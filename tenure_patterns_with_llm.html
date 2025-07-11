@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<!-- Head START-->
+<head>
+<title>Flexspace Observatory</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport"/>
+<meta content="telephone=no" name="format-detection"/>
+<!-- Favicons-->
+<link href="/images/favicon.svg" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/favicon.svg" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon.svg" rel="icon" sizes="16x16" type="image/png"/>
+<link color="#8c8c8c" href="/images/favicon.svg" rel="mask-icon"/>
+<link href="/images/favicon.svg" rel="shortcut icon"/>
+<meta content="#ffffff" name="theme-color"/>
+<!-- Main Styles-->
+<link href="assets/styles.css" rel="stylesheet"/>
+<script src="js/charthelpers.js"></script>
+<!-- High Charts-->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script async="" defer="" id="hs-script-loader" src="//js.hs-scripts.com/5320190.js" type="text/javascript"></script>
+<script charset="utf-8" src="//js.hsforms.net/forms/embed/v2.js" type="text/javascript"></script>
+<script>
+        window.va('beforeSend', (event) => {
+            if (event.url.includes('secret'))
+                return null;
+            return event;
+        }
+        );
+    </script>
+</head>
+<header class="header" id="header">
+<div class="container-fluid">
+<a class="logo-link" href="/">
+<svg class="logo" fill="none" height="100" viewbox="0 0 1112 200" width="300" xmlns="http://www.w3.org/2000/svg">
+<title>Flexspace Observatory</title>
+<g class="logo-icon" fill="#FF4F2F">
+<path class="logo-text" d="M267.7 180.408C263.253 184.895 257.797 187.133 251.33 187.123C244.863 187.113 239.408 184.875 234.965 180.408C230.525 175.935 228.307 170.312 228.31 163.538V129.343C228.31 122.57 230.528 116.963 234.965 112.523C239.402 108.083 244.857 105.863 251.33 105.863C257.807 105.863 263.263 108.083 267.7 112.523C272.137 116.963 274.357 122.57 274.36 129.343V163.538C274.36 170.312 272.14 175.935 267.7 180.408ZM244.165 171.268C246.094 173.116 248.662 174.148 251.333 174.148C254.004 174.148 256.571 173.116 258.5 171.268C260.42 169.352 261.378 166.775 261.375 163.538V129.453C261.375 126.217 260.417 123.64 258.5 121.723C256.57 119.878 254.003 118.848 251.333 118.848C248.662 118.848 246.095 119.878 244.165 121.723C242.245 123.637 241.285 126.213 241.285 129.453V163.538C241.285 166.778 242.245 169.355 244.165 171.268Z" fill="black"></path>
+<path class="logo-text" d="M306.27 186.004H284.72V107.004H306.27C312.89 107.004 318.477 109.186 323.03 113.549C325.232 115.589 326.979 118.071 328.157 120.832C329.335 123.594 329.917 126.572 329.865 129.574C329.865 136.644 327.228 142.062 321.955 145.829C327.225 150.192 329.862 155.796 329.865 162.639C329.907 165.709 329.322 168.756 328.147 171.593C326.972 174.43 325.231 176.998 323.03 179.139C318.48 183.716 312.893 186.004 306.27 186.004ZM297.695 139.389H306.27C309.5 139.389 312.077 138.484 314 136.674C315.848 134.813 316.885 132.297 316.885 129.674C316.885 127.051 315.848 124.535 314 122.674C312.08 120.871 309.503 119.967 306.27 119.964H297.695V139.389ZM297.695 173.019H306.27C309.5 173.019 312.077 172.006 314 169.979C315.852 167.984 316.881 165.363 316.881 162.641C316.881 159.92 315.852 157.299 314 155.304C312.08 153.271 309.503 152.254 306.27 152.254H297.695V173.019Z" fill="black"></path>
+<path class="logo-text" d="M384.57 164.103C384.57 170.877 382.348 176.408 377.905 180.698C373.462 184.988 368.007 187.13 361.54 187.123C355.063 187.123 349.608 184.885 345.175 180.408C340.742 175.932 338.523 170.308 338.52 163.538V158.908H351.52V163.538C351.52 166.778 352.48 169.355 354.4 171.268C355.334 172.212 356.452 172.955 357.684 173.45C358.917 173.946 360.237 174.183 361.565 174.148C364.209 174.231 366.781 173.281 368.735 171.498C370.655 169.733 371.61 167.373 371.61 164.443C371.63 162.39 370.934 160.393 369.64 158.798C368.377 157.194 366.778 155.885 364.955 154.963L353.98 149.768C349.762 147.798 346.083 144.835 343.26 141.133C340.42 137.474 338.906 132.96 338.965 128.328C338.965 121.708 341.112 116.31 345.405 112.133C349.698 107.957 355.077 105.867 361.54 105.863C368.013 105.863 373.468 108.083 377.905 112.523C382.342 116.963 384.563 122.57 384.57 129.343V132.958H371.57V129.458C371.57 126.222 370.612 123.645 368.695 121.728C367.76 120.784 366.641 120.042 365.408 119.548C364.175 119.053 362.853 118.817 361.525 118.853C358.665 118.853 356.353 119.662 354.59 121.278C352.827 122.895 351.942 125.093 351.935 127.873C351.935 132.02 354.042 135.068 358.255 137.018L369.205 142.208C373.511 144.269 377.263 147.327 380.15 151.128C383.046 154.83 384.604 159.403 384.57 164.103Z" fill="black"></path>
+<path class="logo-text" d="M434.165 107V120H407.08V139.415H431.935V152.27H407.08V173.02H434.165V186.02H394.105V107.02L434.165 107Z" fill="black"></path>
+<path class="logo-text" d="M507.88 107L520.855 167.605L533.855 107H547.405L528.775 186H512.98L494.35 107H507.88Z" fill="black"></path>
+<path class="logo-text" d="M561.755 167.939L557.47 186.004H544.47L564.22 107.004H580.025L599.775 186.004H586.775L582.375 167.939H561.755ZM572.145 125.389L564.935 154.964H579.265L572.145 125.389Z" fill="black"></path>
+<path class="logo-text" d="M597.605 107H641.055V120H625.82V186.005H612.82V119.975H597.585L597.605 107Z" fill="black"></path>
+<path class="logo-text" d="M686.99 180.408C682.547 184.895 677.09 187.133 670.62 187.123C664.15 187.113 658.697 184.875 654.26 180.408C649.82 175.935 647.6 170.312 647.6 163.538V129.343C647.6 122.57 649.82 116.963 654.26 112.523C658.7 108.083 664.153 105.863 670.62 105.863C677.097 105.863 682.553 108.083 686.99 112.523C691.427 116.963 693.647 122.57 693.65 129.343V163.538C693.65 170.312 691.43 175.935 686.99 180.408ZM663.435 171.268C665.365 173.117 667.933 174.148 670.605 174.148C673.277 174.148 675.846 173.117 677.775 171.268C679.688 169.352 680.645 166.775 680.645 163.538V129.453C680.645 126.217 679.688 123.64 677.775 121.723C675.844 119.878 673.276 118.849 670.605 118.849C667.934 118.849 665.366 119.878 663.435 121.723C661.522 123.637 660.562 126.213 660.555 129.453V163.538C660.568 166.778 661.528 169.355 663.435 171.268Z" fill="black"></path>
+<path class="logo-text" d="M785.435 159.815V186.005H772.435V160.155L753.475 107H767.585L778.87 142.21L790.155 107H804.265L785.435 159.815Z" fill="black"></path>
+<path class="logo-text" d="M491.01 185.998L478.745 151.858C479.657 151.274 480.526 150.626 481.345 149.918C481.713 149.612 482.065 149.286 482.4 148.943C483.663 147.629 484.773 146.176 485.71 144.613C485.719 144.557 485.745 144.504 485.785 144.463C486.23 143.773 486.632 143.057 486.99 142.318C487.285 141.693 487.549 141.054 487.78 140.403C487.93 140.023 488.04 139.648 488.155 139.273C488.347 138.746 488.497 138.204 488.605 137.653C488.674 137.323 488.724 136.989 488.755 136.653C488.87 136.053 488.945 135.413 489.02 134.813C489.097 134.126 489.135 133.435 489.135 132.743V129.918C489.131 128.262 488.953 126.612 488.605 124.993C487.713 120.705 485.551 116.785 482.4 113.743C482.053 113.39 481.688 113.056 481.305 112.743C477.167 108.945 471.726 106.884 466.11 106.988H443.985V185.988H456.985V155.638H466.13C466.24 155.638 466.335 155.613 466.45 155.613L476.815 185.998H491.01ZM456.965 119.998H466.11C467.431 119.992 468.74 120.248 469.961 120.751C471.182 121.253 472.292 121.993 473.226 122.927C474.16 123.861 474.9 124.971 475.402 126.192C475.905 127.413 476.161 128.722 476.155 130.043V132.638C476.161 133.959 475.905 135.268 475.402 136.489C474.9 137.711 474.16 138.82 473.226 139.754C472.292 140.688 471.182 141.428 469.961 141.931C468.74 142.433 467.431 142.689 466.11 142.683H456.965V119.998Z" fill="black"></path>
+<path class="logo-text" d="M751.03 185.998L738.77 151.858C739.681 151.273 740.55 150.625 741.37 149.918C741.738 149.613 742.088 149.287 742.42 148.943C743.684 147.63 744.795 146.178 745.73 144.613C745.741 144.557 745.767 144.506 745.805 144.463C746.254 143.776 746.656 143.059 747.01 142.318C747.307 141.694 747.571 141.055 747.8 140.403C747.95 140.023 748.065 139.648 748.175 139.273C748.366 138.745 748.518 138.204 748.63 137.653C748.697 137.323 748.747 136.989 748.78 136.653C748.895 136.053 748.97 135.413 749.045 134.813C749.117 134.126 749.154 133.435 749.155 132.743V129.918C749.161 128.264 748.993 126.613 748.655 124.993C747.763 120.704 745.599 116.784 742.445 113.743C742.1 113.39 741.736 113.056 741.355 112.743C737.215 108.944 731.773 106.883 726.155 106.988H704.035V185.988H717.035V155.638H726.175C726.285 155.638 726.385 155.613 726.495 155.613L736.865 185.998H751.03ZM716.99 119.998H726.13C727.451 119.992 728.76 120.248 729.981 120.751C731.202 121.253 732.312 121.993 733.246 122.927C734.18 123.861 734.92 124.971 735.422 126.192C735.925 127.414 736.181 128.722 736.175 130.043V132.638C736.181 133.959 735.925 135.268 735.422 136.489C734.92 137.711 734.18 138.82 733.246 139.754C732.312 140.688 731.202 141.428 729.981 141.931C728.76 142.433 727.451 142.689 726.13 142.683H716.99V119.998Z" fill="black"></path>
+<path d="M113.275 94.5L174.6 33.18L166.82 25.405L105.5 86.725V0H94.5V83.5C94.5 86.4174 93.3411 89.2153 91.2782 91.2782C89.2153 93.3411 86.4174 94.5 83.5 94.5H0V105.5H83.5C86.4174 105.5 89.2153 106.659 91.2782 108.722C93.3411 110.785 94.5 113.583 94.5 116.5V200H105.5V116.5C105.5 113.583 106.659 110.785 108.722 108.722C110.785 106.659 113.583 105.5 116.5 105.5H200V94.5H113.275Z" fill="#FF4F2F"></path>
+<path d="M128.164 120.384L120.386 128.162L166.822 174.598L174.6 166.82L128.164 120.384Z" fill="#FF4F2F"></path>
+<path d="M71.8391 120.39L25.3928 166.836L33.171 174.614L79.6173 128.168L71.8391 120.39Z" fill="#FF4F2F"></path>
+<path d="M33.1751 25.4054L25.397 33.1836L71.8327 79.6193L79.6108 71.8411L33.1751 25.4054Z" fill="#FF4F2F"></path>
+<path class="logo-text" d="M268.32 14.0996V27.0596H241.27V46.4446H266.065V59.2946H241.27V92.9946H228.31V14.0996H268.32Z" fill="black"></path>
+<path class="logo-text" d="M291.435 14.0996V80.0296H318.485V92.9946H278.485V14.0996H291.435Z" fill="black"></path>
+<path class="logo-text" d="M366.935 14.0996V27.0596H339.885V46.4446H364.685V59.2946H339.885V80.0296H366.935V92.9946H326.935V14.0996H366.935Z" fill="black"></path>
+<path class="logo-text" d="M391.27 52.9846L374.135 14.0996H388.225L398.935 39.5696L409.645 14.0996H423.735L406.485 52.9846L424.29 92.9846H410.205L398.93 66.4846L387.66 92.9846H373.575L391.27 52.9846Z" fill="black"></path>
+<path class="logo-text" d="M475.345 71.1288C475.345 77.8888 473.128 83.4104 468.695 87.6938C464.262 91.9771 458.815 94.1188 452.355 94.1188C445.888 94.1188 440.44 91.8838 436.01 87.4138C431.58 82.9438 429.363 77.3271 429.36 70.5638V65.9438H442.325V70.5638C442.325 73.7938 443.282 76.3671 445.195 78.2838C446.129 79.2261 447.246 79.9673 448.478 80.4617C449.709 80.9561 451.028 81.1934 452.355 81.1588C454.994 81.2385 457.56 80.2881 459.51 78.5088C461.427 76.7454 462.385 74.3971 462.385 71.4638C462.407 69.4163 461.718 67.4248 460.435 65.8288C459.175 64.2241 457.577 62.9165 455.755 61.9988L444.82 56.8138C440.611 54.8412 436.94 51.8846 434.115 48.1938C431.28 44.5364 429.769 40.0257 429.83 35.3988C429.83 28.7887 431.972 23.3971 436.255 19.2238C440.538 15.0504 445.912 12.9654 452.375 12.9688C458.835 12.9688 464.282 15.1854 468.715 19.6188C473.148 24.0521 475.365 29.6504 475.365 36.4137V40.0188H462.385V36.5188C462.385 33.2954 461.427 30.7221 459.51 28.7988C458.577 27.8566 457.46 27.1154 456.23 26.621C454.999 26.1265 453.681 25.8892 452.355 25.9238C449.495 25.9238 447.185 26.7321 445.425 28.3488C443.665 29.9654 442.782 32.1638 442.775 34.9438C442.775 39.0738 444.878 42.1171 449.085 44.0738L460.02 49.2688C464.313 51.3249 468.055 54.374 470.935 58.1637C473.825 61.8641 475.38 66.4333 475.345 71.1288Z" fill="black"></path>
+<path class="logo-text" d="M498.935 64.9298V92.9948H485.975V14.0998H508.065C511.079 14.0867 514.066 14.6686 516.855 15.8123C519.643 16.956 522.179 18.6389 524.315 20.7646C526.452 22.8902 528.148 25.4168 529.307 28.1994C530.465 30.9819 531.062 33.9658 531.065 36.9798V41.9348C531.065 48.0348 528.642 53.8849 524.329 58.1983C520.015 62.5116 514.165 64.9348 508.065 64.9348L498.935 64.9298ZM508.065 27.0598H498.935V51.9698H508.065C509.384 51.9738 510.69 51.7169 511.909 51.2139C513.128 50.711 514.236 49.9719 515.168 49.0392C516.1 48.1065 516.839 46.9986 517.341 45.7794C517.843 44.5601 518.1 43.2535 518.095 41.9348V37.0898C518.099 35.7716 517.842 34.4655 517.34 33.2468C516.837 32.0281 516.098 30.9209 515.166 29.9887C514.234 29.0566 513.127 28.3179 511.908 27.8152C510.689 27.3126 509.383 27.0559 508.065 27.0598Z" fill="black"></path>
+<path class="logo-text" d="M546.26 74.9596L541.98 92.9946H529.015L548.74 14.0996H564.52L584.245 92.9946H571.285L566.885 74.9596H546.26ZM556.63 32.4596L549.435 61.9996H563.745L556.63 32.4596Z" fill="black"></path>
+<path class="logo-text" d="M634.935 44.5288H621.975V36.5288C621.975 33.3054 621.017 30.7321 619.1 28.8088C617.175 26.9636 614.612 25.9334 611.945 25.9334C609.279 25.9334 606.715 26.9636 604.79 28.8088C602.87 30.7288 601.912 33.3021 601.915 36.5288V70.5688C601.915 73.7988 602.873 76.3721 604.79 78.2887C606.715 80.1339 609.279 81.1641 611.945 81.1641C614.612 81.1641 617.175 80.1339 619.1 78.2887C621.02 76.3721 621.978 73.7988 621.975 70.5688V61.4338H634.935V70.5637C634.935 77.3237 632.72 82.9404 628.29 87.4138C623.86 91.8871 618.408 94.1221 611.935 94.1188C605.472 94.1188 600.025 91.8838 595.595 87.4138C591.165 82.9438 588.948 77.3271 588.945 70.5637V36.4137C588.945 29.6504 591.162 24.0521 595.595 19.6187C600.028 15.1854 605.475 12.9687 611.935 12.9688C618.395 12.9688 623.843 15.1854 628.28 19.6187C632.717 24.0521 634.935 29.6504 634.935 36.4137V44.5288Z" fill="black"></path>
+<path class="logo-text" d="M686.21 14.0996V27.0596H659.16V46.4446H683.935V59.2946H659.14V80.0296H686.19V92.9946H646.19V14.0996H686.21Z" fill="black"></path>
+<line stroke="black" x1="831.133" x2="828.765" y1="12.0145" y2="187.999"></line>
+<path class="logo-text" clip-rule="evenodd" d="M882.72 103.135H875.919C875.748 103.135 875.577 103.278 875.577 103.478V117.649C875.577 119.021 875.662 120.506 875.719 121.506C875.148 120.535 874.148 118.935 872.834 117.135L862.834 103.278C862.776 103.192 862.662 103.135 862.548 103.135H854.976C854.805 103.135 854.634 103.278 854.634 103.478V133.392C854.634 133.564 854.776 133.735 854.976 133.735H861.776C861.948 133.735 862.119 133.592 862.119 133.392V117.935C862.119 116.935 862.091 115.849 862.034 114.649C862.576 115.535 863.462 116.906 864.691 118.563L875.548 133.564C875.605 133.649 875.719 133.706 875.834 133.706H882.748C882.92 133.706 883.091 133.564 883.091 133.364V103.478C883.034 103.306 882.891 103.135 882.72 103.135Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" clip-rule="evenodd" d="M1020.15 103.135H1009.92C1009.75 103.135 1009.58 103.278 1009.58 103.478V133.392C1009.58 133.564 1009.72 133.735 1009.92 133.735H1019.86C1031.46 133.735 1038.38 127.849 1038.38 118.021C1038.41 112.449 1036.04 103.135 1020.15 103.135ZM1020.49 127.078H1017.89V109.821H1020.21C1026.86 109.821 1029.72 112.363 1029.72 118.306C1029.72 124.192 1026.72 127.078 1020.49 127.078Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" clip-rule="evenodd" d="M996.663 103.135H989.635C989.463 103.135 989.292 103.278 989.292 103.478V120.706C989.292 125.449 987.606 127.478 983.606 127.478C979.206 127.478 977.634 125.621 977.634 120.421V103.478C977.634 103.306 977.492 103.135 977.292 103.135H969.634C969.463 103.135 969.292 103.278 969.292 103.478V120.992C969.292 129.678 974.177 134.249 983.406 134.249C992.149 134.249 996.949 129.249 996.949 120.192V103.478C996.977 103.306 996.835 103.135 996.663 103.135Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" clip-rule="evenodd" d="M1077.32 103.135H1070.29C1070.12 103.135 1069.95 103.278 1069.95 103.478V120.706C1069.95 125.449 1068.26 127.478 1064.26 127.478C1059.86 127.478 1058.29 125.621 1058.29 120.421V103.478C1058.29 103.306 1058.15 103.135 1057.95 103.135H1050.35C1050.18 103.135 1050.01 103.278 1050.01 103.478V120.992C1050.01 129.678 1054.89 134.249 1064.12 134.249C1072.86 134.249 1077.66 129.249 1077.66 120.192V103.478C1077.66 103.306 1077.52 103.135 1077.32 103.135Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" clip-rule="evenodd" d="M1103.72 114.993C1103.18 114.764 1102.66 114.564 1102.21 114.393C1099.32 113.25 1098.04 112.679 1098.04 111.136C1098.04 109.136 1100.52 108.936 1101.58 108.936C1104.64 108.936 1106.86 110.279 1107.46 110.679C1107.61 110.793 1107.81 110.736 1107.92 110.593C1107.92 110.593 1107.92 110.564 1107.95 110.564L1110.84 105.193C1110.92 105.05 1110.86 104.85 1110.72 104.736C1109.38 103.936 1106.55 102.25 1101.12 102.25C1093.49 102.25 1090.09 106.879 1090.09 111.479C1090.09 116.936 1093.55 119.222 1096.92 120.736C1097.89 121.193 1098.81 121.564 1099.61 121.879C1102.18 122.936 1103.75 123.564 1103.75 125.164C1103.75 126.707 1102.12 127.622 1099.41 127.622C1096.09 127.622 1094.06 126.222 1093.09 125.536C1092.89 125.393 1092.64 125.45 1092.49 125.65L1092.46 125.679L1089.52 130.965C1089.44 131.107 1089.49 131.279 1089.61 131.393C1090.75 132.25 1094.01 134.222 1099.81 134.222C1107.32 134.222 1111.81 130.593 1111.81 124.536C1111.78 119.193 1107.89 116.793 1103.72 114.993Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" clip-rule="evenodd" d="M917.548 103.135H897.605C897.434 103.135 897.262 103.278 897.262 103.478V133.392C897.262 133.564 897.405 133.735 897.605 133.735H917.548C917.72 133.735 917.891 133.592 917.891 133.392V127.449C917.891 127.278 917.748 127.106 917.548 127.106H905.405V121.135H917.548C917.72 121.135 917.891 120.992 917.891 120.792V115.306C917.891 115.135 917.748 114.963 917.548 114.963H905.405V109.763H917.548C917.72 109.763 917.891 109.621 917.891 109.421V103.478C917.862 103.306 917.72 103.135 917.548 103.135Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" clip-rule="evenodd" d="M948.263 118.021L957.234 103.678C957.377 103.45 957.206 103.164 956.949 103.164H949.406C949.291 103.164 949.177 103.221 949.12 103.335L944.291 111.736L939.148 103.335C939.091 103.25 938.977 103.164 938.863 103.164H930.291C930.034 103.164 929.863 103.45 930.006 103.678L939.32 118.021L929.491 133.221C929.348 133.45 929.52 133.736 929.777 133.736H937.377C937.491 133.736 937.606 133.679 937.663 133.564L943.291 124.136L949.234 133.593C949.291 133.679 949.406 133.736 949.52 133.736H957.863C958.12 133.736 958.292 133.45 958.149 133.221L948.263 118.021Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" d="M861.882 73.718H855.258V74.03C857.106 74.102 857.586 74.654 857.586 75.902V87.542C857.586 88.814 857.106 89.366 855.258 89.438V89.75H861.45V89.438C859.986 89.366 859.242 89.03 859.242 87.542V82.622H861.882C865.266 82.622 867.786 81.278 867.786 78.182C867.786 75.062 865.266 73.718 861.882 73.718ZM859.242 81.878V74.486H861.282C864.402 74.486 865.89 75.998 865.89 78.182C865.89 80.366 864.402 81.878 861.282 81.878H859.242ZM876.312 90.086C879.264 90.086 881.808 87.518 881.808 83.534C881.808 79.958 879.648 77.414 876.456 77.414C873.552 77.414 871.008 80.006 871.008 84.014C871.008 87.566 873.168 90.086 876.312 90.086ZM872.64 83.246C872.64 80.318 874.08 78.23 876.216 78.23C879.24 78.23 880.2 82.046 880.2 84.206C880.2 87.134 878.76 89.27 876.624 89.27C873.576 89.27 872.64 85.43 872.64 83.246ZM903.342 78.062V77.75H899.262V78.062C900.918 78.35 901.302 78.542 900.894 79.67L897.966 87.614L894.942 79.67C894.558 78.638 894.846 78.374 896.526 78.062V77.75H891.582V78.086C892.518 78.326 892.806 78.518 892.998 78.998L893.358 79.886L890.502 87.614L887.478 79.67C887.094 78.638 887.406 78.398 889.062 78.062V77.75H884.118V78.086C885.078 78.326 885.342 78.518 885.534 78.998L889.926 90.086H890.238L893.742 80.894L897.39 90.086H897.678L901.902 79.022C902.118 78.47 902.43 78.278 903.342 78.062ZM911.188 77.414C908.02 77.414 905.668 79.862 905.668 84.086C905.668 87.374 907.78 90.086 910.852 90.086C913.132 90.086 914.86 88.598 915.484 86.702L915.22 86.582C914.404 87.614 913.324 88.646 911.548 88.646C908.956 88.646 907.252 86.438 907.18 83.006H915.58C915.58 80.102 914.092 77.414 911.188 77.414ZM907.204 82.334C907.42 79.934 908.5 78.182 910.804 78.182C912.94 78.182 913.684 80.006 913.852 82.334H907.204ZM918.766 89.438V89.75H924.526V89.438C922.654 89.198 922.054 88.838 922.054 87.878V81.638C922.774 79.91 923.926 78.926 925.222 78.878C925.654 78.854 926.206 78.998 926.614 79.238L926.854 77.582C926.566 77.462 925.942 77.39 925.486 77.414C924.166 77.438 922.966 78.566 922.054 80.966V77.414H921.718L918.766 78.374V78.71H918.982C920.206 78.71 920.542 79.262 920.542 80.246V87.878C920.542 88.838 920.134 89.198 918.766 89.438ZM934.997 77.414C931.829 77.414 929.477 79.862 929.477 84.086C929.477 87.374 931.589 90.086 934.661 90.086C936.941 90.086 938.669 88.598 939.293 86.702L939.029 86.582C938.213 87.614 937.133 88.646 935.357 88.646C932.765 88.646 931.061 86.438 930.989 83.006H939.389C939.389 80.102 937.901 77.414 934.997 77.414ZM931.013 82.334C931.229 79.934 932.309 78.182 934.613 78.182C936.749 78.182 937.493 80.006 937.661 82.334H931.013ZM948.015 90.086C949.335 90.086 950.727 89.222 951.687 87.566V90.086H952.023L954.951 89.126V88.814H954.711C953.559 88.814 953.199 88.358 953.199 87.278V72.758H952.863L949.911 73.718V74.03H950.175C951.327 74.03 951.687 74.486 951.687 75.59V78.59C951.039 77.918 950.199 77.414 948.831 77.414C945.807 77.414 942.975 79.862 942.975 84.158C942.975 87.758 944.871 90.086 948.015 90.086ZM944.583 83.246C944.583 80.246 946.095 78.062 948.183 78.062C950.559 78.062 951.519 80.198 951.687 81.446V86.918C950.991 88.118 949.719 88.886 948.351 88.886C946.071 88.886 944.583 86.654 944.583 83.246ZM971.221 90.086C974.005 90.086 976.837 87.638 976.837 83.342C976.837 79.742 974.941 77.414 971.797 77.414C970.453 77.414 969.061 78.278 968.101 79.982V72.758H967.765L964.813 73.718V74.03H965.077C966.229 74.03 966.589 74.486 966.589 75.59V89.75H967.141L967.813 88.55C968.485 89.414 969.373 90.086 971.221 90.086ZM968.101 85.694V80.63C968.773 79.406 970.045 78.614 971.461 78.614C973.741 78.614 975.229 80.846 975.229 84.254C975.229 87.254 973.717 89.438 971.629 89.438C969.013 89.438 968.101 86.846 968.101 85.694ZM987.279 78.062C988.887 78.326 989.367 78.518 989.007 79.382L985.743 87.062L982.407 79.406C982.167 78.83 982.071 78.422 984.063 78.062V77.75H979.143V78.086C980.247 78.35 980.367 78.614 980.775 79.55L985.023 89.126L981.687 94.286V94.502H983.319L989.751 79.406C990.087 78.59 990.231 78.374 991.335 78.062V77.75H987.279V78.062Z" fill="black"></path>
+</g>
+</svg>
+</a>
+<div class="header-links">
+<a class="header-link" href="/insights">Insights</a>
+<a class="header-link" href="/contact">Contact us</a>
+<a class="header-link" href="/about">About us</a>
+<span class="header-divider"></span>
+<button class="nav-toggle" id="nav-toggle" type="button">
+<span class="line"></span>
+<span class="line"></span>
+</button>
+</div>
+</div>
+</header>
+<div class="nav" id="nav">
+<div class="container-fluid">
+<div class="nav-inner">
+<div class="nav-top">
+<ul class="mobile-pages-links">
+<li>
+<a href="/contact">Contact us</a>
+</li>
+<li>
+<a href="/about">About us</a>
+</li>
+</ul>
+</div>
+<div class="nav-bottom">
+<a class="link-underline white" href="https://nexudus.com/" target="_blank">
+<span>nexudus.com</span>
+<i class="icon icon-arrow-right"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script src="/js/charthelpers.js"></script>
+<script src="/js/popup.js"></script>
+<div class="popup" id="popup">
+<div class="popup--dark-bg"></div>
+<div class="popup-container w-100">
+<div class="close-btn" onclick="hidePopup(event)">
+<img alt="Close popup" src="images/icon-close.svg"/>
+</div>
+<div class="hubspot-form-container"></div>
+</div>
+</div>
+<main class="main">
+<section class="topic-hero">
+<div class="texts-wrap">
+<div class="container-fluid">
+<p class="font-plaak text-xl color-orange">/02 Evolution and user behaviour</p>
+<h1 class="heading2">Stability and Age: Keys to Member Retention Success</h1>
+<p class="text-xl color-gray">A comprehensive analysis of member tenure patterns in coworking and flexible workspaces around the world. </p>
+<a class="btn btn-orange btn" onclick="showPopup(event, '(English)','525cf6c3-35b3-4e7b-8ac0-f6ff1efddaf9')" title="Download bespoke report">
+                    Download bespoke report <i class="icon icon-download"></i>
+</a>
+</div>
+</div>
+<div class="img-wrap">
+<div class="container-fluid">
+<img alt="topic" sizes="100%" src="images/stayingin.png" srcset="images/stayingin.png 1ximages/stayingin@2x.png 2x"/>
+</div>
+</div>
+</section>
+<section class="topic-report">
+<div class="container-fluid">
+<h2 class="heading3">This report will help you understand:</h2>
+<div class="row">
+<div class="col-sm-6 col-md-4">
+<div class="card">
+<div class="icon-wrap">
+<img src="images/icon-time-person.svg"/>
+</div>
+<h3 class="heading-abcnormal no-margin">Effect of plan type on member tenure</h3>
+<p class="color-gray text-sm">How does the type of plan a user is on impact their tenure?</p>
+</div>
+</div>
+<div class="col-sm-6 col-md-4">
+<div class="card">
+<div class="icon-wrap">
+<img src="images/icon-value-person.svg"/>
+</div>
+<h3 class="heading-abcnormal no-margin">The impact of age on membership tenure</h3>
+<p class="color-gray text-sm">In what ways does the age of a user impact the amount of time they remain at your workspace?</p>
+</div>
+</div>
+<div class="col-sm-6 col-md-4">
+<div class="card">
+<div class="icon-wrap">
+<img src="images/icon-circle.svg"/>
+</div>
+<h3 class="heading-abcnormal no-margin">Differences in tenure between individuals and companies</h3>
+<p class="color-gray text-sm">Are there measurable differences in tenure duration when it comes to individual users or ones part of a larger organisation?</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="topic-layout">
+<div class="container-fluid">
+<div class="row">
+<aside class="col-md-4 topic-nav">
+<div class="nav-sticky">
+<h3 class="heading5">Table of contents:</h3>
+<ul class="nav-scrollspy">
+<li>
+<a href="#section1">
+<p class="font-plaak text-xs color-gray">Section 1</p>
+<p class="text-sm">How does the type of plan affect the permanence of members?</p>
+</a>
+</li>
+<li>
+<a href="#section2">
+<p class="font-plaak text-xs color-gray">Section 2</p>
+<p class="text-sm">How does the user profile influence the permanence of members?</p>
+</a>
+</li>
+<li>
+<a href="#section3">
+<p class="font-plaak text-xs color-gray">Section 3</p>
+<p class="text-sm">New Charts</p>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<article class="col-md-8 topic-body">
+<section class="topic-section" id="section1">
+<h2 class="section-heading">Section 1</h2>
+<h3 class="heading3">How does the type of plan affect the permanence of members? </h3><p>Understanding the impact of membership type on member tenure offers valuable insights into retention patterns within co-working spaces. Our analysis reveals that different plans distinctly influence the duration of member affiliation, with dedicated office spaces leading to longer commitments compared to more transient hot desk arrangements. Additionally, virtual memberships display surprising longevity, which suggests that engagement can thrive even beyond physical presence.</p><p>Overall, the trajectory of average member tenure demonstrates significant growth in the flexible workspace sector from early 2016 to 2025, particularly post-pandemic. Trends indicate improved retention rates across all membership types, hinting at a shift towards greater stability as members increasingly seek meaningful connections and satisfaction with their choices. The following sections will delve deeper into these findings, presenting a clearer picture of the dynamics at play.</p>
+
+
+
+<div class="card card-big keyfindings">
+<div class="row">
+<div class="col-md-6">
+<div class="keyfindings-texts">
+<h4 class="heading3">Key findings</h4>
+<div class="keyfinding-slides-wrap">
+<div class="keyfinding-slides">
+<div class="keyfinding-slide">
+
+
+<p class="weight-medium">Stability Drives Member Loyalty</p><p class="text-xs">Office memberships, with an average tenure of 12 months, highlight a clear correlation between workspace stability and member retention, as compared to Hot Desk memberships averaging only 7 months.</p></div>
+<div class="keyfinding-slide">
+<p class="weight-medium">Which plans have the highest and lowest permanencies? </p>
+<p class="text-xs">The average length of stay of office plan users, the highest among the non-virtual plans, is 71% higher than that of Host Desk plan members (9.09 months compared to 5.32 months respectively).</p>
+</div>
+<div class="keyfinding-slide">
+<p class="weight-medium">Virtual Office</p>
+<p class="text-xs">The virtual office has the longest permenence of all types of plans and is a service that can grow practically unlimitedly due to its low space requirements. </p>
+</div>
+</div>
+<div class="keyfinding-slides-controls">
+<div class="keyfinding-slides-arrows"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="img-wrap">
+<img alt="keyfindings" sizes="100%" src="images/keyfinding1.png" srcset="images/keyfinding1.png 1ximages/keyfinding1@2x.png 2x"/>
+</div>
+</div>
+</div>
+</div>
+<h3 class="heading4">How does the type of plan affect the permanence of members?</h3><p>The analysis of member tenure across various co-working space membership types reveals distinct patterns that tie directly to the nature of each plan. Office memberships boast the longest average tenure of approximately **12 months**, indicating that members value stability and a dedicated workspace considerably more than others. In stark contrast, Hot Desk members show the shortest average tenure of around **7 months**, reflective of their more transient engagement with the space, suggesting a lower commitment level and fewer ties to the community.</p><p>Interestingly, Virtual memberships record a surprising average tenure of about **13 months**, hinting at strong customer loyalty and the potential for meaningful interactions beyond physical presence. Overall, these findings underscore how the permanence associated with different membership types significantly affects member retention and engagement, with a clear correlation between the stability of the workspace and the duration of affiliation.</p>
+
+<h3 class="heading4"></h3><p>The analysis reveals a significant upward trend in member tenure within the flexible workspace sector from early 2016 to 2025, with the average tenure increasing from approximately 5 months to a peak nearing 15 months in March 2023. The data indicates notable spikes, particularly during 2023, signifying shifts in member loyalty and usage patterns, likely influenced by the evolving nature of work post-pandemic. Though fluctuations remain present, the overall trajectory shows that member retention is steadily improving, indicating a structural change in workspace dynamics.</p><p>When dissecting individual membership types, a similar pattern emerges, with substantial spikes in tenure across categories in March 2023. Notably, 'Virtual' memberships remained the most stable and attractive, with peak tenures surpassing those of 'Dedicated Desk' and 'Hot Desk' subscriptions, which displayed more erratic behaviors. The collective data points towards enhanced retention and longer commitments across all membership types, suggesting an industry-wide transition towards stability and increased member satisfaction.</p>
+
+<h3 class="heading4"></h3>
+<p>The Dedicated Desk and Part-time, although they seem to respond to different needs, in terms of permanence there is hardly more than 3 % difference between them.</p>
+<h3 class="heading4"></h3>
+<p>The Hot desk is the plan with the lowest permanence and traditionally low cost. However, it can be very attractive for operators operating in common areas.</p>
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab00">Tenure Mean And Median By Type Of Membership</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab00">
+<figure class="chart">
+<div id="chart00">
+<script>
+                                            var chartIndex = 0
+                                            var section1index = 0
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 40, "type": "column"}}, "series": [{"data": [{"y": 8.12, "color": "#CF2101", "name": "Dedicated Desk"}, {"y": 6.73, "color": "#7A86F0", "name": "Hot Desk"}, {"y": 11.86, "color": "#FF4F2F", "name": "Office"}, {"y": 7.07, "color": "#151E6D", "name": "Part-time"}, {"y": 13.4, "color": "#FFD600", "name": "Virtual"}], "name": "Tenure Mean And Median By Type Of Membership", "type": "column"}], "title": {"text": "Tenure Mean And Median By Type Of Membership"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Part-Time", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 15, "min": 0, "tickInterval": 2, "title": {"text": " "}}}'
+                                            renderChart('chart' + section1index + chartIndex, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<h3 class="heading4">Evolution &amp;user behaviour in the flexible workspace industry</h3>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab100">Global Mean Tenure</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab101">Mean Tenure By Type Of Membership</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab100">
+<figure class="chart">
+<div id="chart100">
+<script>
+                                            var chartIndex = 0
+                                            var section1index = 0
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "spline"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"series": {"pointInterval": 0.083, "pointStart": 2016.01, "type": "series"}, "spline": {"lineWidth": 3, "marker": {"enabled": false}, "type": "spline"}}, "series": [{"data": [{"y": 5.73, "name": "2016-01-01"}, {"y": 5.12, "name": "2016-02-01"}, {"y": 5.54, "name": "2016-03-01"}, {"y": 5.12, "name": "2016-04-01"}, {"y": 5.19, "name": "2016-05-01"}, {"y": 4.92, "name": "2016-06-01"}, {"y": 5.14, "name": "2016-07-01"}, {"y": 5.26, "name": "2016-08-01"}, {"y": 4.86, "name": "2016-09-01"}, {"y": 5.51, "name": "2016-10-01"}, {"y": 5.13, "name": "2016-11-01"}, {"y": 5.84, "name": "2016-12-01"}, {"y": 6.1, "name": "2017-01-01"}, {"y": 6.0, "name": "2017-02-01"}, {"y": 6.3, "name": "2017-03-01"}, {"y": 5.82, "name": "2017-04-01"}, {"y": 5.54, "name": "2017-05-01"}, {"y": 5.73, "name": "2017-06-01"}, {"y": 5.52, "name": "2017-07-01"}, {"y": 5.25, "name": "2017-08-01"}, {"y": 5.94, "name": "2017-09-01"}, {"y": 6.35, "name": "2017-10-01"}, {"y": 5.95, "name": "2017-11-01"}, {"y": 6.2, "name": "2017-12-01"}, {"y": 6.05, "name": "2018-01-01"}, {"y": 6.21, "name": "2018-02-01"}, {"y": 6.46, "name": "2018-03-01"}, {"y": 5.72, "name": "2018-04-01"}, {"y": 6.0, "name": "2018-05-01"}, {"y": 5.7, "name": "2018-06-01"}, {"y": 6.06, "name": "2018-07-01"}, {"y": 5.77, "name": "2018-08-01"}, {"y": 5.94, "name": "2018-09-01"}, {"y": 6.4, "name": "2018-10-01"}, {"y": 6.05, "name": "2018-11-01"}, {"y": 6.37, "name": "2018-12-01"}, {"y": 6.57, "name": "2019-01-01"}, {"y": 6.7, "name": "2019-02-01"}, {"y": 6.79, "name": "2019-03-01"}, {"y": 6.53, "name": "2019-04-01"}, {"y": 6.93, "name": "2019-05-01"}, {"y": 6.76, "name": "2019-06-01"}, {"y": 6.41, "name": "2019-07-01"}, {"y": 6.18, "name": "2019-08-01"}, {"y": 6.58, "name": "2019-09-01"}, {"y": 6.76, "name": "2019-10-01"}, {"y": 6.7, "name": "2019-11-01"}, {"y": 7.06, "name": "2019-12-01"}, {"y": 7.17, "name": "2020-01-01"}, {"y": 7.06, "name": "2020-02-01"}, {"y": 7.64, "name": "2020-03-01"}, {"y": 7.33, "name": "2020-04-01"}, {"y": 7.93, "name": "2020-05-01"}, {"y": 8.43, "name": "2020-06-01"}, {"y": 8.14, "name": "2020-07-01"}, {"y": 7.94, "name": "2020-08-01"}, {"y": 7.82, "name": "2020-09-01"}, {"y": 7.78, "name": "2020-10-01"}, {"y": 7.46, "name": "2020-11-01"}, {"y": 7.52, "name": "2020-12-01"}, {"y": 7.74, "name": "2021-01-01"}, {"y": 7.98, "name": "2021-02-01"}, {"y": 8.01, "name": "2021-03-01"}, {"y": 7.62, "name": "2021-04-01"}, {"y": 7.35, "name": "2021-05-01"}, {"y": 7.48, "name": "2021-06-01"}, {"y": 7.37, "name": "2021-07-01"}, {"y": 7.47, "name": "2021-08-01"}, {"y": 7.76, "name": "2021-09-01"}, {"y": 7.73, "name": "2021-10-01"}, {"y": 7.47, "name": "2021-11-01"}, {"y": 7.53, "name": "2021-12-01"}, {"y": 8.56, "name": "2022-01-01"}, {"y": 8.11, "name": "2022-02-01"}, {"y": 8.05, "name": "2022-03-01"}, {"y": 7.7, "name": "2022-04-01"}, {"y": 7.92, "name": "2022-05-01"}, {"y": 8.06, "name": "2022-06-01"}, {"y": 8.19, "name": "2022-07-01"}, {"y": 8.11, "name": "2022-08-01"}, {"y": 7.93, "name": "2022-09-01"}, {"y": 8.36, "name": "2022-10-01"}, {"y": 8.58, "name": "2022-11-01"}, {"y": 9.27, "name": "2022-12-01"}, {"y": 9.18, "name": "2023-01-01"}, {"y": 9.25, "name": "2023-02-01"}, {"y": 14.53, "name": "2023-03-01"}, {"y": 9.18, "name": "2023-04-01"}, {"y": 9.33, "name": "2023-05-01"}, {"y": 9.24, "name": "2023-06-01"}, {"y": 9.16, "name": "2023-07-01"}, {"y": 9.22, "name": "2023-08-01"}, {"y": 9.52, "name": "2023-09-01"}, {"y": 10.51, "name": "2023-10-01"}, {"y": 9.34, "name": "2023-11-01"}, {"y": 9.76, "name": "2023-12-01"}, {"y": 10.11, "name": "2024-01-01"}, {"y": 10.36, "name": "2024-02-01"}, {"y": 9.93, "name": "2024-03-01"}, {"y": 10.09, "name": "2024-04-01"}, {"y": 9.9, "name": "2024-05-01"}, {"y": 9.74, "name": "2024-06-01"}, {"y": 9.98, "name": "2024-07-01"}, {"y": 9.62, "name": "2024-08-01"}, {"y": 10.62, "name": "2024-09-01"}, {"y": 12.76, "name": "2024-10-01"}, {"y": 10.16, "name": "2024-11-01"}, {"y": 10.59, "name": "2024-12-01"}, {"y": 10.63, "name": "2025-01-01"}, {"y": 11.22, "name": "2025-02-01"}, {"y": 11.78, "name": "2025-03-01"}, {"y": 11.01, "name": "2025-04-01"}], "name": "Mean Tenure On Contracts Finished", "color": "#FF4F2F", "type": "spline"}], "title": {"text": "Mean Tenure On Contracts Finished"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 2025.4, "min": 2016, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 17, "min": 0, "tickInterval": 2, "title": {"text": " "}}}'
+                                            console.log({
+                                                code
+                                            })
+                                            renderChart('chart1' + section1index + chartIndex, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab101">
+<figure class="chart">
+<div id="chart101">
+<script>
+                                            var chartIndex = 1
+                                            var section1index = 0
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "spline"}, "legend": {"itemDistance": 30, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 30}, "plotOptions": {"series": {"pointInterval": 0.083, "pointStart": 2016.01, "type": "series"}, "spline": {"lineWidth": 3, "marker": {"enabled": false}, "type": "spline"}}, "series": [{"data": [{"y": 4.73, "name": "2016-01-01"}, {"y": 3.91, "name": "2016-02-01"}, {"y": 5.62, "name": "2016-03-01"}, {"y": 4.91, "name": "2016-04-01"}, {"y": 3.89, "name": "2016-05-01"}, {"y": 4.71, "name": "2016-06-01"}, {"y": 4.35, "name": "2016-07-01"}, {"y": 4.44, "name": "2016-08-01"}, {"y": 4.77, "name": "2016-09-01"}, {"y": 5.02, "name": "2016-10-01"}, {"y": 5.5, "name": "2016-11-01"}, {"y": 5.52, "name": "2016-12-01"}, {"y": 4.94, "name": "2017-01-01"}, {"y": 6.04, "name": "2017-02-01"}, {"y": 5.26, "name": "2017-03-01"}, {"y": 4.49, "name": "2017-04-01"}, {"y": 5.56, "name": "2017-05-01"}, {"y": 5.3, "name": "2017-06-01"}, {"y": 5.0, "name": "2017-07-01"}, {"y": 5.45, "name": "2017-08-01"}, {"y": 5.08, "name": "2017-09-01"}, {"y": 5.47, "name": "2017-10-01"}, {"y": 5.89, "name": "2017-11-01"}, {"y": 5.49, "name": "2017-12-01"}, {"y": 5.92, "name": "2018-01-01"}, {"y": 6.79, "name": "2018-02-01"}, {"y": 6.77, "name": "2018-03-01"}, {"y": 5.49, "name": "2018-04-01"}, {"y": 5.46, "name": "2018-05-01"}, {"y": 5.66, "name": "2018-06-01"}, {"y": 5.88, "name": "2018-07-01"}, {"y": 5.27, "name": "2018-08-01"}, {"y": 5.94, "name": "2018-09-01"}, {"y": 6.32, "name": "2018-10-01"}, {"y": 5.26, "name": "2018-11-01"}, {"y": 5.76, "name": "2018-12-01"}, {"y": 6.33, "name": "2019-01-01"}, {"y": 6.06, "name": "2019-02-01"}, {"y": 6.13, "name": "2019-03-01"}, {"y": 6.11, "name": "2019-04-01"}, {"y": 6.51, "name": "2019-05-01"}, {"y": 6.26, "name": "2019-06-01"}, {"y": 6.4, "name": "2019-07-01"}, {"y": 5.7, "name": "2019-08-01"}, {"y": 6.23, "name": "2019-09-01"}, {"y": 6.35, "name": "2019-10-01"}, {"y": 6.66, "name": "2019-11-01"}, {"y": 6.59, "name": "2019-12-01"}, {"y": 6.56, "name": "2020-01-01"}, {"y": 6.27, "name": "2020-02-01"}, {"y": 7.12, "name": "2020-03-01"}, {"y": 6.68, "name": "2020-04-01"}, {"y": 7.28, "name": "2020-05-01"}, {"y": 7.62, "name": "2020-06-01"}, {"y": 7.3, "name": "2020-07-01"}, {"y": 8.43, "name": "2020-08-01"}, {"y": 7.63, "name": "2020-09-01"}, {"y": 7.59, "name": "2020-10-01"}, {"y": 6.39, "name": "2020-11-01"}, {"y": 6.42, "name": "2020-12-01"}, {"y": 7.26, "name": "2021-01-01"}, {"y": 6.75, "name": "2021-02-01"}, {"y": 7.71, "name": "2021-03-01"}, {"y": 6.6, "name": "2021-04-01"}, {"y": 6.66, "name": "2021-05-01"}, {"y": 6.14, "name": "2021-06-01"}, {"y": 6.27, "name": "2021-07-01"}, {"y": 5.98, "name": "2021-08-01"}, {"y": 6.24, "name": "2021-09-01"}, {"y": 6.37, "name": "2021-10-01"}, {"y": 6.62, "name": "2021-11-01"}, {"y": 5.96, "name": "2021-12-01"}, {"y": 6.81, "name": "2022-01-01"}, {"y": 6.68, "name": "2022-02-01"}, {"y": 6.74, "name": "2022-03-01"}, {"y": 6.56, "name": "2022-04-01"}, {"y": 6.41, "name": "2022-05-01"}, {"y": 7.51, "name": "2022-06-01"}, {"y": 7.27, "name": "2022-07-01"}, {"y": 7.33, "name": "2022-08-01"}, {"y": 6.78, "name": "2022-09-01"}, {"y": 7.6, "name": "2022-10-01"}, {"y": 6.95, "name": "2022-11-01"}, {"y": 7.3, "name": "2022-12-01"}, {"y": 7.53, "name": "2023-01-01"}, {"y": 7.02, "name": "2023-02-01"}, {"y": 14.06, "name": "2023-03-01"}, {"y": 7.53, "name": "2023-04-01"}, {"y": 8.27, "name": "2023-05-01"}, {"y": 7.7, "name": "2023-06-01"}, {"y": 6.94, "name": "2023-07-01"}, {"y": 8.53, "name": "2023-08-01"}, {"y": 7.97, "name": "2023-09-01"}, {"y": 8.7, "name": "2023-10-01"}, {"y": 8.39, "name": "2023-11-01"}, {"y": 8.11, "name": "2023-12-01"}, {"y": 7.94, "name": "2024-01-01"}, {"y": 7.61, "name": "2024-02-01"}, {"y": 7.82, "name": "2024-03-01"}, {"y": 8.26, "name": "2024-04-01"}, {"y": 8.32, "name": "2024-05-01"}, {"y": 8.86, "name": "2024-06-01"}, {"y": 8.13, "name": "2024-07-01"}, {"y": 8.65, "name": "2024-08-01"}, {"y": 8.26, "name": "2024-09-01"}, {"y": 11.18, "name": "2024-10-01"}, {"y": 9.16, "name": "2024-11-01"}, {"y": 8.61, "name": "2024-12-01"}, {"y": 8.68, "name": "2025-01-01"}, {"y": 9.76, "name": "2025-02-01"}, {"y": 9.87, "name": "2025-03-01"}, {"y": 9.05, "name": "2025-04-01"}], "name": "Dedicated Desk", "color": "#CF2101", "type": "spline"}, {"data": [{"y": 4.96, "name": "2016-01-01"}, {"y": 4.8, "name": "2016-02-01"}, {"y": 4.53, "name": "2016-03-01"}, {"y": 3.86, "name": "2016-04-01"}, {"y": 5.02, "name": "2016-05-01"}, {"y": 4.08, "name": "2016-06-01"}, {"y": 5.31, "name": "2016-07-01"}, {"y": 4.08, "name": "2016-08-01"}, {"y": 4.03, "name": "2016-09-01"}, {"y": 5.28, "name": "2016-10-01"}, {"y": 4.41, "name": "2016-11-01"}, {"y": 6.03, "name": "2016-12-01"}, {"y": 5.65, "name": "2017-01-01"}, {"y": 5.28, "name": "2017-02-01"}, {"y": 5.43, "name": "2017-03-01"}, {"y": 4.7, "name": "2017-04-01"}, {"y": 5.44, "name": "2017-05-01"}, {"y": 5.69, "name": "2017-06-01"}, {"y": 5.34, "name": "2017-07-01"}, {"y": 4.31, "name": "2017-08-01"}, {"y": 5.76, "name": "2017-09-01"}, {"y": 5.21, "name": "2017-10-01"}, {"y": 4.98, "name": "2017-11-01"}, {"y": 5.5, "name": "2017-12-01"}, {"y": 4.85, "name": "2018-01-01"}, {"y": 5.24, "name": "2018-02-01"}, {"y": 5.46, "name": "2018-03-01"}, {"y": 5.07, "name": "2018-04-01"}, {"y": 5.7, "name": "2018-05-01"}, {"y": 5.5, "name": "2018-06-01"}, {"y": 4.35, "name": "2018-07-01"}, {"y": 4.67, "name": "2018-08-01"}, {"y": 4.64, "name": "2018-09-01"}, {"y": 4.46, "name": "2018-10-01"}, {"y": 5.73, "name": "2018-11-01"}, {"y": 5.8, "name": "2018-12-01"}, {"y": 5.21, "name": "2019-01-01"}, {"y": 5.61, "name": "2019-02-01"}, {"y": 5.9, "name": "2019-03-01"}, {"y": 5.3, "name": "2019-04-01"}, {"y": 5.48, "name": "2019-05-01"}, {"y": 5.58, "name": "2019-06-01"}, {"y": 5.78, "name": "2019-07-01"}, {"y": 5.45, "name": "2019-08-01"}, {"y": 5.76, "name": "2019-09-01"}, {"y": 6.11, "name": "2019-10-01"}, {"y": 5.81, "name": "2019-11-01"}, {"y": 5.89, "name": "2019-12-01"}, {"y": 5.93, "name": "2020-01-01"}, {"y": 5.94, "name": "2020-02-01"}, {"y": 6.84, "name": "2020-03-01"}, {"y": 6.42, "name": "2020-04-01"}, {"y": 7.44, "name": "2020-05-01"}, {"y": 7.11, "name": "2020-06-01"}, {"y": 6.77, "name": "2020-07-01"}, {"y": 6.88, "name": "2020-08-01"}, {"y": 6.31, "name": "2020-09-01"}, {"y": 6.61, "name": "2020-10-01"}, {"y": 5.94, "name": "2020-11-01"}, {"y": 6.48, "name": "2020-12-01"}, {"y": 6.42, "name": "2021-01-01"}, {"y": 6.51, "name": "2021-02-01"}, {"y": 6.46, "name": "2021-03-01"}, {"y": 6.23, "name": "2021-04-01"}, {"y": 6.23, "name": "2021-05-01"}, {"y": 6.09, "name": "2021-06-01"}, {"y": 6.27, "name": "2021-07-01"}, {"y": 5.94, "name": "2021-08-01"}, {"y": 6.19, "name": "2021-09-01"}, {"y": 6.44, "name": "2021-10-01"}, {"y": 6.46, "name": "2021-11-01"}, {"y": 5.97, "name": "2021-12-01"}, {"y": 6.65, "name": "2022-01-01"}, {"y": 6.5, "name": "2022-02-01"}, {"y": 6.52, "name": "2022-03-01"}, {"y": 5.44, "name": "2022-04-01"}, {"y": 6.27, "name": "2022-05-01"}, {"y": 6.17, "name": "2022-06-01"}, {"y": 6.23, "name": "2022-07-01"}, {"y": 6.23, "name": "2022-08-01"}, {"y": 6.19, "name": "2022-09-01"}, {"y": 6.33, "name": "2022-10-01"}, {"y": 7.09, "name": "2022-11-01"}, {"y": 7.58, "name": "2022-12-01"}, {"y": 7.66, "name": "2023-01-01"}, {"y": 7.83, "name": "2023-02-01"}, {"y": 13.32, "name": "2023-03-01"}, {"y": 6.75, "name": "2023-04-01"}, {"y": 7.45, "name": "2023-05-01"}, {"y": 8.08, "name": "2023-06-01"}, {"y": 7.22, "name": "2023-07-01"}, {"y": 7.43, "name": "2023-08-01"}, {"y": 7.29, "name": "2023-09-01"}, {"y": 8.55, "name": "2023-10-01"}, {"y": 7.12, "name": "2023-11-01"}, {"y": 8.14, "name": "2023-12-01"}, {"y": 8.72, "name": "2024-01-01"}, {"y": 7.94, "name": "2024-02-01"}, {"y": 8.79, "name": "2024-03-01"}, {"y": 8.07, "name": "2024-04-01"}, {"y": 8.84, "name": "2024-05-01"}, {"y": 8.35, "name": "2024-06-01"}, {"y": 8.51, "name": "2024-07-01"}, {"y": 7.59, "name": "2024-08-01"}, {"y": 8.25, "name": "2024-09-01"}, {"y": 10.77, "name": "2024-10-01"}, {"y": 8.46, "name": "2024-11-01"}, {"y": 8.98, "name": "2024-12-01"}, {"y": 9.14, "name": "2025-01-01"}, {"y": 9.88, "name": "2025-02-01"}, {"y": 10.12, "name": "2025-03-01"}, {"y": 8.76, "name": "2025-04-01"}], "name": "Hot Desk", "color": "#7A86F0", "type": "spline"}, {"data": [{"y": 5.55, "name": "2016-01-01"}, {"y": 5.99, "name": "2016-02-01"}, {"y": 5.63, "name": "2016-03-01"}, {"y": 5.75, "name": "2016-04-01"}, {"y": 4.72, "name": "2016-05-01"}, {"y": 5.45, "name": "2016-06-01"}, {"y": 5.72, "name": "2016-07-01"}, {"y": 5.75, "name": "2016-08-01"}, {"y": 5.17, "name": "2016-09-01"}, {"y": 5.96, "name": "2016-10-01"}, {"y": 5.77, "name": "2016-11-01"}, {"y": 6.35, "name": "2016-12-01"}, {"y": 5.95, "name": "2017-01-01"}, {"y": 6.49, "name": "2017-02-01"}, {"y": 7.72, "name": "2017-03-01"}, {"y": 6.8, "name": "2017-04-01"}, {"y": 6.37, "name": "2017-05-01"}, {"y": 6.1, "name": "2017-06-01"}, {"y": 6.33, "name": "2017-07-01"}, {"y": 6.63, "name": "2017-08-01"}, {"y": 7.26, "name": "2017-09-01"}, {"y": 7.05, "name": "2017-10-01"}, {"y": 6.48, "name": "2017-11-01"}, {"y": 7.68, "name": "2017-12-01"}, {"y": 6.48, "name": "2018-01-01"}, {"y": 7.32, "name": "2018-02-01"}, {"y": 7.1, "name": "2018-03-01"}, {"y": 6.96, "name": "2018-04-01"}, {"y": 6.7, "name": "2018-05-01"}, {"y": 7.18, "name": "2018-06-01"}, {"y": 7.55, "name": "2018-07-01"}, {"y": 7.46, "name": "2018-08-01"}, {"y": 6.71, "name": "2018-09-01"}, {"y": 6.85, "name": "2018-10-01"}, {"y": 7.32, "name": "2018-11-01"}, {"y": 6.96, "name": "2018-12-01"}, {"y": 7.62, "name": "2019-01-01"}, {"y": 7.78, "name": "2019-02-01"}, {"y": 7.88, "name": "2019-03-01"}, {"y": 7.38, "name": "2019-04-01"}, {"y": 8.64, "name": "2019-05-01"}, {"y": 7.4, "name": "2019-06-01"}, {"y": 7.19, "name": "2019-07-01"}, {"y": 6.88, "name": "2019-08-01"}, {"y": 7.27, "name": "2019-09-01"}, {"y": 8.04, "name": "2019-10-01"}, {"y": 7.91, "name": "2019-11-01"}, {"y": 7.73, "name": "2019-12-01"}, {"y": 8.39, "name": "2020-01-01"}, {"y": 8.35, "name": "2020-02-01"}, {"y": 8.32, "name": "2020-03-01"}, {"y": 8.03, "name": "2020-04-01"}, {"y": 8.42, "name": "2020-05-01"}, {"y": 9.01, "name": "2020-06-01"}, {"y": 8.79, "name": "2020-07-01"}, {"y": 9.35, "name": "2020-08-01"}, {"y": 9.84, "name": "2020-09-01"}, {"y": 8.81, "name": "2020-10-01"}, {"y": 8.67, "name": "2020-11-01"}, {"y": 8.4, "name": "2020-12-01"}, {"y": 9.01, "name": "2021-01-01"}, {"y": 9.26, "name": "2021-02-01"}, {"y": 8.85, "name": "2021-03-01"}, {"y": 8.36, "name": "2021-04-01"}, {"y": 8.66, "name": "2021-05-01"}, {"y": 8.21, "name": "2021-06-01"}, {"y": 8.06, "name": "2021-07-01"}, {"y": 8.22, "name": "2021-08-01"}, {"y": 8.52, "name": "2021-09-01"}, {"y": 8.5, "name": "2021-10-01"}, {"y": 8.32, "name": "2021-11-01"}, {"y": 7.91, "name": "2021-12-01"}, {"y": 8.8, "name": "2022-01-01"}, {"y": 8.62, "name": "2022-02-01"}, {"y": 8.85, "name": "2022-03-01"}, {"y": 8.85, "name": "2022-04-01"}, {"y": 8.89, "name": "2022-05-01"}, {"y": 8.44, "name": "2022-06-01"}, {"y": 9.86, "name": "2022-07-01"}, {"y": 8.49, "name": "2022-08-01"}, {"y": 9.24, "name": "2022-09-01"}, {"y": 9.14, "name": "2022-10-01"}, {"y": 9.77, "name": "2022-11-01"}, {"y": 10.33, "name": "2022-12-01"}, {"y": 9.75, "name": "2023-01-01"}, {"y": 10.3, "name": "2023-02-01"}, {"y": 14.84, "name": "2023-03-01"}, {"y": 9.91, "name": "2023-04-01"}, {"y": 10.56, "name": "2023-05-01"}, {"y": 10.33, "name": "2023-06-01"}, {"y": 10.42, "name": "2023-07-01"}, {"y": 10.69, "name": "2023-08-01"}, {"y": 11.37, "name": "2023-09-01"}, {"y": 10.97, "name": "2023-10-01"}, {"y": 10.56, "name": "2023-11-01"}, {"y": 11.03, "name": "2023-12-01"}, {"y": 10.93, "name": "2024-01-01"}, {"y": 10.62, "name": "2024-02-01"}, {"y": 10.89, "name": "2024-03-01"}, {"y": 10.81, "name": "2024-04-01"}, {"y": 10.67, "name": "2024-05-01"}, {"y": 10.86, "name": "2024-06-01"}, {"y": 11.13, "name": "2024-07-01"}, {"y": 10.52, "name": "2024-08-01"}, {"y": 11.68, "name": "2024-09-01"}, {"y": 13.54, "name": "2024-10-01"}, {"y": 11.16, "name": "2024-11-01"}, {"y": 11.77, "name": "2024-12-01"}, {"y": 11.78, "name": "2025-01-01"}, {"y": 11.76, "name": "2025-02-01"}, {"y": 12.11, "name": "2025-03-01"}, {"y": 11.92, "name": "2025-04-01"}], "name": "Office", "color": "#0E735A", "type": "spline"}, {"data": [{"y": 5.94, "name": "2016-01-01"}, {"y": 5.65, "name": "2016-02-01"}, {"y": 5.97, "name": "2016-03-01"}, {"y": 5.95, "name": "2016-04-01"}, {"y": 5.43, "name": "2016-05-01"}, {"y": 4.95, "name": "2016-06-01"}, {"y": 5.54, "name": "2016-07-01"}, {"y": 6.28, "name": "2016-08-01"}, {"y": 5.56, "name": "2016-09-01"}, {"y": 6.15, "name": "2016-10-01"}, {"y": 5.56, "name": "2016-11-01"}, {"y": 6.02, "name": "2016-12-01"}, {"y": 6.76, "name": "2017-01-01"}, {"y": 6.48, "name": "2017-02-01"}, {"y": 6.71, "name": "2017-03-01"}, {"y": 6.16, "name": "2017-04-01"}, {"y": 5.89, "name": "2017-05-01"}, {"y": 5.98, "name": "2017-06-01"}, {"y": 6.03, "name": "2017-07-01"}, {"y": 5.66, "name": "2017-08-01"}, {"y": 6.88, "name": "2017-09-01"}, {"y": 6.75, "name": "2017-10-01"}, {"y": 6.24, "name": "2017-11-01"}, {"y": 6.32, "name": "2017-12-01"}, {"y": 6.63, "name": "2018-01-01"}, {"y": 6.27, "name": "2018-02-01"}, {"y": 6.9, "name": "2018-03-01"}, {"y": 6.0, "name": "2018-04-01"}, {"y": 6.25, "name": "2018-05-01"}, {"y": 5.79, "name": "2018-06-01"}, {"y": 6.23, "name": "2018-07-01"}, {"y": 6.1, "name": "2018-08-01"}, {"y": 6.01, "name": "2018-09-01"}, {"y": 6.89, "name": "2018-10-01"}, {"y": 6.04, "name": "2018-11-01"}, {"y": 7.0, "name": "2018-12-01"}, {"y": 7.22, "name": "2019-01-01"}, {"y": 6.98, "name": "2019-02-01"}, {"y": 7.57, "name": "2019-03-01"}, {"y": 7.15, "name": "2019-04-01"}, {"y": 7.27, "name": "2019-05-01"}, {"y": 6.98, "name": "2019-06-01"}, {"y": 7.11, "name": "2019-07-01"}, {"y": 6.59, "name": "2019-08-01"}, {"y": 7.16, "name": "2019-09-01"}, {"y": 7.12, "name": "2019-10-01"}, {"y": 6.79, "name": "2019-11-01"}, {"y": 7.22, "name": "2019-12-01"}, {"y": 8.15, "name": "2020-01-01"}, {"y": 7.38, "name": "2020-02-01"}, {"y": 8.22, "name": "2020-03-01"}, {"y": 8.0, "name": "2020-04-01"}, {"y": 8.57, "name": "2020-05-01"}, {"y": 9.22, "name": "2020-06-01"}, {"y": 9.27, "name": "2020-07-01"}, {"y": 8.45, "name": "2020-08-01"}, {"y": 7.96, "name": "2020-09-01"}, {"y": 8.08, "name": "2020-10-01"}, {"y": 7.54, "name": "2020-11-01"}, {"y": 7.81, "name": "2020-12-01"}, {"y": 8.18, "name": "2021-01-01"}, {"y": 7.99, "name": "2021-02-01"}, {"y": 8.01, "name": "2021-03-01"}, {"y": 8.37, "name": "2021-04-01"}, {"y": 7.55, "name": "2021-05-01"}, {"y": 7.97, "name": "2021-06-01"}, {"y": 7.7, "name": "2021-07-01"}, {"y": 7.96, "name": "2021-08-01"}, {"y": 8.0, "name": "2021-09-01"}, {"y": 7.77, "name": "2021-10-01"}, {"y": 7.38, "name": "2021-11-01"}, {"y": 7.71, "name": "2021-12-01"}, {"y": 8.9, "name": "2022-01-01"}, {"y": 8.28, "name": "2022-02-01"}, {"y": 8.31, "name": "2022-03-01"}, {"y": 7.83, "name": "2022-04-01"}, {"y": 8.2, "name": "2022-05-01"}, {"y": 8.34, "name": "2022-06-01"}, {"y": 7.99, "name": "2022-07-01"}, {"y": 8.39, "name": "2022-08-01"}, {"y": 8.2, "name": "2022-09-01"}, {"y": 8.74, "name": "2022-10-01"}, {"y": 8.27, "name": "2022-11-01"}, {"y": 9.46, "name": "2022-12-01"}, {"y": 9.26, "name": "2023-01-01"}, {"y": 9.19, "name": "2023-02-01"}, {"y": 15.25, "name": "2023-03-01"}, {"y": 9.27, "name": "2023-04-01"}, {"y": 9.65, "name": "2023-05-01"}, {"y": 9.7, "name": "2023-06-01"}, {"y": 9.51, "name": "2023-07-01"}, {"y": 8.97, "name": "2023-08-01"}, {"y": 9.83, "name": "2023-09-01"}, {"y": 11.1, "name": "2023-10-01"}, {"y": 9.72, "name": "2023-11-01"}, {"y": 9.74, "name": "2023-12-01"}, {"y": 10.48, "name": "2024-01-01"}, {"y": 11.11, "name": "2024-02-01"}, {"y": 10.27, "name": "2024-03-01"}, {"y": 10.1, "name": "2024-04-01"}, {"y": 9.59, "name": "2024-05-01"}, {"y": 9.44, "name": "2024-06-01"}, {"y": 9.69, "name": "2024-07-01"}, {"y": 9.66, "name": "2024-08-01"}, {"y": 10.7, "name": "2024-09-01"}, {"y": 13.5, "name": "2024-10-01"}, {"y": 10.11, "name": "2024-11-01"}, {"y": 10.61, "name": "2024-12-01"}, {"y": 10.84, "name": "2025-01-01"}, {"y": 10.94, "name": "2025-02-01"}, {"y": 11.58, "name": "2025-03-01"}, {"y": 11.48, "name": "2025-04-01"}], "name": "Others", "color": "#8A2BC4", "type": "spline"}, {"data": [{"y": 5.72, "name": "2016-01-01"}, {"y": 3.7, "name": "2016-02-01"}, {"y": 3.03, "name": "2016-03-01"}, {"y": 3.43, "name": "2016-04-01"}, {"y": 3.11, "name": "2016-05-01"}, {"y": 3.47, "name": "2016-06-01"}, {"y": 5.08, "name": "2016-07-01"}, {"y": 5.33, "name": "2016-08-01"}, {"y": 4.83, "name": "2016-09-01"}, {"y": 4.47, "name": "2016-10-01"}, {"y": 4.66, "name": "2016-11-01"}, {"y": 3.78, "name": "2016-12-01"}, {"y": 4.14, "name": "2017-01-01"}, {"y": 4.04, "name": "2017-02-01"}, {"y": 3.84, "name": "2017-03-01"}, {"y": 5.17, "name": "2017-04-01"}, {"y": 3.39, "name": "2017-05-01"}, {"y": 4.07, "name": "2017-06-01"}, {"y": 3.82, "name": "2017-07-01"}, {"y": 3.68, "name": "2017-08-01"}, {"y": 4.28, "name": "2017-09-01"}, {"y": 4.32, "name": "2017-10-01"}, {"y": 4.58, "name": "2017-11-01"}, {"y": 3.84, "name": "2017-12-01"}, {"y": 4.68, "name": "2018-01-01"}, {"y": 4.2, "name": "2018-02-01"}, {"y": 7.03, "name": "2018-03-01"}, {"y": 4.27, "name": "2018-04-01"}, {"y": 4.84, "name": "2018-05-01"}, {"y": 4.6, "name": "2018-06-01"}, {"y": 5.73, "name": "2018-07-01"}, {"y": 4.77, "name": "2018-08-01"}, {"y": 5.27, "name": "2018-09-01"}, {"y": 4.48, "name": "2018-10-01"}, {"y": 4.96, "name": "2018-11-01"}, {"y": 7.05, "name": "2018-12-01"}, {"y": 5.69, "name": "2019-01-01"}, {"y": 5.89, "name": "2019-02-01"}, {"y": 5.56, "name": "2019-03-01"}, {"y": 5.4, "name": "2019-04-01"}, {"y": 6.49, "name": "2019-05-01"}, {"y": 4.7, "name": "2019-06-01"}, {"y": 5.39, "name": "2019-07-01"}, {"y": 4.77, "name": "2019-08-01"}, {"y": 6.14, "name": "2019-09-01"}, {"y": 5.39, "name": "2019-10-01"}, {"y": 4.34, "name": "2019-11-01"}, {"y": 6.41, "name": "2019-12-01"}, {"y": 6.13, "name": "2020-01-01"}, {"y": 5.36, "name": "2020-02-01"}, {"y": 7.19, "name": "2020-03-01"}, {"y": 8.0, "name": "2020-04-01"}, {"y": 7.34, "name": "2020-05-01"}, {"y": 7.37, "name": "2020-06-01"}, {"y": 8.05, "name": "2020-07-01"}, {"y": 7.16, "name": "2020-08-01"}, {"y": 6.77, "name": "2020-09-01"}, {"y": 6.89, "name": "2020-10-01"}, {"y": 5.65, "name": "2020-11-01"}, {"y": 6.35, "name": "2020-12-01"}, {"y": 6.49, "name": "2021-01-01"}, {"y": 8.21, "name": "2021-02-01"}, {"y": 9.42, "name": "2021-03-01"}, {"y": 6.16, "name": "2021-04-01"}, {"y": 7.15, "name": "2021-05-01"}, {"y": 5.39, "name": "2021-06-01"}, {"y": 6.49, "name": "2021-07-01"}, {"y": 5.51, "name": "2021-08-01"}, {"y": 5.22, "name": "2021-09-01"}, {"y": 5.45, "name": "2021-10-01"}, {"y": 4.63, "name": "2021-11-01"}, {"y": 6.39, "name": "2021-12-01"}, {"y": 8.97, "name": "2022-01-01"}, {"y": 6.95, "name": "2022-02-01"}, {"y": 6.78, "name": "2022-03-01"}, {"y": 7.81, "name": "2022-04-01"}, {"y": 9.28, "name": "2022-05-01"}, {"y": 6.14, "name": "2022-06-01"}, {"y": 6.8, "name": "2022-07-01"}, {"y": 6.62, "name": "2022-08-01"}, {"y": 7.48, "name": "2022-09-01"}, {"y": 7.58, "name": "2022-10-01"}, {"y": 7.92, "name": "2022-11-01"}, {"y": 6.42, "name": "2022-12-01"}, {"y": 7.19, "name": "2023-01-01"}, {"y": 7.42, "name": "2023-02-01"}, {"y": 13.88, "name": "2023-03-01"}, {"y": 6.92, "name": "2023-04-01"}, {"y": 7.42, "name": "2023-05-01"}, {"y": 7.4, "name": "2023-06-01"}, {"y": 6.42, "name": "2023-07-01"}, {"y": 5.58, "name": "2023-08-01"}, {"y": 6.04, "name": "2023-09-01"}, {"y": 8.25, "name": "2023-10-01"}, {"y": 6.21, "name": "2023-11-01"}, {"y": 8.13, "name": "2023-12-01"}, {"y": 7.31, "name": "2024-01-01"}, {"y": 8.15, "name": "2024-02-01"}, {"y": 7.14, "name": "2024-03-01"}, {"y": 6.91, "name": "2024-04-01"}, {"y": 9.88, "name": "2024-05-01"}, {"y": 7.72, "name": "2024-06-01"}, {"y": 8.1, "name": "2024-07-01"}, {"y": 7.47, "name": "2024-08-01"}, {"y": 8.39, "name": "2024-09-01"}, {"y": 10.63, "name": "2024-10-01"}, {"y": 8.77, "name": "2024-11-01"}, {"y": 6.64, "name": "2024-12-01"}, {"y": 10.33, "name": "2025-01-01"}, {"y": 8.76, "name": "2025-02-01"}, {"y": 10.24, "name": "2025-03-01"}, {"y": 10.77, "name": "2025-04-01"}], "name": "Part-time", "color": "#151E6D", "type": "spline"}, {"data": [{"y": 6.3, "name": "2016-01-01"}, {"y": 4.45, "name": "2016-02-01"}, {"y": 3.04, "name": "2016-03-01"}, {"y": 3.95, "name": "2016-04-01"}, {"y": 4.95, "name": "2016-05-01"}, {"y": 7.02, "name": "2016-06-01"}, {"y": 5.38, "name": "2016-07-01"}, {"y": 5.63, "name": "2016-08-01"}, {"y": 7.33, "name": "2016-09-01"}, {"y": 6.94, "name": "2016-10-01"}, {"y": 5.85, "name": "2016-11-01"}, {"y": 9.0, "name": "2016-12-01"}, {"y": 8.41, "name": "2017-01-01"}, {"y": 7.71, "name": "2017-02-01"}, {"y": 7.17, "name": "2017-03-01"}, {"y": 6.28, "name": "2017-04-01"}, {"y": 6.35, "name": "2017-05-01"}, {"y": 9.05, "name": "2017-06-01"}, {"y": 6.65, "name": "2017-07-01"}, {"y": 5.78, "name": "2017-08-01"}, {"y": 7.22, "name": "2017-09-01"}, {"y": 6.91, "name": "2017-10-01"}, {"y": 8.55, "name": "2017-11-01"}, {"y": 6.85, "name": "2017-12-01"}, {"y": 7.04, "name": "2018-01-01"}, {"y": 8.6, "name": "2018-02-01"}, {"y": 8.26, "name": "2018-03-01"}, {"y": 7.32, "name": "2018-04-01"}, {"y": 8.03, "name": "2018-05-01"}, {"y": 7.88, "name": "2018-06-01"}, {"y": 7.21, "name": "2018-07-01"}, {"y": 7.64, "name": "2018-08-01"}, {"y": 7.89, "name": "2018-09-01"}, {"y": 6.86, "name": "2018-10-01"}, {"y": 6.89, "name": "2018-11-01"}, {"y": 6.86, "name": "2018-12-01"}, {"y": 9.39, "name": "2019-01-01"}, {"y": 8.07, "name": "2019-02-01"}, {"y": 7.52, "name": "2019-03-01"}, {"y": 8.77, "name": "2019-04-01"}, {"y": 8.57, "name": "2019-05-01"}, {"y": 9.59, "name": "2019-06-01"}, {"y": 7.7, "name": "2019-07-01"}, {"y": 9.3, "name": "2019-08-01"}, {"y": 9.15, "name": "2019-09-01"}, {"y": 9.09, "name": "2019-10-01"}, {"y": 10.74, "name": "2019-11-01"}, {"y": 9.6, "name": "2019-12-01"}, {"y": 9.14, "name": "2020-01-01"}, {"y": 8.55, "name": "2020-02-01"}, {"y": 8.98, "name": "2020-03-01"}, {"y": 9.1, "name": "2020-04-01"}, {"y": 9.21, "name": "2020-05-01"}, {"y": 9.15, "name": "2020-06-01"}, {"y": 9.87, "name": "2020-07-01"}, {"y": 8.21, "name": "2020-08-01"}, {"y": 7.96, "name": "2020-09-01"}, {"y": 9.63, "name": "2020-10-01"}, {"y": 8.87, "name": "2020-11-01"}, {"y": 9.35, "name": "2020-12-01"}, {"y": 8.58, "name": "2021-01-01"}, {"y": 9.85, "name": "2021-02-01"}, {"y": 8.72, "name": "2021-03-01"}, {"y": 8.93, "name": "2021-04-01"}, {"y": 9.79, "name": "2021-05-01"}, {"y": 9.25, "name": "2021-06-01"}, {"y": 8.81, "name": "2021-07-01"}, {"y": 8.21, "name": "2021-08-01"}, {"y": 9.26, "name": "2021-09-01"}, {"y": 9.64, "name": "2021-10-01"}, {"y": 9.48, "name": "2021-11-01"}, {"y": 10.58, "name": "2021-12-01"}, {"y": 11.24, "name": "2022-01-01"}, {"y": 10.73, "name": "2022-02-01"}, {"y": 11.35, "name": "2022-03-01"}, {"y": 11.68, "name": "2022-04-01"}, {"y": 9.44, "name": "2022-05-01"}, {"y": 10.96, "name": "2022-06-01"}, {"y": 10.71, "name": "2022-07-01"}, {"y": 11.81, "name": "2022-08-01"}, {"y": 10.92, "name": "2022-09-01"}, {"y": 11.08, "name": "2022-10-01"}, {"y": 12.35, "name": "2022-11-01"}, {"y": 13.52, "name": "2022-12-01"}, {"y": 12.35, "name": "2023-01-01"}, {"y": 13.99, "name": "2023-02-01"}, {"y": 17.38, "name": "2023-03-01"}, {"y": 12.66, "name": "2023-04-01"}, {"y": 11.06, "name": "2023-05-01"}, {"y": 11.43, "name": "2023-06-01"}, {"y": 10.81, "name": "2023-07-01"}, {"y": 12.12, "name": "2023-08-01"}, {"y": 12.28, "name": "2023-09-01"}, {"y": 11.99, "name": "2023-10-01"}, {"y": 12.76, "name": "2023-11-01"}, {"y": 12.41, "name": "2023-12-01"}, {"y": 12.47, "name": "2024-01-01"}, {"y": 13.03, "name": "2024-02-01"}, {"y": 12.76, "name": "2024-03-01"}, {"y": 14.33, "name": "2024-04-01"}, {"y": 12.37, "name": "2024-05-01"}, {"y": 13.07, "name": "2024-06-01"}, {"y": 13.41, "name": "2024-07-01"}, {"y": 12.97, "name": "2024-08-01"}, {"y": 14.31, "name": "2024-09-01"}, {"y": 16.21, "name": "2024-10-01"}, {"y": 13.4, "name": "2024-11-01"}, {"y": 13.33, "name": "2024-12-01"}, {"y": 13.03, "name": "2025-01-01"}, {"y": 14.73, "name": "2025-02-01"}, {"y": 14.23, "name": "2025-03-01"}, {"y": 14.63, "name": "2025-04-01"}], "name": "Virtual", "color": "#FFD600", "type": "spline"}], "title": {"text": "Tenure Mean Evolution By Type Of Membership"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 2025.4, "min": 2016, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 20, "min": 0, "tickInterval": 2, "title": {"text": " "}}}'
+                                            console.log({
+                                                code
+                                            })
+                                            renderChart('chart1' + section1index + chartIndex, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="topic-section" id="section2">
+<h2 class="section-heading">Section 2</h2>
+<h3 class="heading3">How does the type of plan affect the permanence of members? </h3><p>The analysis of member tenure patterns reveals that age plays a critical role in the retention of members across various workspace arrangements. As members age, their average tenure generally increases, particularly within Dedicated Desk and Hot Desk types. Office memberships, especially among individuals aged 25-44, demonstrate significant long-term commitment, while older members show extraordinary loyalty to Virtual memberships, emphasizing a broader trend of enhanced retention with age.</p><p>Moreover, the comparison between member and company tenures indicates that members often enjoy longer tenures than organizations in structured environments like Offices and Virtual spaces. This juxtaposition highlights how different workspace types contribute to member satisfaction and loyalty, with more personalized and community-driven environments fostering deeper connections and extended engagements.</p>
+
+
+
+<div class="card card-big keyfindings">
+<div class="row">
+<div class="col-md-6">
+<div class="keyfindings-texts">
+<h4 class="heading3">Key findings</h4>
+<div class="keyfinding-slides-wrap">
+<div class="keyfinding-slides">
+<div class="keyfinding-slide">
+
+
+<p class="weight-medium">Age Matters in Member Retention</p><p class="text-xs">Member retention significantly increases with age, peaking at an average of nearly 16 years for Virtual memberships among those aged 55-100.</p></div>
+<div class="keyfinding-slide">
+<p class="weight-medium">We prefer members who belong to teams for the rates...</p>
+<p class="text-xs">Team members offer between 10% and 16% more tenure on Part-time, Dedicated Desk and Hot Desk rates.</p>
+</div>
+<div class="keyfinding-slide">
+<p class="weight-medium">We prefer individual users to...</p>
+<p class="text-xs">In the Virtual and Office plans, non-team members are those who show a slightly higher permanence.</p>
+</div>
+</div>
+<div class="keyfinding-slides-controls">
+<div class="keyfinding-slides-arrows"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="img-wrap">
+<img alt="keyfindings" sizes="100%" src="images/keyfinding2.png" srcset="images/keyfinding2.png 1ximages/keyfinding2@2x.png 2x"/>
+</div>
+</div>
+</div>
+</div>
+<h3 class="heading4">How does the age of members affect their tenure?</h3><p>The analysis of member tenure patterns highlights that age significantly influences retention across different membership types. For Dedicated Desk and Hot Desk arrangements, mean tenures improve as members grow older, with notable peaks around the 45-54 age group. In contrast, Part-time memberships exhibit lower retention rates among younger members, showing minimal increase after age 54, indicating a potential shift to more committed membership types or departure as members age.</p><p>Office memberships showcase the highest average tenures, particularly for individuals in the 25-44 age range who display substantial long-term commitment. Conversely, Virtual memberships reveal extraordinary loyalty among older demographics, peaking at nearly 16 years for the 55-100 age group. Overall, while younger members favor Office and Dedicated Desk types, older members tend to gravitate towards flexible options, reflecting a broader trend of increasing retention alongside age.</p>
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab10">Mean Tenure By Age And Type Of Membership</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab10">
+<figure class="chart">
+<div id="chart10">
+<script>
+                                            var chartIndex = 0
+                                            var section1index = 1
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "right", "itemDistance": 30, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 30}, "plotOptions": {"column": {"borderRadius": 2, "groupPadding": 0.15, "pointPadding": 0.2, "type": "column"}}, "series": [{"data": [{"y": 5.69, "name": "17-24"}, {"y": 7.12, "name": "25-34"}, {"y": 8.15, "name": "35-44"}, {"y": 9.09, "name": "45-54"}, {"y": 7.8, "name": "55-100"}], "name": "Dedicated Desk", "color": "#CF2101", "type": "column"}, {"data": [{"y": 7.12, "name": "17-24"}, {"y": 7.2, "name": "25-34"}, {"y": 7.95, "name": "35-44"}, {"y": 9.19, "name": "45-54"}, {"y": 9.99, "name": "55-100"}], "name": "Hot Desk", "color": "#7A86F0", "type": "column"}, {"data": [{"y": 7.5, "name": "17-24"}, {"y": 11.16, "name": "25-34"}, {"y": 11.47, "name": "35-44"}, {"y": 11.7, "name": "45-54"}, {"y": 11.52, "name": "55-100"}], "name": "Office", "color": "#FF5F2F", "type": "column"}, {"data": [{"y": 4.23, "name": "17-24"}, {"y": 5.72, "name": "25-34"}, {"y": 7.23, "name": "35-44"}, {"y": 7.82, "name": "45-54"}, {"y": 6.99, "name": "55-100"}], "name": "Part-time", "color": "#151E6D", "type": "column"}, {"data": [{"y": 7.66, "name": "17-24"}, {"y": 10.56, "name": "25-34"}, {"y": 11.59, "name": "35-44"}, {"y": 13.36, "name": "45-54"}, {"y": 15.7, "name": "55-100"}], "name": "Virtual", "color": "#FFD600", "type": "column"}], "title": {"text": "Mean Tenure by Age and Type of Membership"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["17-24", "25-34", "35-44", "45-54", "55-100"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 20, "min": 0, "tickInterval": 2, "title": {"text": " "}}}'
+                                            renderChart('chart' + section1index + chartIndex, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<h3 class="heading4">How does tenure compare between freelancers and teams?</h3><p>The analysis of tenure patterns indicates that members generally have a longer average tenure than companies across various workspaces. For instance, in the Office setting, members average 12.17 years compared to 9.61 years for companies, showcasing a significant difference of around 27%. Similarly, in the Dedicated Desk category, members show slightly better retention with 8.07 years versus 8.54 years for companies. However, in more flexible arrangements such as Hot Desk and Part-time spaces, company tenures exceed member tenures, highlighting a shift in commitment levels based on workspace type.</p><p>The overall trends demonstrate that the Office and Virtual environments are particularly conducive to prolonged engagements, with virtual tenure peaking at over 13 years for both categories. This suggests that structured and community-oriented spaces appear to foster greater loyalty among members, while more transient arrangements may not encourage the same level of commitment. The variance in average tenures across different coworking types underscores the influence of workspace contexts on member satisfaction and retention.</p>
+
+
+
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab110">Tenure Mean By Coworker Type</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab111">Mean Tenure By Coworker Type And Type Of Membership</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab110">
+<figure class="chart">
+<div id="chart110">
+<script>
+                                            var chartIndex = 0
+                                            var section1index = 1
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 80, "type": "column"}}, "series": [{"data": [{"y": 10.1, "color": "#FF4F2F", "name": "Company"}, {"y": 10.31, "color": "#FFD600", "name": "Member"}], "name": "Tenure Mean By Coworker Type", "type": "column"}], "title": {"text": "Tenure Mean By Coworker Type"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Company", "Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 12, "min": 0, "tickInterval": 2, "title": {"text": " "}}}'
+                                            console.log({
+                                                code
+                                            })
+                                            renderChart('chart1' + section1index + chartIndex, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab111">
+<figure class="chart">
+<div id="chart111">
+<script>
+                                            var chartIndex = 1
+                                            var section1index = 1
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "right", "itemDistance": 30, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 30}, "plotOptions": {"column": {"borderRadius": 2, "groupPadding": 0.15, "pointPadding": 5, "pointWidth": 30, "type": "column"}}, "series": [{"data": [{"y": 8.54, "name": "Company"}, {"y": 8.07, "name": "Member"}], "name": "Dedicated Desk", "color": "#CF2101", "type": "column"}, {"data": [{"y": 7.04, "name": "Company"}, {"y": 6.7, "name": "Member"}], "name": "Hot Desk", "color": "#7A86F0", "type": "column"}, {"data": [{"y": 9.61, "name": "Company"}, {"y": 12.17, "name": "Member"}], "name": "Office", "color": "#FF5F2F", "type": "column"}, {"data": [{"y": 7.82, "name": "Company"}, {"y": 7.02, "name": "Member"}], "name": "Part-time", "color": "#151E6D", "type": "column"}, {"data": [{"y": 13.15, "name": "Company"}, {"y": 13.5, "name": "Member"}], "name": "Virtual", "color": "#FFD600", "type": "column"}], "title": {"text": "Mean Tenure By Coworker Type And Type Of Membership"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Company", "Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 15, "min": 0, "tickInterval": 2, "title": {"text": " "}}}'
+                                            console.log({
+                                                code
+                                            })
+                                            renderChart('chart1' + section1index + chartIndex, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="topic-section" id="section3">
+<h2 class="section-heading">Section 3</h2>
+<h3 class="heading3">New Charts </h3><p>The analysis of member tenure patterns in the flexible workspace industry reveals critical trends that relate directly to coworking space size and membership type. Specifically, as coworking spaces grow larger, there is a noticeable decline in average tenures, particularly for more flexible arrangements like hot desks. This trend highlights the challenge of maintaining member commitment in larger environments, where personalization and community may become less palpable.</p><p>Conversely, smaller coworking spaces, accommodating fewer than 40 members, exhibit significantly longer tenures and better retention rates across all membership categories. This suggests that the intimate community experience in smaller setups fosters greater loyalty among members. As the detailed analyses unfold, we will explore these tenure dynamics and the implications they hold for coworking operators in crafting strategies that enhance member commitment.</p>
+
+<h3 class="heading4">Mean tenure by membership type</h3><p>The analysis of mean tenure by membership type across varying coworking sizes reveals a declining trend as the member base increases. In spaces with 0-40 members, virtual membership boasts the longest average tenure at approximately 16 months, followed by office memberships at around 13.5 months. In larger environments (41-100 members), all categories experience a decrease, especially for flexible options like hot desks, which drop to about 8.65 months. By the largest cohort (+250 members), hot desk tenures plummet to approximately 5.65 months, highlighting the challenge of maintaining commitment in crowded spaces.</p><p>Overall, as coworking sizes expand, there's a notable decline in mean tenure, especially for flexible memberships. While virtual memberships retain substantial loyalty even in larger setups, the dedicated desk and hot desk categories suffer significant reductions, with dedicated desks averaging just above 7 months in the largest spaces. This pattern suggests that coworking operators may need to enhance offerings or reconsider the balance of flexible versus more permanent arrangements to better serve different user commitment levels.</p>
+
+
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab200">Mean Tenure By Type Of Membership and Coworking Size</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab200">
+<figure class="chart">
+<div id="chart2000">
+<script>
+                                            var chartIndex = 0
+                                            var section1index = 200
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "spline"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"spline": {"lineWidth": 3, "marker": {"enabled": false}, "type": "spline"}}, "series": [{"data": [{"y": 11.0, "name": "Dedicated Desk"}, {"y": 9.54, "name": "Hot Desk"}, {"y": 13.51, "name": "Office"}, {"y": 10.08, "name": "Part-time"}, {"y": 15.94, "name": "Virtual"}], "name": "0-40 Members", "color": "#FFD600", "type": "spline"}, {"data": [{"y": 9.93, "name": "Dedicated Desk"}, {"y": 8.65, "name": "Hot Desk"}, {"y": 13.04, "name": "Office"}, {"y": 8.87, "name": "Part-time"}, {"y": 14.46, "name": "Virtual"}], "name": "41-100 Members", "color": "#7A86F0", "type": "spline"}, {"data": [{"y": 8.62, "name": "Dedicated Desk"}, {"y": 8.18, "name": "Hot Desk"}, {"y": 12.25, "name": "Office"}, {"y": 6.99, "name": "Part-time"}, {"y": 13.38, "name": "Virtual"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "spline"}, {"data": [{"y": 7.13, "name": "Dedicated Desk"}, {"y": 5.65, "name": "Hot Desk"}, {"y": 11.36, "name": "Office"}, {"y": 6.41, "name": "Part-time"}, {"y": 12.06, "name": "Virtual"}], "name": "+250 Members", "color": "#151E6D", "type": "spline"}], "title": {"text": "Tenure Mean By Type Of Membership and Coworking Size"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Part-Time", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 20, "min": 2, "tickInterval": 2, "title": {"text": " "}}}'
+                                            renderChart('chart' + section1index + chartIndex, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<h3 class="heading4">Evolution of tenure</h3><p>The analysis of member tenure in flexible workspace categories from January 2016 to April 2025 shows a marked upward trend across all segments, with the smallest coworking spaces (0-40 members) experiencing the highest mean tenure, peaking at approximately 21 months. This group has demonstrated strong retention, particularly notable between 2022 and 2023 where the average surged significantly. Meanwhile, coworking spaces with 41-100 members also demonstrated substantial growth, reaching about 19.6 months, characterized by stable progression and pronounced increases in early 2023.</p><p>Conversely, larger coworking spaces (+250 members) began with the lowest average tenure of around 3.3 months but have shown consistent improvement, nearly reaching 16 months by 2025. However, this group still trails behind smaller spaces, signifying varied retention behaviors based on coworking space size. Overall, the data reflects a significant commitment increase among members in flexible work environments, with encouraging retention trends across all categories.</p>
+
+
+
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab300">Mean Tenure Evolution By Coworking Size</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab300">
+<figure class="chart">
+<div id="chart3000">
+<script>
+                                            var chartIndex = 0
+                                            var section1index = 300
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "spline"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"series": {"pointInterval": 0.083, "pointStart": 2016.01, "type": "series"}, "spline": {"lineWidth": 3, "marker": {"enabled": false}, "type": "spline"}}, "series": [{"data": [{"y": 7.79, "name": "2016-01-01"}, {"y": 7.7, "name": "2016-02-01"}, {"y": 7.91, "name": "2016-03-01"}, {"y": 8.51, "name": "2016-04-01"}, {"y": 8.15, "name": "2016-05-01"}, {"y": 7.37, "name": "2016-06-01"}, {"y": 8.56, "name": "2016-07-01"}, {"y": 7.37, "name": "2016-08-01"}, {"y": 7.23, "name": "2016-09-01"}, {"y": 8.67, "name": "2016-10-01"}, {"y": 7.7, "name": "2016-11-01"}, {"y": 9.81, "name": "2016-12-01"}, {"y": 9.34, "name": "2017-01-01"}, {"y": 8.72, "name": "2017-02-01"}, {"y": 11.01, "name": "2017-03-01"}, {"y": 8.9, "name": "2017-04-01"}, {"y": 8.03, "name": "2017-05-01"}, {"y": 9.95, "name": "2017-06-01"}, {"y": 9.09, "name": "2017-07-01"}, {"y": 8.07, "name": "2017-08-01"}, {"y": 9.84, "name": "2017-09-01"}, {"y": 10.09, "name": "2017-10-01"}, {"y": 9.15, "name": "2017-11-01"}, {"y": 8.92, "name": "2017-12-01"}, {"y": 8.31, "name": "2018-01-01"}, {"y": 9.13, "name": "2018-02-01"}, {"y": 10.85, "name": "2018-03-01"}, {"y": 9.19, "name": "2018-04-01"}, {"y": 8.61, "name": "2018-05-01"}, {"y": 9.26, "name": "2018-06-01"}, {"y": 8.69, "name": "2018-07-01"}, {"y": 9.07, "name": "2018-08-01"}, {"y": 9.45, "name": "2018-09-01"}, {"y": 8.88, "name": "2018-10-01"}, {"y": 8.85, "name": "2018-11-01"}, {"y": 9.8, "name": "2018-12-01"}, {"y": 9.98, "name": "2019-01-01"}, {"y": 9.97, "name": "2019-02-01"}, {"y": 10.09, "name": "2019-03-01"}, {"y": 10.31, "name": "2019-04-01"}, {"y": 9.28, "name": "2019-05-01"}, {"y": 9.36, "name": "2019-06-01"}, {"y": 8.71, "name": "2019-07-01"}, {"y": 8.21, "name": "2019-08-01"}, {"y": 8.95, "name": "2019-09-01"}, {"y": 9.0, "name": "2019-10-01"}, {"y": 8.75, "name": "2019-11-01"}, {"y": 9.37, "name": "2019-12-01"}, {"y": 9.33, "name": "2020-01-01"}, {"y": 9.06, "name": "2020-02-01"}, {"y": 11.14, "name": "2020-03-01"}, {"y": 11.44, "name": "2020-04-01"}, {"y": 10.73, "name": "2020-05-01"}, {"y": 10.92, "name": "2020-06-01"}, {"y": 10.59, "name": "2020-07-01"}, {"y": 10.94, "name": "2020-08-01"}, {"y": 10.31, "name": "2020-09-01"}, {"y": 10.67, "name": "2020-10-01"}, {"y": 9.82, "name": "2020-11-01"}, {"y": 11.21, "name": "2020-12-01"}, {"y": 10.35, "name": "2021-01-01"}, {"y": 10.72, "name": "2021-02-01"}, {"y": 11.27, "name": "2021-03-01"}, {"y": 10.94, "name": "2021-04-01"}, {"y": 10.31, "name": "2021-05-01"}, {"y": 10.49, "name": "2021-06-01"}, {"y": 11.35, "name": "2021-07-01"}, {"y": 11.53, "name": "2021-08-01"}, {"y": 11.53, "name": "2021-09-01"}, {"y": 11.0, "name": "2021-10-01"}, {"y": 11.51, "name": "2021-11-01"}, {"y": 11.44, "name": "2021-12-01"}, {"y": 12.83, "name": "2022-01-01"}, {"y": 11.73, "name": "2022-02-01"}, {"y": 12.07, "name": "2022-03-01"}, {"y": 12.73, "name": "2022-04-01"}, {"y": 12.36, "name": "2022-05-01"}, {"y": 12.22, "name": "2022-06-01"}, {"y": 12.67, "name": "2022-07-01"}, {"y": 13.85, "name": "2022-08-01"}, {"y": 12.07, "name": "2022-09-01"}, {"y": 12.88, "name": "2022-10-01"}, {"y": 13.54, "name": "2022-11-01"}, {"y": 15.04, "name": "2022-12-01"}, {"y": 14.43, "name": "2023-01-01"}, {"y": 14.07, "name": "2023-02-01"}, {"y": 21.22, "name": "2023-03-01"}, {"y": 13.99, "name": "2023-04-01"}, {"y": 14.63, "name": "2023-05-01"}, {"y": 14.01, "name": "2023-06-01"}, {"y": 13.93, "name": "2023-07-01"}, {"y": 14.19, "name": "2023-08-01"}, {"y": 14.31, "name": "2023-09-01"}, {"y": 17.6, "name": "2023-10-01"}, {"y": 14.79, "name": "2023-11-01"}, {"y": 15.08, "name": "2023-12-01"}, {"y": 16.67, "name": "2024-01-01"}, {"y": 16.19, "name": "2024-02-01"}, {"y": 14.73, "name": "2024-03-01"}, {"y": 15.79, "name": "2024-04-01"}, {"y": 14.28, "name": "2024-05-01"}, {"y": 14.12, "name": "2024-06-01"}, {"y": 14.91, "name": "2024-07-01"}, {"y": 14.34, "name": "2024-08-01"}, {"y": 16.72, "name": "2024-09-01"}, {"y": 21.18, "name": "2024-10-01"}, {"y": 16.09, "name": "2024-11-01"}, {"y": 16.25, "name": "2024-12-01"}, {"y": 16.43, "name": "2025-01-01"}, {"y": 16.46, "name": "2025-02-01"}, {"y": 19.24, "name": "2025-03-01"}, {"y": 18.28, "name": "2025-04-01"}], "name": "0-40 Members", "color": "#FFD600", "type": "spline"}, {"data": [{"y": 7.11, "name": "2016-01-01"}, {"y": 6.45, "name": "2016-02-01"}, {"y": 7.11, "name": "2016-03-01"}, {"y": 7.25, "name": "2016-04-01"}, {"y": 6.68, "name": "2016-05-01"}, {"y": 7.01, "name": "2016-06-01"}, {"y": 6.61, "name": "2016-07-01"}, {"y": 7.94, "name": "2016-08-01"}, {"y": 6.38, "name": "2016-09-01"}, {"y": 6.71, "name": "2016-10-01"}, {"y": 7.7, "name": "2016-11-01"}, {"y": 8.87, "name": "2016-12-01"}, {"y": 8.3, "name": "2017-01-01"}, {"y": 8.38, "name": "2017-02-01"}, {"y": 7.44, "name": "2017-03-01"}, {"y": 9.23, "name": "2017-04-01"}, {"y": 8.24, "name": "2017-05-01"}, {"y": 9.11, "name": "2017-06-01"}, {"y": 8.89, "name": "2017-07-01"}, {"y": 7.87, "name": "2017-08-01"}, {"y": 9.94, "name": "2017-09-01"}, {"y": 9.39, "name": "2017-10-01"}, {"y": 8.05, "name": "2017-11-01"}, {"y": 10.34, "name": "2017-12-01"}, {"y": 10.34, "name": "2018-01-01"}, {"y": 11.62, "name": "2018-02-01"}, {"y": 10.96, "name": "2018-03-01"}, {"y": 9.63, "name": "2018-04-01"}, {"y": 10.16, "name": "2018-05-01"}, {"y": 9.72, "name": "2018-06-01"}, {"y": 9.8, "name": "2018-07-01"}, {"y": 10.99, "name": "2018-08-01"}, {"y": 8.58, "name": "2018-09-01"}, {"y": 10.09, "name": "2018-10-01"}, {"y": 9.66, "name": "2018-11-01"}, {"y": 9.02, "name": "2018-12-01"}, {"y": 10.34, "name": "2019-01-01"}, {"y": 9.71, "name": "2019-02-01"}, {"y": 10.5, "name": "2019-03-01"}, {"y": 10.63, "name": "2019-04-01"}, {"y": 10.98, "name": "2019-05-01"}, {"y": 11.75, "name": "2019-06-01"}, {"y": 9.76, "name": "2019-07-01"}, {"y": 9.02, "name": "2019-08-01"}, {"y": 9.33, "name": "2019-09-01"}, {"y": 10.76, "name": "2019-10-01"}, {"y": 10.28, "name": "2019-11-01"}, {"y": 10.06, "name": "2019-12-01"}, {"y": 10.54, "name": "2020-01-01"}, {"y": 10.24, "name": "2020-02-01"}, {"y": 11.9, "name": "2020-03-01"}, {"y": 10.75, "name": "2020-04-01"}, {"y": 11.49, "name": "2020-05-01"}, {"y": 12.73, "name": "2020-06-01"}, {"y": 12.89, "name": "2020-07-01"}, {"y": 12.49, "name": "2020-08-01"}, {"y": 11.63, "name": "2020-09-01"}, {"y": 10.95, "name": "2020-10-01"}, {"y": 10.62, "name": "2020-11-01"}, {"y": 10.85, "name": "2020-12-01"}, {"y": 11.89, "name": "2021-01-01"}, {"y": 12.16, "name": "2021-02-01"}, {"y": 11.82, "name": "2021-03-01"}, {"y": 11.32, "name": "2021-04-01"}, {"y": 10.61, "name": "2021-05-01"}, {"y": 10.84, "name": "2021-06-01"}, {"y": 11.46, "name": "2021-07-01"}, {"y": 10.85, "name": "2021-08-01"}, {"y": 11.37, "name": "2021-09-01"}, {"y": 11.42, "name": "2021-10-01"}, {"y": 10.5, "name": "2021-11-01"}, {"y": 11.1, "name": "2021-12-01"}, {"y": 13.1, "name": "2022-01-01"}, {"y": 11.65, "name": "2022-02-01"}, {"y": 11.9, "name": "2022-03-01"}, {"y": 11.8, "name": "2022-04-01"}, {"y": 12.43, "name": "2022-05-01"}, {"y": 12.59, "name": "2022-06-01"}, {"y": 11.4, "name": "2022-07-01"}, {"y": 12.4, "name": "2022-08-01"}, {"y": 12.25, "name": "2022-09-01"}, {"y": 12.44, "name": "2022-10-01"}, {"y": 12.45, "name": "2022-11-01"}, {"y": 15.79, "name": "2022-12-01"}, {"y": 14.97, "name": "2023-01-01"}, {"y": 14.92, "name": "2023-02-01"}, {"y": 19.63, "name": "2023-03-01"}, {"y": 13.07, "name": "2023-04-01"}, {"y": 14.29, "name": "2023-05-01"}, {"y": 15.49, "name": "2023-06-01"}, {"y": 14.27, "name": "2023-07-01"}, {"y": 14.08, "name": "2023-08-01"}, {"y": 16.36, "name": "2023-09-01"}, {"y": 15.13, "name": "2023-10-01"}, {"y": 14.96, "name": "2023-11-01"}, {"y": 15.46, "name": "2023-12-01"}, {"y": 14.96, "name": "2024-01-01"}, {"y": 15.47, "name": "2024-02-01"}, {"y": 14.5, "name": "2024-03-01"}, {"y": 15.7, "name": "2024-04-01"}, {"y": 14.96, "name": "2024-05-01"}, {"y": 14.4, "name": "2024-06-01"}, {"y": 13.93, "name": "2024-07-01"}, {"y": 14.84, "name": "2024-08-01"}, {"y": 15.43, "name": "2024-09-01"}, {"y": 20.23, "name": "2024-10-01"}, {"y": 14.7, "name": "2024-11-01"}, {"y": 15.5, "name": "2024-12-01"}, {"y": 15.97, "name": "2025-01-01"}, {"y": 16.18, "name": "2025-02-01"}, {"y": 17.22, "name": "2025-03-01"}, {"y": 17.33, "name": "2025-04-01"}], "name": "41-100 Members", "color": "#7A86F0", "type": "spline"}, {"data": [{"y": 5.3, "name": "2016-01-01"}, {"y": 5.41, "name": "2016-02-01"}, {"y": 5.43, "name": "2016-03-01"}, {"y": 4.79, "name": "2016-04-01"}, {"y": 5.51, "name": "2016-05-01"}, {"y": 4.91, "name": "2016-06-01"}, {"y": 5.37, "name": "2016-07-01"}, {"y": 6.41, "name": "2016-08-01"}, {"y": 5.16, "name": "2016-09-01"}, {"y": 6.35, "name": "2016-10-01"}, {"y": 5.8, "name": "2016-11-01"}, {"y": 6.59, "name": "2016-12-01"}, {"y": 6.8, "name": "2017-01-01"}, {"y": 6.88, "name": "2017-02-01"}, {"y": 7.53, "name": "2017-03-01"}, {"y": 7.44, "name": "2017-04-01"}, {"y": 8.64, "name": "2017-05-01"}, {"y": 7.57, "name": "2017-06-01"}, {"y": 7.79, "name": "2017-07-01"}, {"y": 7.29, "name": "2017-08-01"}, {"y": 7.9, "name": "2017-09-01"}, {"y": 7.91, "name": "2017-10-01"}, {"y": 8.05, "name": "2017-11-01"}, {"y": 7.41, "name": "2017-12-01"}, {"y": 8.87, "name": "2018-01-01"}, {"y": 8.55, "name": "2018-02-01"}, {"y": 8.93, "name": "2018-03-01"}, {"y": 8.56, "name": "2018-04-01"}, {"y": 9.68, "name": "2018-05-01"}, {"y": 9.1, "name": "2018-06-01"}, {"y": 9.69, "name": "2018-07-01"}, {"y": 9.31, "name": "2018-08-01"}, {"y": 9.51, "name": "2018-09-01"}, {"y": 9.47, "name": "2018-10-01"}, {"y": 9.02, "name": "2018-11-01"}, {"y": 9.63, "name": "2018-12-01"}, {"y": 10.14, "name": "2019-01-01"}, {"y": 10.53, "name": "2019-02-01"}, {"y": 10.11, "name": "2019-03-01"}, {"y": 11.11, "name": "2019-04-01"}, {"y": 11.56, "name": "2019-05-01"}, {"y": 10.01, "name": "2019-06-01"}, {"y": 10.33, "name": "2019-07-01"}, {"y": 10.25, "name": "2019-08-01"}, {"y": 10.82, "name": "2019-09-01"}, {"y": 10.23, "name": "2019-10-01"}, {"y": 10.21, "name": "2019-11-01"}, {"y": 10.31, "name": "2019-12-01"}, {"y": 11.58, "name": "2020-01-01"}, {"y": 9.82, "name": "2020-02-01"}, {"y": 11.45, "name": "2020-03-01"}, {"y": 11.88, "name": "2020-04-01"}, {"y": 12.19, "name": "2020-05-01"}, {"y": 11.55, "name": "2020-06-01"}, {"y": 11.83, "name": "2020-07-01"}, {"y": 11.86, "name": "2020-08-01"}, {"y": 10.92, "name": "2020-09-01"}, {"y": 11.92, "name": "2020-10-01"}, {"y": 10.55, "name": "2020-11-01"}, {"y": 11.0, "name": "2020-12-01"}, {"y": 10.99, "name": "2021-01-01"}, {"y": 10.67, "name": "2021-02-01"}, {"y": 11.35, "name": "2021-03-01"}, {"y": 10.76, "name": "2021-04-01"}, {"y": 9.94, "name": "2021-05-01"}, {"y": 10.17, "name": "2021-06-01"}, {"y": 9.08, "name": "2021-07-01"}, {"y": 10.24, "name": "2021-08-01"}, {"y": 11.2, "name": "2021-09-01"}, {"y": 12.1, "name": "2021-10-01"}, {"y": 10.55, "name": "2021-11-01"}, {"y": 11.09, "name": "2021-12-01"}, {"y": 11.71, "name": "2022-01-01"}, {"y": 10.98, "name": "2022-02-01"}, {"y": 11.9, "name": "2022-03-01"}, {"y": 10.99, "name": "2022-04-01"}, {"y": 11.12, "name": "2022-05-01"}, {"y": 11.31, "name": "2022-06-01"}, {"y": 10.88, "name": "2022-07-01"}, {"y": 11.58, "name": "2022-08-01"}, {"y": 11.82, "name": "2022-09-01"}, {"y": 11.34, "name": "2022-10-01"}, {"y": 11.84, "name": "2022-11-01"}, {"y": 13.43, "name": "2022-12-01"}, {"y": 12.82, "name": "2023-01-01"}, {"y": 12.63, "name": "2023-02-01"}, {"y": 17.57, "name": "2023-03-01"}, {"y": 11.92, "name": "2023-04-01"}, {"y": 12.92, "name": "2023-05-01"}, {"y": 13.3, "name": "2023-06-01"}, {"y": 12.32, "name": "2023-07-01"}, {"y": 12.57, "name": "2023-08-01"}, {"y": 13.51, "name": "2023-09-01"}, {"y": 13.27, "name": "2023-10-01"}, {"y": 13.23, "name": "2023-11-01"}, {"y": 13.56, "name": "2023-12-01"}, {"y": 13.75, "name": "2024-01-01"}, {"y": 13.94, "name": "2024-02-01"}, {"y": 13.42, "name": "2024-03-01"}, {"y": 13.84, "name": "2024-04-01"}, {"y": 12.94, "name": "2024-05-01"}, {"y": 14.03, "name": "2024-06-01"}, {"y": 13.6, "name": "2024-07-01"}, {"y": 13.07, "name": "2024-08-01"}, {"y": 13.26, "name": "2024-09-01"}, {"y": 17.47, "name": "2024-10-01"}, {"y": 13.62, "name": "2024-11-01"}, {"y": 15.97, "name": "2024-12-01"}, {"y": 14.35, "name": "2025-01-01"}, {"y": 14.83, "name": "2025-02-01"}, {"y": 16.83, "name": "2025-03-01"}, {"y": 16.23, "name": "2025-04-01"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "spline"}, {"data": [{"y": 3.3, "name": "2016-01-01"}, {"y": 3.62, "name": "2016-02-01"}, {"y": 3.67, "name": "2016-03-01"}, {"y": 3.88, "name": "2016-04-01"}, {"y": 3.16, "name": "2016-05-01"}, {"y": 4.22, "name": "2016-06-01"}, {"y": 4.16, "name": "2016-07-01"}, {"y": 4.24, "name": "2016-08-01"}, {"y": 3.94, "name": "2016-09-01"}, {"y": 5.12, "name": "2016-10-01"}, {"y": 4.14, "name": "2016-11-01"}, {"y": 4.51, "name": "2016-12-01"}, {"y": 4.87, "name": "2017-01-01"}, {"y": 4.45, "name": "2017-02-01"}, {"y": 4.59, "name": "2017-03-01"}, {"y": 4.52, "name": "2017-04-01"}, {"y": 4.62, "name": "2017-05-01"}, {"y": 4.41, "name": "2017-06-01"}, {"y": 4.46, "name": "2017-07-01"}, {"y": 4.23, "name": "2017-08-01"}, {"y": 5.16, "name": "2017-09-01"}, {"y": 5.06, "name": "2017-10-01"}, {"y": 5.2, "name": "2017-11-01"}, {"y": 5.37, "name": "2017-12-01"}, {"y": 5.31, "name": "2018-01-01"}, {"y": 5.23, "name": "2018-02-01"}, {"y": 5.21, "name": "2018-03-01"}, {"y": 4.65, "name": "2018-04-01"}, {"y": 5.38, "name": "2018-05-01"}, {"y": 5.23, "name": "2018-06-01"}, {"y": 5.54, "name": "2018-07-01"}, {"y": 5.35, "name": "2018-08-01"}, {"y": 4.9, "name": "2018-09-01"}, {"y": 5.62, "name": "2018-10-01"}, {"y": 5.58, "name": "2018-11-01"}, {"y": 5.69, "name": "2018-12-01"}, {"y": 6.31, "name": "2019-01-01"}, {"y": 6.21, "name": "2019-02-01"}, {"y": 6.84, "name": "2019-03-01"}, {"y": 6.07, "name": "2019-04-01"}, {"y": 6.29, "name": "2019-05-01"}, {"y": 5.74, "name": "2019-06-01"}, {"y": 6.0, "name": "2019-07-01"}, {"y": 5.91, "name": "2019-08-01"}, {"y": 6.25, "name": "2019-09-01"}, {"y": 6.75, "name": "2019-10-01"}, {"y": 6.71, "name": "2019-11-01"}, {"y": 7.06, "name": "2019-12-01"}, {"y": 7.31, "name": "2020-01-01"}, {"y": 6.55, "name": "2020-02-01"}, {"y": 7.16, "name": "2020-03-01"}, {"y": 6.93, "name": "2020-04-01"}, {"y": 7.74, "name": "2020-05-01"}, {"y": 7.97, "name": "2020-06-01"}, {"y": 7.8, "name": "2020-07-01"}, {"y": 8.07, "name": "2020-08-01"}, {"y": 7.66, "name": "2020-09-01"}, {"y": 7.95, "name": "2020-10-01"}, {"y": 7.22, "name": "2020-11-01"}, {"y": 6.86, "name": "2020-12-01"}, {"y": 7.46, "name": "2021-01-01"}, {"y": 7.25, "name": "2021-02-01"}, {"y": 7.78, "name": "2021-03-01"}, {"y": 7.31, "name": "2021-04-01"}, {"y": 6.79, "name": "2021-05-01"}, {"y": 6.39, "name": "2021-06-01"}, {"y": 6.43, "name": "2021-07-01"}, {"y": 6.58, "name": "2021-08-01"}, {"y": 6.68, "name": "2021-09-01"}, {"y": 6.91, "name": "2021-10-01"}, {"y": 6.31, "name": "2021-11-01"}, {"y": 6.45, "name": "2021-12-01"}, {"y": 7.18, "name": "2022-01-01"}, {"y": 6.84, "name": "2022-02-01"}, {"y": 7.2, "name": "2022-03-01"}, {"y": 6.44, "name": "2022-04-01"}, {"y": 6.73, "name": "2022-05-01"}, {"y": 6.59, "name": "2022-06-01"}, {"y": 6.93, "name": "2022-07-01"}, {"y": 6.82, "name": "2022-08-01"}, {"y": 6.96, "name": "2022-09-01"}, {"y": 7.16, "name": "2022-10-01"}, {"y": 7.12, "name": "2022-11-01"}, {"y": 7.53, "name": "2022-12-01"}, {"y": 7.51, "name": "2023-01-01"}, {"y": 7.67, "name": "2023-02-01"}, {"y": 10.36, "name": "2023-03-01"}, {"y": 7.3, "name": "2023-04-01"}, {"y": 8.13, "name": "2023-05-01"}, {"y": 8.08, "name": "2023-06-01"}, {"y": 7.86, "name": "2023-07-01"}, {"y": 8.08, "name": "2023-08-01"}, {"y": 8.33, "name": "2023-09-01"}, {"y": 8.27, "name": "2023-10-01"}, {"y": 7.98, "name": "2023-11-01"}, {"y": 8.57, "name": "2023-12-01"}, {"y": 8.8, "name": "2024-01-01"}, {"y": 9.11, "name": "2024-02-01"}, {"y": 8.86, "name": "2024-03-01"}, {"y": 8.6, "name": "2024-04-01"}, {"y": 8.7, "name": "2024-05-01"}, {"y": 8.41, "name": "2024-06-01"}, {"y": 8.31, "name": "2024-07-01"}, {"y": 8.31, "name": "2024-08-01"}, {"y": 8.65, "name": "2024-09-01"}, {"y": 9.76, "name": "2024-10-01"}, {"y": 8.51, "name": "2024-11-01"}, {"y": 8.96, "name": "2024-12-01"}, {"y": 9.05, "name": "2025-01-01"}, {"y": 9.63, "name": "2025-02-01"}, {"y": 9.64, "name": "2025-03-01"}, {"y": 9.43, "name": "2025-04-01"}], "name": "+250 Members", "color": "#151E6D", "type": "spline"}], "title": {"text": "Tenure Mean Evolution By Coworking Size"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 2025.4, "min": 2016, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 25, "min": 2, "tickInterval": 2, "title": {"text": " "}}}'
+                                            renderChart('chart' + section1index + chartIndex, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<h3 class="heading4">Mean tenure by age</h3><p>The analysis of mean tenure by age across different coworking space sizes reveals a clear trend: members in smaller spaces generally have longer tenures. For instance, in spaces with 0-40 members, the average tenure for the youngest cohort (17-24) is approximately 8.5 months, increasing markedly to around 13.8 months for members aged 45-54. Conversely, larger coworking spaces, such as those with over 250 members, demonstrate the shortest tenures, starting at roughly 6.5 months for younger members and peaking at 11.2 months for those aged 55-100, indicating a significant decrease in member retention in larger environments.</p><p>Overall, tenure patterns also show that as members age, their tenure tends to increase, particularly in smaller to mid-sized spaces, with the 45-54 age group consistently showing the highest averages. This suggests that the community and environment provided by smaller coworking spaces may play a crucial role in enhancing member loyalty, emphasizing the need for larger spaces to develop strategies aimed at boosting retention rates in their offerings.</p>
+
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab400">Mean Tenure By Coworking Size and Age</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab400">
+<figure class="chart">
+<div id="chart4000">
+<script>
+                                            var chartIndex = 0
+                                            var section1index = 400
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 2, "groupPadding": 0.15, "pointPadding": 0.2, "type": "column"}}, "series": [{"data": [{"y": 8.57, "name": "17-24"}, {"y": 11.06, "name": "25-34"}, {"y": 12.97, "name": "35-44"}, {"y": 13.77, "name": "45-54"}, {"y": 13.56, "name": "55-100"}], "name": "0-40 Members", "color": "#FFD600", "type": "column"}, {"data": [{"y": 9.41, "name": "17-24"}, {"y": 10.51, "name": "25-34"}, {"y": 10.96, "name": "35-44"}, {"y": 12.16, "name": "45-54"}, {"y": 11.84, "name": "55-100"}], "name": "41-100 Members", "color": "#7A86F0", "type": "column"}, {"data": [{"y": 7.93, "name": "17-24"}, {"y": 9.93, "name": "25-34"}, {"y": 10.37, "name": "35-44"}, {"y": 10.92, "name": "45-54"}, {"y": 11.64, "name": "55-100"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "column"}, {"data": [{"y": 6.49, "name": "17-24"}, {"y": 9.47, "name": "25-34"}, {"y": 10.09, "name": "35-44"}, {"y": 11.02, "name": "45-54"}, {"y": 11.16, "name": "55-100"}], "name": "+250 Members", "color": "#151E6D", "type": "column"}], "title": {"text": "Mean Tenure by Age and Coworking Size"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["17-24", "25-34", "35-44", "45-54", "55-100"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 15, "min": 0, "tickInterval": 2, "title": {"text": " "}}}'
+                                            renderChart('chart' + section1index + chartIndex, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<h3 class="heading4">Average length of stay by coworking size</h3><p>The analysis of average length of stay in coworking spaces reveals a clear trend: as coworking sizes increase, the duration of member tenures decreases for both Companies and individual Members. In spaces accommodating up to 40 Members, Companies stay for approximately 12.4 months, while Members stay slightly longer at around 13.3 months. However, as coworking spaces grow to 41-100 Members, both categories experience a decline, with Companies averaging about 11.6 months and Members at 12.3 months, indicating retention challenges as space scale impacts the personalized atmosphere.</p><p>As coworking sizes expand to 101-250 Members, average stays drop further, with Companies averaging only 10.4 months and Members 11.2 months. This downward trend culminates in spaces exceeding 250 Members, where Companies average just 8.2 months, and Members about 9.4 months. Such significant drops illustrate the difficulties in retaining members in larger coworking environments, reinforcing the notion that smaller spaces may more effectively foster longer affiliations among coworkers.</p>
+
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab500">Mean Length Of Stay By Coworking Size and Coworker Type</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab500">
+<figure class="chart">
+<div id="chart5000">
+<script>
+                                            var chartIndex = 0
+                                            var section1index = 500
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 12.41, "name": "Company"}, {"y": 13.32, "name": "Member"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 11.64, "name": "Company"}, {"y": 12.3, "name": "Member"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 10.35, "name": "Company"}, {"y": 11.19, "name": "Member"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 8.23, "name": "Company"}, {"y": 9.41, "name": "Member"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Average Length of Stay by Coworking Size and Coworker Type"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Company", "Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "title": {"text": " "}}}'
+                                            renderChart('chart' + section1index + chartIndex, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+</section>
+</article>
+</div>
+</div>
+</section>
+<section class="topic-conclusion">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6 col-lg-7">
+<div class="texts-wrap">
+<p class="font-plaak color-orange">Conclusions</p>
+<h2 class="heading4"></h2>
+<p>If you want to improve your retention values you should concentrate on getting members on virtual and office plans. However, if your priority is members on Part-time, Dedicated Desk and Hot Desk rates, team members will offer you up to 16% longer tenure </p>
+<p>Globally, we have found that concentrating on attracting members aged 45+ will give you at least 20% more tenure than any other age group.</p>
+<p>Looking to the future, taking into account how the sector has evolved in recent years plus the impact of the pandemic which has accelerated the entry of new customers into the sector from a traditional model who have decided to migrate in search of flexibility at a time when uncertainty has increased, we believe that permanence will continue to increase unless some unexpected external factor impacts the industry globally.</p>
+<a class="btn btn-orange btn" onclick="showPopup(event, '(English)','525cf6c3-35b3-4e7b-8ac0-f6ff1efddaf9')" title="Download bespoke report">
+                            Download bespoke report <i class="icon icon-download"></i>
+</a>
+</div>
+</div>
+<div class="col-md-6 col-lg-5">
+<div class="card card-big">
+<p class="text-sm font-plaak color-orange">Analysis Per Market</p>
+<h3 class="heading4">US, UK and Spain</h3>
+<p class="text-sm color-gray">A comprehensive analysis of reservation patterns in coworking and flex workspaces in the United States, United Kingdom and Spain.</p>
+<a class="btn btn-orange btn-square" href="/market_analysis.html">
+<i class="icon icon-arrow-right"></i>
+</a>
+<div class="img-wrap">
+<img alt="topic" sizes="100%" src="images/topic-conclusion2.png" srcset="images/topic-conclusion2.png 1ximages/topic-conclusion2@2x.png 2x" style="width: 100%"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer START-->
+<div class="alert text-center cookiealert" role="alert">
+<div class="container-fluid">
+<h5>Cookie Warning</h5>
+<p class="text-xs">
+            We value your privacy. This website uses and stores data such as cookies to enable essential website functionality, enhance your browsing experience, measure advertising performance as well as analytics and marketing. By clicking 'Accept All', you consent to our use of your data. 
+<a class="color-black" href="https://www.flexspaceobservatory.com/privacy-policy/ ">Learn more</a>
+</p>
+<br/>
+<div class="ml-auto">
+<button class="btn btn-sm denycookies" type="button">Deny</button>
+<button class="btn btn-orange btn-sm acceptcookies" type="button">Accept All</button>
+</div>
+</div>
+</div>
+<footer class="footer">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-8">
+<!--.footer-subscribeh2.heading3
+  | Want to be kept in the loop when new studies are released?
+  br
+  | Subscribe to our newsletter.
+.footer-subscribe_form
+  form
+    label Email
+    .form-group_inline
+      input.form-input.input-dark.footer-subscribe_input(type='email' placeholder='Ex. james.arthur@gmail.com')
+      button.btn.btn-orange.footer-subscribe_btn(type='submit' disabled='')
+        | Subscribe
+        i.icon.icon-arrow-right-->
+</div>
+<div class="col-lg-4">
+<div class="footer-infos">
+<div class="footer-inner">
+<a class="footer-link" href="/">
+<svg fill="none" height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="m18.125 15.12 9.811-9.811-1.245-1.244-9.811 9.811V0h-1.76v13.36a1.76 1.76 0 0 1-1.76 1.76H0v1.76h13.36c.972 0 1.76.788 1.76 1.76V32h1.76V18.64c0-.972.788-1.76 1.76-1.76H32v-1.76H18.125Z" fill="#FF4F2F"></path>
+<path d="m20.506 19.26-1.244 1.245 7.43 7.43 1.244-1.245-7.43-7.43ZM11.494 19.261l-7.431 7.432 1.244 1.244 7.431-7.431-1.244-1.245ZM5.309 4.063 4.064 5.308l7.43 7.43 1.245-1.245-7.43-7.43Z" fill="#FF4F2F"></path>
+</svg>
+</a>
+<p class="text-xs color-gray">©2022 Flexspace Observatory. All rights reserved.</p>
+<a class="link-underline" href="https://nexudus.com/" target="_blank">
+<span>nexudus.com</span>
+<i class="icon icon-arrow-right"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src="js/googleTag.js"></script>
+<script src="js/scripts.js"></script>
+<!--script src="/js/cookie.js"></script-->
+<script defer="" src="js/script.js"></script>
+<!-- Footer END-->

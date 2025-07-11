@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+
+<!-- Head START-->
+<head>
+<title>Flexspace Observatory</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport"/>
+<meta content="telephone=no" name="format-detection"/>
+<!-- Favicons-->
+<link href="/images/favicon.svg" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/favicon.svg" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon.svg" rel="icon" sizes="16x16" type="image/png"/>
+<link color="#8c8c8c" href="/images/favicon.svg" rel="mask-icon"/>
+<link href="/images/favicon.svg" rel="shortcut icon"/>
+<meta content="#ffffff" name="theme-color"/>
+<!-- Main Styles-->
+<link href="assets/styles.css" rel="stylesheet"/>
+<!-- High Charts-->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script async="" defer="" id="hs-script-loader" src="/js.hs-scripts.com/5320190.js" type="text/javascript"></script>
+<script charset="utf-8" src="/js.hsforms.net/forms/embed/v2.js" type="text/javascript"></script>
+<script>
+        window.va('beforeSend', (event) => {
+            if (event.url.includes('secret'))
+                return null;
+            return event;
+        }
+        );
+    </script>
+</head>
+<header class="header" id="header">
+<div class="container-fluid">
+<a class="logo-link" href="/">
+<svg class="logo" fill="none" height="100" viewbox="0 0 1112 200" width="300" xmlns="http://www.w3.org/2000/svg">
+<title>Flexspace Observatory</title>
+<g class="logo-icon" fill="#FF4F2F">
+<path class="logo-text" d="M267.7 180.408C263.253 184.895 257.797 187.133 251.33 187.123C244.863 187.113 239.408 184.875 234.965 180.408C230.525 175.935 228.307 170.312 228.31 163.538V129.343C228.31 122.57 230.528 116.963 234.965 112.523C239.402 108.083 244.857 105.863 251.33 105.863C257.807 105.863 263.263 108.083 267.7 112.523C272.137 116.963 274.357 122.57 274.36 129.343V163.538C274.36 170.312 272.14 175.935 267.7 180.408ZM244.165 171.268C246.094 173.116 248.662 174.148 251.333 174.148C254.004 174.148 256.571 173.116 258.5 171.268C260.42 169.352 261.378 166.775 261.375 163.538V129.453C261.375 126.217 260.417 123.64 258.5 121.723C256.57 119.878 254.003 118.848 251.333 118.848C248.662 118.848 246.095 119.878 244.165 121.723C242.245 123.637 241.285 126.213 241.285 129.453V163.538C241.285 166.778 242.245 169.355 244.165 171.268Z" fill="black"></path>
+<path class="logo-text" d="M306.27 186.004H284.72V107.004H306.27C312.89 107.004 318.477 109.186 323.03 113.549C325.232 115.589 326.979 118.071 328.157 120.832C329.335 123.594 329.917 126.572 329.865 129.574C329.865 136.644 327.228 142.062 321.955 145.829C327.225 150.192 329.862 155.796 329.865 162.639C329.907 165.709 329.322 168.756 328.147 171.593C326.972 174.43 325.231 176.998 323.03 179.139C318.48 183.716 312.893 186.004 306.27 186.004ZM297.695 139.389H306.27C309.5 139.389 312.077 138.484 314 136.674C315.848 134.813 316.885 132.297 316.885 129.674C316.885 127.051 315.848 124.535 314 122.674C312.08 120.871 309.503 119.967 306.27 119.964H297.695V139.389ZM297.695 173.019H306.27C309.5 173.019 312.077 172.006 314 169.979C315.852 167.984 316.881 165.363 316.881 162.641C316.881 159.92 315.852 157.299 314 155.304C312.08 153.271 309.503 152.254 306.27 152.254H297.695V173.019Z" fill="black"></path>
+<path class="logo-text" d="M384.57 164.103C384.57 170.877 382.348 176.408 377.905 180.698C373.462 184.988 368.007 187.13 361.54 187.123C355.063 187.123 349.608 184.885 345.175 180.408C340.742 175.932 338.523 170.308 338.52 163.538V158.908H351.52V163.538C351.52 166.778 352.48 169.355 354.4 171.268C355.334 172.212 356.452 172.955 357.684 173.45C358.917 173.946 360.237 174.183 361.565 174.148C364.209 174.231 366.781 173.281 368.735 171.498C370.655 169.733 371.61 167.373 371.61 164.443C371.63 162.39 370.934 160.393 369.64 158.798C368.377 157.194 366.778 155.885 364.955 154.963L353.98 149.768C349.762 147.798 346.083 144.835 343.26 141.133C340.42 137.474 338.906 132.96 338.965 128.328C338.965 121.708 341.112 116.31 345.405 112.133C349.698 107.957 355.077 105.867 361.54 105.863C368.013 105.863 373.468 108.083 377.905 112.523C382.342 116.963 384.563 122.57 384.57 129.343V132.958H371.57V129.458C371.57 126.222 370.612 123.645 368.695 121.728C367.76 120.784 366.641 120.042 365.408 119.548C364.175 119.053 362.853 118.817 361.525 118.853C358.665 118.853 356.353 119.662 354.59 121.278C352.827 122.895 351.942 125.093 351.935 127.873C351.935 132.02 354.042 135.068 358.255 137.018L369.205 142.208C373.511 144.269 377.263 147.327 380.15 151.128C383.046 154.83 384.604 159.403 384.57 164.103Z" fill="black"></path>
+<path class="logo-text" d="M434.165 107V120H407.08V139.415H431.935V152.27H407.08V173.02H434.165V186.02H394.105V107.02L434.165 107Z" fill="black"></path>
+<path class="logo-text" d="M507.88 107L520.855 167.605L533.855 107H547.405L528.775 186H512.98L494.35 107H507.88Z" fill="black"></path>
+<path class="logo-text" d="M561.755 167.939L557.47 186.004H544.47L564.22 107.004H580.025L599.775 186.004H586.775L582.375 167.939H561.755ZM572.145 125.389L564.935 154.964H579.265L572.145 125.389Z" fill="black"></path>
+<path class="logo-text" d="M597.605 107H641.055V120H625.82V186.005H612.82V119.975H597.585L597.605 107Z" fill="black"></path>
+<path class="logo-text" d="M686.99 180.408C682.547 184.895 677.09 187.133 670.62 187.123C664.15 187.113 658.697 184.875 654.26 180.408C649.82 175.935 647.6 170.312 647.6 163.538V129.343C647.6 122.57 649.82 116.963 654.26 112.523C658.7 108.083 664.153 105.863 670.62 105.863C677.097 105.863 682.553 108.083 686.99 112.523C691.427 116.963 693.647 122.57 693.65 129.343V163.538C693.65 170.312 691.43 175.935 686.99 180.408ZM663.435 171.268C665.365 173.117 667.933 174.148 670.605 174.148C673.277 174.148 675.846 173.117 677.775 171.268C679.688 169.352 680.645 166.775 680.645 163.538V129.453C680.645 126.217 679.688 123.64 677.775 121.723C675.844 119.878 673.276 118.849 670.605 118.849C667.934 118.849 665.366 119.878 663.435 121.723C661.522 123.637 660.562 126.213 660.555 129.453V163.538C660.568 166.778 661.528 169.355 663.435 171.268Z" fill="black"></path>
+<path class="logo-text" d="M785.435 159.815V186.005H772.435V160.155L753.475 107H767.585L778.87 142.21L790.155 107H804.265L785.435 159.815Z" fill="black"></path>
+<path class="logo-text" d="M491.01 185.998L478.745 151.858C479.657 151.274 480.526 150.626 481.345 149.918C481.713 149.612 482.065 149.286 482.4 148.943C483.663 147.629 484.773 146.176 485.71 144.613C485.719 144.557 485.745 144.504 485.785 144.463C486.23 143.773 486.632 143.057 486.99 142.318C487.285 141.693 487.549 141.054 487.78 140.403C487.93 140.023 488.04 139.648 488.155 139.273C488.347 138.746 488.497 138.204 488.605 137.653C488.674 137.323 488.724 136.989 488.755 136.653C488.87 136.053 488.945 135.413 489.02 134.813C489.097 134.126 489.135 133.435 489.135 132.743V129.918C489.131 128.262 488.953 126.612 488.605 124.993C487.713 120.705 485.551 116.785 482.4 113.743C482.053 113.39 481.688 113.056 481.305 112.743C477.167 108.945 471.726 106.884 466.11 106.988H443.985V185.988H456.985V155.638H466.13C466.24 155.638 466.335 155.613 466.45 155.613L476.815 185.998H491.01ZM456.965 119.998H466.11C467.431 119.992 468.74 120.248 469.961 120.751C471.182 121.253 472.292 121.993 473.226 122.927C474.16 123.861 474.9 124.971 475.402 126.192C475.905 127.413 476.161 128.722 476.155 130.043V132.638C476.161 133.959 475.905 135.268 475.402 136.489C474.9 137.711 474.16 138.82 473.226 139.754C472.292 140.688 471.182 141.428 469.961 141.931C468.74 142.433 467.431 142.689 466.11 142.683H456.965V119.998Z" fill="black"></path>
+<path class="logo-text" d="M751.03 185.998L738.77 151.858C739.681 151.273 740.55 150.625 741.37 149.918C741.738 149.613 742.088 149.287 742.42 148.943C743.684 147.63 744.795 146.178 745.73 144.613C745.741 144.557 745.767 144.506 745.805 144.463C746.254 143.776 746.656 143.059 747.01 142.318C747.307 141.694 747.571 141.055 747.8 140.403C747.95 140.023 748.065 139.648 748.175 139.273C748.366 138.745 748.518 138.204 748.63 137.653C748.697 137.323 748.747 136.989 748.78 136.653C748.895 136.053 748.97 135.413 749.045 134.813C749.117 134.126 749.154 133.435 749.155 132.743V129.918C749.161 128.264 748.993 126.613 748.655 124.993C747.763 120.704 745.599 116.784 742.445 113.743C742.1 113.39 741.736 113.056 741.355 112.743C737.215 108.944 731.773 106.883 726.155 106.988H704.035V185.988H717.035V155.638H726.175C726.285 155.638 726.385 155.613 726.495 155.613L736.865 185.998H751.03ZM716.99 119.998H726.13C727.451 119.992 728.76 120.248 729.981 120.751C731.202 121.253 732.312 121.993 733.246 122.927C734.18 123.861 734.92 124.971 735.422 126.192C735.925 127.414 736.181 128.722 736.175 130.043V132.638C736.181 133.959 735.925 135.268 735.422 136.489C734.92 137.711 734.18 138.82 733.246 139.754C732.312 140.688 731.202 141.428 729.981 141.931C728.76 142.433 727.451 142.689 726.13 142.683H716.99V119.998Z" fill="black"></path>
+<path d="M113.275 94.5L174.6 33.18L166.82 25.405L105.5 86.725V0H94.5V83.5C94.5 86.4174 93.3411 89.2153 91.2782 91.2782C89.2153 93.3411 86.4174 94.5 83.5 94.5H0V105.5H83.5C86.4174 105.5 89.2153 106.659 91.2782 108.722C93.3411 110.785 94.5 113.583 94.5 116.5V200H105.5V116.5C105.5 113.583 106.659 110.785 108.722 108.722C110.785 106.659 113.583 105.5 116.5 105.5H200V94.5H113.275Z" fill="#FF4F2F"></path>
+<path d="M128.164 120.384L120.386 128.162L166.822 174.598L174.6 166.82L128.164 120.384Z" fill="#FF4F2F"></path>
+<path d="M71.8391 120.39L25.3928 166.836L33.171 174.614L79.6173 128.168L71.8391 120.39Z" fill="#FF4F2F"></path>
+<path d="M33.1751 25.4054L25.397 33.1836L71.8327 79.6193L79.6108 71.8411L33.1751 25.4054Z" fill="#FF4F2F"></path>
+<path class="logo-text" d="M268.32 14.0996V27.0596H241.27V46.4446H266.065V59.2946H241.27V92.9946H228.31V14.0996H268.32Z" fill="black"></path>
+<path class="logo-text" d="M291.435 14.0996V80.0296H318.485V92.9946H278.485V14.0996H291.435Z" fill="black"></path>
+<path class="logo-text" d="M366.935 14.0996V27.0596H339.885V46.4446H364.685V59.2946H339.885V80.0296H366.935V92.9946H326.935V14.0996H366.935Z" fill="black"></path>
+<path class="logo-text" d="M391.27 52.9846L374.135 14.0996H388.225L398.935 39.5696L409.645 14.0996H423.735L406.485 52.9846L424.29 92.9846H410.205L398.93 66.4846L387.66 92.9846H373.575L391.27 52.9846Z" fill="black"></path>
+<path class="logo-text" d="M475.345 71.1288C475.345 77.8888 473.128 83.4104 468.695 87.6938C464.262 91.9771 458.815 94.1188 452.355 94.1188C445.888 94.1188 440.44 91.8838 436.01 87.4138C431.58 82.9438 429.363 77.3271 429.36 70.5638V65.9438H442.325V70.5638C442.325 73.7938 443.282 76.3671 445.195 78.2838C446.129 79.2261 447.246 79.9673 448.478 80.4617C449.709 80.9561 451.028 81.1934 452.355 81.1588C454.994 81.2385 457.56 80.2881 459.51 78.5088C461.427 76.7454 462.385 74.3971 462.385 71.4638C462.407 69.4163 461.718 67.4248 460.435 65.8288C459.175 64.2241 457.577 62.9165 455.755 61.9988L444.82 56.8138C440.611 54.8412 436.94 51.8846 434.115 48.1938C431.28 44.5364 429.769 40.0257 429.83 35.3988C429.83 28.7887 431.972 23.3971 436.255 19.2238C440.538 15.0504 445.912 12.9654 452.375 12.9688C458.835 12.9688 464.282 15.1854 468.715 19.6188C473.148 24.0521 475.365 29.6504 475.365 36.4137V40.0188H462.385V36.5188C462.385 33.2954 461.427 30.7221 459.51 28.7988C458.577 27.8566 457.46 27.1154 456.23 26.621C454.999 26.1265 453.681 25.8892 452.355 25.9238C449.495 25.9238 447.185 26.7321 445.425 28.3488C443.665 29.9654 442.782 32.1638 442.775 34.9438C442.775 39.0738 444.878 42.1171 449.085 44.0738L460.02 49.2688C464.313 51.3249 468.055 54.374 470.935 58.1637C473.825 61.8641 475.38 66.4333 475.345 71.1288Z" fill="black"></path>
+<path class="logo-text" d="M498.935 64.9298V92.9948H485.975V14.0998H508.065C511.079 14.0867 514.066 14.6686 516.855 15.8123C519.643 16.956 522.179 18.6389 524.315 20.7646C526.452 22.8902 528.148 25.4168 529.307 28.1994C530.465 30.9819 531.062 33.9658 531.065 36.9798V41.9348C531.065 48.0348 528.642 53.8849 524.329 58.1983C520.015 62.5116 514.165 64.9348 508.065 64.9348L498.935 64.9298ZM508.065 27.0598H498.935V51.9698H508.065C509.384 51.9738 510.69 51.7169 511.909 51.2139C513.128 50.711 514.236 49.9719 515.168 49.0392C516.1 48.1065 516.839 46.9986 517.341 45.7794C517.843 44.5601 518.1 43.2535 518.095 41.9348V37.0898C518.099 35.7716 517.842 34.4655 517.34 33.2468C516.837 32.0281 516.098 30.9209 515.166 29.9887C514.234 29.0566 513.127 28.3179 511.908 27.8152C510.689 27.3126 509.383 27.0559 508.065 27.0598Z" fill="black"></path>
+<path class="logo-text" d="M546.26 74.9596L541.98 92.9946H529.015L548.74 14.0996H564.52L584.245 92.9946H571.285L566.885 74.9596H546.26ZM556.63 32.4596L549.435 61.9996H563.745L556.63 32.4596Z" fill="black"></path>
+<path class="logo-text" d="M634.935 44.5288H621.975V36.5288C621.975 33.3054 621.017 30.7321 619.1 28.8088C617.175 26.9636 614.612 25.9334 611.945 25.9334C609.279 25.9334 606.715 26.9636 604.79 28.8088C602.87 30.7288 601.912 33.3021 601.915 36.5288V70.5688C601.915 73.7988 602.873 76.3721 604.79 78.2887C606.715 80.1339 609.279 81.1641 611.945 81.1641C614.612 81.1641 617.175 80.1339 619.1 78.2887C621.02 76.3721 621.978 73.7988 621.975 70.5688V61.4338H634.935V70.5637C634.935 77.3237 632.72 82.9404 628.29 87.4138C623.86 91.8871 618.408 94.1221 611.935 94.1188C605.472 94.1188 600.025 91.8838 595.595 87.4138C591.165 82.9438 588.948 77.3271 588.945 70.5637V36.4137C588.945 29.6504 591.162 24.0521 595.595 19.6187C600.028 15.1854 605.475 12.9687 611.935 12.9688C618.395 12.9688 623.843 15.1854 628.28 19.6187C632.717 24.0521 634.935 29.6504 634.935 36.4137V44.5288Z" fill="black"></path>
+<path class="logo-text" d="M686.21 14.0996V27.0596H659.16V46.4446H683.935V59.2946H659.14V80.0296H686.19V92.9946H646.19V14.0996H686.21Z" fill="black"></path>
+<line stroke="black" x1="831.133" x2="828.765" y1="12.0145" y2="187.999"></line>
+<path class="logo-text" clip-rule="evenodd" d="M882.72 103.135H875.919C875.748 103.135 875.577 103.278 875.577 103.478V117.649C875.577 119.021 875.662 120.506 875.719 121.506C875.148 120.535 874.148 118.935 872.834 117.135L862.834 103.278C862.776 103.192 862.662 103.135 862.548 103.135H854.976C854.805 103.135 854.634 103.278 854.634 103.478V133.392C854.634 133.564 854.776 133.735 854.976 133.735H861.776C861.948 133.735 862.119 133.592 862.119 133.392V117.935C862.119 116.935 862.091 115.849 862.034 114.649C862.576 115.535 863.462 116.906 864.691 118.563L875.548 133.564C875.605 133.649 875.719 133.706 875.834 133.706H882.748C882.92 133.706 883.091 133.564 883.091 133.364V103.478C883.034 103.306 882.891 103.135 882.72 103.135Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" clip-rule="evenodd" d="M1020.15 103.135H1009.92C1009.75 103.135 1009.58 103.278 1009.58 103.478V133.392C1009.58 133.564 1009.72 133.735 1009.92 133.735H1019.86C1031.46 133.735 1038.38 127.849 1038.38 118.021C1038.41 112.449 1036.04 103.135 1020.15 103.135ZM1020.49 127.078H1017.89V109.821H1020.21C1026.86 109.821 1029.72 112.363 1029.72 118.306C1029.72 124.192 1026.72 127.078 1020.49 127.078Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" clip-rule="evenodd" d="M996.663 103.135H989.635C989.463 103.135 989.292 103.278 989.292 103.478V120.706C989.292 125.449 987.606 127.478 983.606 127.478C979.206 127.478 977.634 125.621 977.634 120.421V103.478C977.634 103.306 977.492 103.135 977.292 103.135H969.634C969.463 103.135 969.292 103.278 969.292 103.478V120.992C969.292 129.678 974.177 134.249 983.406 134.249C992.149 134.249 996.949 129.249 996.949 120.192V103.478C996.977 103.306 996.835 103.135 996.663 103.135Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" clip-rule="evenodd" d="M1077.32 103.135H1070.29C1070.12 103.135 1069.95 103.278 1069.95 103.478V120.706C1069.95 125.449 1068.26 127.478 1064.26 127.478C1059.86 127.478 1058.29 125.621 1058.29 120.421V103.478C1058.29 103.306 1058.15 103.135 1057.95 103.135H1050.35C1050.18 103.135 1050.01 103.278 1050.01 103.478V120.992C1050.01 129.678 1054.89 134.249 1064.12 134.249C1072.86 134.249 1077.66 129.249 1077.66 120.192V103.478C1077.66 103.306 1077.52 103.135 1077.32 103.135Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" clip-rule="evenodd" d="M1103.72 114.993C1103.18 114.764 1102.66 114.564 1102.21 114.393C1099.32 113.25 1098.04 112.679 1098.04 111.136C1098.04 109.136 1100.52 108.936 1101.58 108.936C1104.64 108.936 1106.86 110.279 1107.46 110.679C1107.61 110.793 1107.81 110.736 1107.92 110.593C1107.92 110.593 1107.92 110.564 1107.95 110.564L1110.84 105.193C1110.92 105.05 1110.86 104.85 1110.72 104.736C1109.38 103.936 1106.55 102.25 1101.12 102.25C1093.49 102.25 1090.09 106.879 1090.09 111.479C1090.09 116.936 1093.55 119.222 1096.92 120.736C1097.89 121.193 1098.81 121.564 1099.61 121.879C1102.18 122.936 1103.75 123.564 1103.75 125.164C1103.75 126.707 1102.12 127.622 1099.41 127.622C1096.09 127.622 1094.06 126.222 1093.09 125.536C1092.89 125.393 1092.64 125.45 1092.49 125.65L1092.46 125.679L1089.52 130.965C1089.44 131.107 1089.49 131.279 1089.61 131.393C1090.75 132.25 1094.01 134.222 1099.81 134.222C1107.32 134.222 1111.81 130.593 1111.81 124.536C1111.78 119.193 1107.89 116.793 1103.72 114.993Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" clip-rule="evenodd" d="M917.548 103.135H897.605C897.434 103.135 897.262 103.278 897.262 103.478V133.392C897.262 133.564 897.405 133.735 897.605 133.735H917.548C917.72 133.735 917.891 133.592 917.891 133.392V127.449C917.891 127.278 917.748 127.106 917.548 127.106H905.405V121.135H917.548C917.72 121.135 917.891 120.992 917.891 120.792V115.306C917.891 115.135 917.748 114.963 917.548 114.963H905.405V109.763H917.548C917.72 109.763 917.891 109.621 917.891 109.421V103.478C917.862 103.306 917.72 103.135 917.548 103.135Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" clip-rule="evenodd" d="M948.263 118.021L957.234 103.678C957.377 103.45 957.206 103.164 956.949 103.164H949.406C949.291 103.164 949.177 103.221 949.12 103.335L944.291 111.736L939.148 103.335C939.091 103.25 938.977 103.164 938.863 103.164H930.291C930.034 103.164 929.863 103.45 930.006 103.678L939.32 118.021L929.491 133.221C929.348 133.45 929.52 133.736 929.777 133.736H937.377C937.491 133.736 937.606 133.679 937.663 133.564L943.291 124.136L949.234 133.593C949.291 133.679 949.406 133.736 949.52 133.736H957.863C958.12 133.736 958.292 133.45 958.149 133.221L948.263 118.021Z" fill="#161616" fill-rule="evenodd"></path>
+<path class="logo-text" d="M861.882 73.718H855.258V74.03C857.106 74.102 857.586 74.654 857.586 75.902V87.542C857.586 88.814 857.106 89.366 855.258 89.438V89.75H861.45V89.438C859.986 89.366 859.242 89.03 859.242 87.542V82.622H861.882C865.266 82.622 867.786 81.278 867.786 78.182C867.786 75.062 865.266 73.718 861.882 73.718ZM859.242 81.878V74.486H861.282C864.402 74.486 865.89 75.998 865.89 78.182C865.89 80.366 864.402 81.878 861.282 81.878H859.242ZM876.312 90.086C879.264 90.086 881.808 87.518 881.808 83.534C881.808 79.958 879.648 77.414 876.456 77.414C873.552 77.414 871.008 80.006 871.008 84.014C871.008 87.566 873.168 90.086 876.312 90.086ZM872.64 83.246C872.64 80.318 874.08 78.23 876.216 78.23C879.24 78.23 880.2 82.046 880.2 84.206C880.2 87.134 878.76 89.27 876.624 89.27C873.576 89.27 872.64 85.43 872.64 83.246ZM903.342 78.062V77.75H899.262V78.062C900.918 78.35 901.302 78.542 900.894 79.67L897.966 87.614L894.942 79.67C894.558 78.638 894.846 78.374 896.526 78.062V77.75H891.582V78.086C892.518 78.326 892.806 78.518 892.998 78.998L893.358 79.886L890.502 87.614L887.478 79.67C887.094 78.638 887.406 78.398 889.062 78.062V77.75H884.118V78.086C885.078 78.326 885.342 78.518 885.534 78.998L889.926 90.086H890.238L893.742 80.894L897.39 90.086H897.678L901.902 79.022C902.118 78.47 902.43 78.278 903.342 78.062ZM911.188 77.414C908.02 77.414 905.668 79.862 905.668 84.086C905.668 87.374 907.78 90.086 910.852 90.086C913.132 90.086 914.86 88.598 915.484 86.702L915.22 86.582C914.404 87.614 913.324 88.646 911.548 88.646C908.956 88.646 907.252 86.438 907.18 83.006H915.58C915.58 80.102 914.092 77.414 911.188 77.414ZM907.204 82.334C907.42 79.934 908.5 78.182 910.804 78.182C912.94 78.182 913.684 80.006 913.852 82.334H907.204ZM918.766 89.438V89.75H924.526V89.438C922.654 89.198 922.054 88.838 922.054 87.878V81.638C922.774 79.91 923.926 78.926 925.222 78.878C925.654 78.854 926.206 78.998 926.614 79.238L926.854 77.582C926.566 77.462 925.942 77.39 925.486 77.414C924.166 77.438 922.966 78.566 922.054 80.966V77.414H921.718L918.766 78.374V78.71H918.982C920.206 78.71 920.542 79.262 920.542 80.246V87.878C920.542 88.838 920.134 89.198 918.766 89.438ZM934.997 77.414C931.829 77.414 929.477 79.862 929.477 84.086C929.477 87.374 931.589 90.086 934.661 90.086C936.941 90.086 938.669 88.598 939.293 86.702L939.029 86.582C938.213 87.614 937.133 88.646 935.357 88.646C932.765 88.646 931.061 86.438 930.989 83.006H939.389C939.389 80.102 937.901 77.414 934.997 77.414ZM931.013 82.334C931.229 79.934 932.309 78.182 934.613 78.182C936.749 78.182 937.493 80.006 937.661 82.334H931.013ZM948.015 90.086C949.335 90.086 950.727 89.222 951.687 87.566V90.086H952.023L954.951 89.126V88.814H954.711C953.559 88.814 953.199 88.358 953.199 87.278V72.758H952.863L949.911 73.718V74.03H950.175C951.327 74.03 951.687 74.486 951.687 75.59V78.59C951.039 77.918 950.199 77.414 948.831 77.414C945.807 77.414 942.975 79.862 942.975 84.158C942.975 87.758 944.871 90.086 948.015 90.086ZM944.583 83.246C944.583 80.246 946.095 78.062 948.183 78.062C950.559 78.062 951.519 80.198 951.687 81.446V86.918C950.991 88.118 949.719 88.886 948.351 88.886C946.071 88.886 944.583 86.654 944.583 83.246ZM971.221 90.086C974.005 90.086 976.837 87.638 976.837 83.342C976.837 79.742 974.941 77.414 971.797 77.414C970.453 77.414 969.061 78.278 968.101 79.982V72.758H967.765L964.813 73.718V74.03H965.077C966.229 74.03 966.589 74.486 966.589 75.59V89.75H967.141L967.813 88.55C968.485 89.414 969.373 90.086 971.221 90.086ZM968.101 85.694V80.63C968.773 79.406 970.045 78.614 971.461 78.614C973.741 78.614 975.229 80.846 975.229 84.254C975.229 87.254 973.717 89.438 971.629 89.438C969.013 89.438 968.101 86.846 968.101 85.694ZM987.279 78.062C988.887 78.326 989.367 78.518 989.007 79.382L985.743 87.062L982.407 79.406C982.167 78.83 982.071 78.422 984.063 78.062V77.75H979.143V78.086C980.247 78.35 980.367 78.614 980.775 79.55L985.023 89.126L981.687 94.286V94.502H983.319L989.751 79.406C990.087 78.59 990.231 78.374 991.335 78.062V77.75H987.279V78.062Z" fill="black"></path>
+</g>
+</svg>
+</a>
+<div class="header-links">
+<a class="header-link" href="/insights">Insights</a>
+<a class="header-link" href="/contact">Contact us</a>
+<a class="header-link" href="/about">About us</a>
+<span class="header-divider"></span>
+<button class="nav-toggle" id="nav-toggle" type="button">
+<span class="line"></span>
+<span class="line"></span>
+</button>
+</div>
+</div>
+</header>
+<div class="nav" id="nav">
+<div class="container-fluid">
+<div class="nav-inner">
+<div class="nav-top">
+<ul class="mobile-pages-links">
+<li>
+<a href="/contact">Contact us</a>
+</li>
+<li>
+<a href="/about">About us</a>
+</li>
+</ul>
+</div>
+<div class="nav-bottom">
+<a class="link-underline white" href="https://nexudus.com/" target="_blank">
+<span>nexudus.com</span>
+<i class="icon icon-arrow-right"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script src="js/charthelpers.js"></script>
+<!-- Header END-->
+<main class="main">
+<section class="topic-hero">
+<div class="texts-wrap">
+<div class="container-fluid">
+<p class="font-plaak text-xl color-orange">/01 Resources and Resource Demand • Analysis Per Market</p>
+<h1 class="heading2">Small Gatherings, Big Insights: Navigating Resource Demand Trends</h1>
+<p class="text-xl color-gray">A comprehensive analysis of reservation patterns in coworking and flex workspaces in the US, UK and Spain. </p>
+<!--a.btn.btn-orange(href=btnLink1)| 
+=btnText1
+i.icon.icon-download-->
+</div>
+</div>
+<div class="img-wrap">
+<div class="container-fluid">
+<img alt="topic" sizes="100%" src="images/topic-hero2.png" srcset="/images/topic-hero2.png 1x/images/topic-hero2@2x.png 2x"/>
+</div>
+</div>
+</section>
+<section class="topic-report">
+<div class="container-fluid">
+<h2 class="heading3">This report will help you understand</h2>
+<div class="row">
+<div class="col-sm-6 col-md-4">
+<div class="card">
+<div class="icon-wrap">
+<img src="images/icon-time.svg"/>
+</div>
+<h3 class="heading-abcnormal no-margin">Booking time effect</h3>
+<p class="color-gray text-sm">How does the time of a booking affect the length of meetings or the size of the booked resource?</p>
+</div>
+</div>
+<div class="col-sm-6 col-md-4">
+<div class="card">
+<div class="icon-wrap">
+<img src="images/icon-price.svg"/>
+</div>
+<h3 class="heading-abcnormal no-margin">Booking price</h3>
+<p class="color-gray text-sm">What is the mean price of a booking depending on the type of user that is using the resource?</p>
+</div>
+</div>
+<div class="col-sm-6 col-md-4">
+<div class="card">
+<div class="icon-wrap">
+<img src="images/icon-users.svg"/>
+</div>
+<h3 class="heading-abcnormal no-margin">Capacity effect</h3>
+<p class="color-gray text-sm">How does the capacity of a resource affect the number of bookings it receives?</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="topic-layout">
+<div class="container-fluid">
+<div class="row">
+<aside class="col-md-4 topic-nav">
+<div class="nav-sticky">
+<h3 class="heading5">Table of contents</h3>
+<ul class="nav-scrollspy">
+<li>
+<a href="#section1">
+<p class="font-plaak text-xs color-gray">Section 1</p>
+<p class="text-sm">How does the time of a booking affect the length of meetings or the size of the booked resource?</p>
+</a>
+</li>
+<li>
+<a href="#section2">
+<p class="font-plaak text-xs color-gray">Section 2</p>
+<p class="text-sm">How does the time of a booking affect the length of meetings or the size of the booked resource?</p>
+</a>
+</li>
+<li>
+<a href="#section3">
+<p class="font-plaak text-xs color-gray">Section 3</p>
+<p class="text-sm">What is the mean price of a booking depending on the type of user that is using the resource?</p>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<article class="col-md-8 topic-body">
+<section class="topic-section" id="section1">
+<h2 class="section-heading">Section 1</h2>
+<h3 class="heading3">How does the time of a booking affect the length of meetings or the size of the booked resource? </h3><p>The analysis of booking trends reveals that the timing of reservations significantly influences both meeting lengths and resource demand across different markets. Observations show varied patterns based on regional preferences and group sizes, highlighting distinct approaches to scheduling meetings throughout the day.</p><p>In particular, smaller groups exhibit a tendency towards longer meetings but with stark afternoon declines, while larger groups tend to maintain consistent, shorter engagements. This section delves into how these dynamics reflect broader operational needs and resource allocation behaviors in coworking environments, setting the stage for a deeper examination of the data across various markets.</p>
+
+
+<div class="card card-big keyfindings">
+<div class="row">
+<div class="col-md-6">
+<div class="keyfindings-texts">
+<h4 class="heading3">Key findings</h4>
+<div class="keyfinding-slides-wrap">
+<div class="keyfinding-slides">
+<div class="keyfinding-slide">
+
+
+<p class="weight-medium">Meeting Length Shrinks with Group Size</p><p class="text-xs">As group size increases, average meeting durations decrease significantly, with smaller groups (0-40 members) averaging 300 minutes in the morning but dropping to under 100 minutes by the evening.</p></div>
+<div class="keyfinding-slide">
+<p class="weight-medium">The average duration of a booking (UK)</p>
+<p class="text-xs">From 7 AM to 9 AM in the morning, the average duration of bookings is 130 minutes, its daily maximum.</p>
+</div>
+<div class="keyfinding-slide">
+<p class="weight-medium">The average duration of a booking (Spain)</p>
+<p class="text-xs">Bookings that start between 8am and 10am are those with the highest mean duration of the day with lengths of between 120-140 mins.</p>
+</div>
+</div>
+<div class="keyfinding-slides-controls">
+<div class="keyfinding-slides-arrows"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="img-wrap">
+<img alt="keyfindings" sizes="100%" src="images/average-duration.png" srcset="/images/average-duration.png 1x/images/average-duration@2x.png 2x"/>
+</div>
+</div>
+</div>
+</div>
+<h3 class="heading4">Mean duration in minutes by location</h3><p>The analysis of mean booking durations across various locations reveals distinctive patterns by region and group size. In Spain, the average meeting length peaks in the early hours at about 213 minutes, then declined sharply to around 87 minutes by late afternoon. The UK exhibited the longest daily meetings, reaching 255 minutes at 9 AM, but saw durations drop to approximately 80 minutes by 3 PM. In contrast, the US maintained a steadier meeting duration, peaking at 207 minutes and tapering slightly as the day progressed, highlighting a preference for more stable meeting schedules throughout the day.</p><p>Group size analysis indicates that smaller memberships (0-40) tended to book longer meetings, with a peak near 300 minutes in the morning, dropping significantly to under 100 minutes in the evening. Larger groups (101+) registered shorter, more consistent durations, peaking around 220 minutes but declining even faster as the day advanced. Generally, as group size increased, average meeting durations decreased, demonstrating diverse scheduling habits, possibly influenced by operational scale and resource allocation within coworking environments.</p>
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab0">Countries</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab1">Coworking Size - US</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab2">Coworking Size - UK</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab3">Coworking Size - Spain</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab0">
+<figure class="chart">
+<div id="chart0">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}, "series": {"pointStart": 6, "type": "series"}}, "series": [{"data": [{"y": 146.1, "name": "6H"}, {"y": 164.09, "name": "7H"}, {"y": 213.26, "name": "8H"}, {"y": 183.87, "name": "9H"}, {"y": 127.72, "name": "10H"}, {"y": 100.03, "name": "11H"}, {"y": 96.32, "name": "12H"}, {"y": 88.35, "name": "13H"}, {"y": 106.21, "name": "14H"}, {"y": 100.36, "name": "15H"}, {"y": 94.51, "name": "16H"}, {"y": 87.42, "name": "17H"}, {"y": 88.61, "name": "18H"}, {"y": 83.39, "name": "19H"}, {"y": 73.33, "name": "20H"}, {"y": 86.51, "name": "21H"}], "name": "Spain", "color": "#0E735A", "type": "line"}, {"data": [{"y": 209.96, "name": "6H"}, {"y": 139.28, "name": "7H"}, {"y": 210.69, "name": "8H"}, {"y": 254.66, "name": "9H"}, {"y": 146.98, "name": "10H"}, {"y": 108.32, "name": "11H"}, {"y": 123.5, "name": "12H"}, {"y": 114.03, "name": "13H"}, {"y": 99.2, "name": "14H"}, {"y": 82.96, "name": "15H"}, {"y": 79.73, "name": "16H"}, {"y": 100.49, "name": "17H"}, {"y": 123.13, "name": "18H"}, {"y": 118.77, "name": "19H"}, {"y": 124.79, "name": "20H"}, {"y": 112.11, "name": "21H"}], "name": "United Kingdom", "color": "#8A2BC4", "type": "line"}, {"data": [{"y": 207.14, "name": "6H"}, {"y": 198.84, "name": "7H"}, {"y": 213.45, "name": "8H"}, {"y": 197.92, "name": "9H"}, {"y": 131.46, "name": "10H"}, {"y": 110.41, "name": "11H"}, {"y": 122.25, "name": "12H"}, {"y": 110.32, "name": "13H"}, {"y": 111.62, "name": "14H"}, {"y": 105.37, "name": "15H"}, {"y": 99.2, "name": "16H"}, {"y": 118.91, "name": "17H"}, {"y": 124.95, "name": "18H"}, {"y": 113.05, "name": "19H"}, {"y": 102.41, "name": "20H"}, {"y": 106.22, "name": "21H"}], "name": "United States", "color": "#850525", "type": "line"}, {"data": [{"y": 210.44, "name": "6H"}, {"y": 209.94, "name": "7H"}, {"y": 246.47, "name": "8H"}, {"y": 223.1, "name": "9H"}, {"y": 135.41, "name": "10H"}, {"y": 107.25, "name": "11H"}, {"y": 117.5, "name": "12H"}, {"y": 111.13, "name": "13H"}, {"y": 105.56, "name": "14H"}, {"y": 95.2, "name": "15H"}, {"y": 93.55, "name": "16H"}, {"y": 105.07, "name": "17H"}, {"y": 116.98, "name": "18H"}, {"y": 109.21, "name": "19H"}, {"y": 109.34, "name": "20H"}, {"y": 102.85, "name": "21H"}], "name": "All", "color": "#F19E39", "type": "line"}], "title": {"text": "Mean duration in minutes and country"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}H", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 21, "min": 6, "tickInterval": 2, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 20, "title": {"text": " "}}}'
+                                            renderChart('chart' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab1">
+<figure class="chart">
+<div id="chart1">
+<script>
+                                            var index = 1
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}, "series": {"pointStart": 6, "type": "series"}}, "series": [{"data": [{"y": 170.55, "name": "6H"}, {"y": 232.0, "name": "7H"}, {"y": 251.75, "name": "8H"}, {"y": 262.38, "name": "9H"}, {"y": 157.17, "name": "10H"}, {"y": 129.75, "name": "11H"}, {"y": 150.54, "name": "12H"}, {"y": 136.13, "name": "13H"}, {"y": 184.18, "name": "14H"}, {"y": 151.88, "name": "15H"}, {"y": 120.63, "name": "16H"}, {"y": 127.53, "name": "17H"}, {"y": 129.02, "name": "18H"}, {"y": 120.14, "name": "19H"}, {"y": 109.25, "name": "20H"}, {"y": 134.66, "name": "21H"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 241.39, "name": "6H"}, {"y": 216.89, "name": "7H"}, {"y": 242.59, "name": "8H"}, {"y": 209.03, "name": "9H"}, {"y": 141.14, "name": "10H"}, {"y": 119.4, "name": "11H"}, {"y": 137.13, "name": "12H"}, {"y": 119.4, "name": "13H"}, {"y": 114.29, "name": "14H"}, {"y": 124.74, "name": "15H"}, {"y": 107.15, "name": "16H"}, {"y": 126.5, "name": "17H"}, {"y": 132.75, "name": "18H"}, {"y": 118.34, "name": "19H"}, {"y": 108.65, "name": "20H"}, {"y": 137.23, "name": "21H"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 244.67, "name": "6H"}, {"y": 186.35, "name": "7H"}, {"y": 184.74, "name": "8H"}, {"y": 167.64, "name": "9H"}, {"y": 120.23, "name": "10H"}, {"y": 103.83, "name": "11H"}, {"y": 112.92, "name": "12H"}, {"y": 102.32, "name": "13H"}, {"y": 93.57, "name": "14H"}, {"y": 90.75, "name": "15H"}, {"y": 94.93, "name": "16H"}, {"y": 111.44, "name": "17H"}, {"y": 117.43, "name": "18H"}, {"y": 102.02, "name": "19H"}, {"y": 94.09, "name": "20H"}, {"y": 83.68, "name": "21H"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 166.27, "name": "6H"}, {"y": 152.75, "name": "7H"}, {"y": 184.12, "name": "8H"}, {"y": 174.75, "name": "9H"}, {"y": 123.69, "name": "10H"}, {"y": 103.59, "name": "11H"}, {"y": 110.43, "name": "12H"}, {"y": 102.08, "name": "13H"}, {"y": 93.13, "name": "14H"}, {"y": 88.22, "name": "15H"}, {"y": 91.12, "name": "16H"}, {"y": 117.38, "name": "17H"}, {"y": 124.22, "name": "18H"}, {"y": 114.67, "name": "19H"}, {"y": 100.3, "name": "20H"}, {"y": 84.92, "name": "21H"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean duration in minutes and country (US)"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}H", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 21, "min": 6, "tickInterval": 2, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 20, "title": {"text": " "}}}'
+                                            renderChart('chart' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab2">
+<figure class="chart">
+<div id="chart2">
+<script>
+                                            var index = 2
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}, "series": {"pointStart": 6, "type": "series"}}, "series": [{"data": [{"y": 179.92, "name": "6H"}, {"y": 204.39, "name": "7H"}, {"y": 244.2, "name": "8H"}, {"y": 299.49, "name": "9H"}, {"y": 174.35, "name": "10H"}, {"y": 126.37, "name": "11H"}, {"y": 169.77, "name": "12H"}, {"y": 134.04, "name": "13H"}, {"y": 105.83, "name": "14H"}, {"y": 91.1, "name": "15H"}, {"y": 89.95, "name": "16H"}, {"y": 142.94, "name": "17H"}, {"y": 151.83, "name": "18H"}, {"y": 130.54, "name": "19H"}, {"y": 137.04, "name": "20H"}, {"y": 81.24, "name": "21H"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 312.72, "name": "6H"}, {"y": 187.06, "name": "7H"}, {"y": 274.35, "name": "8H"}, {"y": 301.44, "name": "9H"}, {"y": 184.32, "name": "10H"}, {"y": 136.11, "name": "11H"}, {"y": 158.81, "name": "12H"}, {"y": 132.38, "name": "13H"}, {"y": 110.23, "name": "14H"}, {"y": 92.09, "name": "15H"}, {"y": 96.07, "name": "16H"}, {"y": 112.41, "name": "17H"}, {"y": 136.18, "name": "18H"}, {"y": 128.9, "name": "19H"}, {"y": 107.13, "name": "20H"}, {"y": 112.29, "name": "21H"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 229.62, "name": "6H"}, {"y": 223.97, "name": "7H"}, {"y": 257.29, "name": "8H"}, {"y": 290.34, "name": "9H"}, {"y": 170.14, "name": "10H"}, {"y": 124.03, "name": "11H"}, {"y": 134.85, "name": "12H"}, {"y": 126.66, "name": "13H"}, {"y": 121.62, "name": "14H"}, {"y": 86.35, "name": "15H"}, {"y": 84.4, "name": "16H"}, {"y": 103.67, "name": "17H"}, {"y": 141.47, "name": "18H"}, {"y": 121.84, "name": "19H"}, {"y": 130.57, "name": "20H"}, {"y": 122.41, "name": "21H"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 177.43, "name": "6H"}, {"y": 121.33, "name": "7H"}, {"y": 173.59, "name": "8H"}, {"y": 221.42, "name": "9H"}, {"y": 129.77, "name": "10H"}, {"y": 98.73, "name": "11H"}, {"y": 107.71, "name": "12H"}, {"y": 105.96, "name": "13H"}, {"y": 91.07, "name": "14H"}, {"y": 80.57, "name": "15H"}, {"y": 76.4, "name": "16H"}, {"y": 93.99, "name": "17H"}, {"y": 111.19, "name": "18H"}, {"y": 111.52, "name": "19H"}, {"y": 124.21, "name": "20H"}, {"y": 116.64, "name": "21H"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean duration in minutes and country (UK)"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}H", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 21, "min": 6, "tickInterval": 2, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 20, "title": {"text": " "}}}'
+                                            renderChart('chart' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab3">
+<figure class="chart">
+<div id="chart3">
+<script>
+                                            var index = 3
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}, "series": {"pointStart": 6, "type": "series"}}, "series": [{"data": [{"y": 150.4, "name": "6H"}, {"y": 269.55, "name": "7H"}, {"y": 237.15, "name": "8H"}, {"y": 171.74, "name": "9H"}, {"y": 120.93, "name": "10H"}, {"y": 95.09, "name": "11H"}, {"y": 84.76, "name": "12H"}, {"y": 86.5, "name": "13H"}, {"y": 110.35, "name": "14H"}, {"y": 109.91, "name": "15H"}, {"y": 110.05, "name": "16H"}, {"y": 96.4, "name": "17H"}, {"y": 92.56, "name": "18H"}, {"y": 80.33, "name": "19H"}, {"y": 69.77, "name": "20H"}, {"y": 93.17, "name": "21H"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 126.0, "name": "6H"}, {"y": 215.54, "name": "7H"}, {"y": 168.79, "name": "8H"}, {"y": 177.04, "name": "9H"}, {"y": 128.15, "name": "10H"}, {"y": 96.93, "name": "11H"}, {"y": 87.23, "name": "12H"}, {"y": 85.2, "name": "13H"}, {"y": 115.87, "name": "14H"}, {"y": 106.6, "name": "15H"}, {"y": 95.42, "name": "16H"}, {"y": 92.23, "name": "17H"}, {"y": 93.51, "name": "18H"}, {"y": 89.34, "name": "19H"}, {"y": 81.63, "name": "20H"}, {"y": 79.29, "name": "21H"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 115.71, "name": "6H"}, {"y": 116.74, "name": "7H"}, {"y": 205.8, "name": "8H"}, {"y": 193.21, "name": "9H"}, {"y": 135.98, "name": "10H"}, {"y": 108.32, "name": "11H"}, {"y": 107.64, "name": "12H"}, {"y": 94.45, "name": "13H"}, {"y": 112.88, "name": "14H"}, {"y": 104.99, "name": "15H"}, {"y": 93.42, "name": "16H"}, {"y": 90.33, "name": "17H"}, {"y": 88.01, "name": "18H"}, {"y": 85.39, "name": "19H"}, {"y": 75.83, "name": "20H"}, {"y": 85.05, "name": "21H"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 126.62, "name": "6H"}, {"y": 109.76, "name": "7H"}, {"y": 228.46, "name": "8H"}, {"y": 185.37, "name": "9H"}, {"y": 124.59, "name": "10H"}, {"y": 97.92, "name": "11H"}, {"y": 96.9, "name": "12H"}, {"y": 86.65, "name": "13H"}, {"y": 98.12, "name": "14H"}, {"y": 91.89, "name": "15H"}, {"y": 88.52, "name": "16H"}, {"y": 78.29, "name": "17H"}, {"y": 82.72, "name": "18H"}, {"y": 80.2, "name": "19H"}, {"y": 74.91, "name": "20H"}, {"y": 83.82, "name": "21H"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean duration in minutes and country (Spain)"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}H", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 21, "min": 6, "tickInterval": 2, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 20, "title": {"text": " "}}}'
+                                            renderChart('chart' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<h3 class="heading4">Mean resource capacity by booking hour and location</h3><p>Resource capacity trends across booking hours reflect distinct preferences by country and membership size. In Spain, capacity peaks at about 6.90 units in the evening, while the UK shows stronger early morning demand peaking at 7.12 units, only to decline sharply later in the day. The US mirrors this, peaking at 7.36 units in the late afternoon but starting from a notably low early-morning level. Aggregated data indicate overall higher demand in the morning hours, with a gradual decline leading to an eventual drop in capacity by evening, evident across all regions.</p><p>When analyzing by membership size, smaller groups (0-40 members) showcase a significant preference for late-hour bookings, peaking near 10.5 units in the UK at 19H, whereas larger groups prefer earlier time slots, with the largest category showing persistent low levels of demand post-18H. This behavior results in smaller groups demonstrating increased demand as the day advances, contrasting with medium and larger groups that maintain steadier, more predictable booking behaviors focused on the morning and early afternoon.</p>
+
+
+
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab10">Countries</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab11">Coworking Size - US</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab12">Coworking Size - UK</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab13">Coworking Size - Spain</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab10">
+<figure class="chart">
+<div id="chart10">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}, "series": {"pointStart": 6, "type": "series"}}, "series": [{"data": [{"y": 5.77, "name": "6H"}, {"y": 6.63, "name": "7H"}, {"y": 5.53, "name": "8H"}, {"y": 5.84, "name": "9H"}, {"y": 5.67, "name": "10H"}, {"y": 5.56, "name": "11H"}, {"y": 5.48, "name": "12H"}, {"y": 5.48, "name": "13H"}, {"y": 5.43, "name": "14H"}, {"y": 5.65, "name": "15H"}, {"y": 5.67, "name": "16H"}, {"y": 5.87, "name": "17H"}, {"y": 6.15, "name": "18H"}, {"y": 6.66, "name": "19H"}, {"y": 5.98, "name": "20H"}, {"y": 6.9, "name": "21H"}], "name": "Spain", "color": "#0E735A", "type": "line"}, {"data": [{"y": 7.12, "name": "6H"}, {"y": 6.2, "name": "7H"}, {"y": 7.09, "name": "8H"}, {"y": 7.09, "name": "9H"}, {"y": 6.47, "name": "10H"}, {"y": 6.18, "name": "11H"}, {"y": 6.32, "name": "12H"}, {"y": 6.24, "name": "13H"}, {"y": 6.07, "name": "14H"}, {"y": 5.89, "name": "15H"}, {"y": 5.86, "name": "16H"}, {"y": 6.27, "name": "17H"}, {"y": 7.11, "name": "18H"}, {"y": 6.88, "name": "19H"}, {"y": 5.27, "name": "20H"}, {"y": 5.16, "name": "21H"}], "name": "United Kingdom", "color": "#8A2BC4", "type": "line"}, {"data": [{"y": 1.98, "name": "6H"}, {"y": 7.18, "name": "7H"}, {"y": 6.45, "name": "8H"}, {"y": 6.72, "name": "9H"}, {"y": 6.13, "name": "10H"}, {"y": 6.12, "name": "11H"}, {"y": 6.1, "name": "12H"}, {"y": 6.11, "name": "13H"}, {"y": 6.13, "name": "14H"}, {"y": 6.06, "name": "15H"}, {"y": 6.29, "name": "16H"}, {"y": 6.7, "name": "17H"}, {"y": 7.36, "name": "18H"}, {"y": 6.66, "name": "19H"}, {"y": 6.16, "name": "20H"}, {"y": 5.27, "name": "21H"}], "name": "United States", "color": "#850525", "type": "line"}, {"data": [{"y": 4.31, "name": "6H"}, {"y": 6.19, "name": "7H"}, {"y": 6.44, "name": "8H"}, {"y": 6.67, "name": "9H"}, {"y": 6.28, "name": "10H"}, {"y": 6.06, "name": "11H"}, {"y": 6.11, "name": "12H"}, {"y": 6.19, "name": "13H"}, {"y": 6.14, "name": "14H"}, {"y": 5.98, "name": "15H"}, {"y": 5.93, "name": "16H"}, {"y": 6.05, "name": "17H"}, {"y": 6.5, "name": "18H"}, {"y": 6.45, "name": "19H"}, {"y": 4.96, "name": "20H"}, {"y": 4.43, "name": "21H"}], "name": "All", "color": "#F19E39", "type": "line"}], "title": {"text": "Mean resource capacity by booking hour and country"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}H", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 21, "min": 6, "tickInterval": 2, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 10, "min": 1, "tickInterval": 1, "title": {"text": " "}}}'
+                                            renderChart('chart1' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab11">
+<figure class="chart">
+<div id="chart11">
+<script>
+                                            var index = 1
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}, "series": {"pointStart": 6, "type": "series"}}, "series": [{"data": [{"y": 1.31, "name": "6H"}, {"y": 6.92, "name": "7H"}, {"y": 6.66, "name": "8H"}, {"y": 7.69, "name": "9H"}, {"y": 5.44, "name": "10H"}, {"y": 6.63, "name": "11H"}, {"y": 6.78, "name": "12H"}, {"y": 6.63, "name": "13H"}, {"y": 6.52, "name": "14H"}, {"y": 5.81, "name": "15H"}, {"y": 6.26, "name": "16H"}, {"y": 6.67, "name": "17H"}, {"y": 6.91, "name": "18H"}, {"y": 7.06, "name": "19H"}, {"y": 6.28, "name": "20H"}, {"y": 3.12, "name": "21H"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 5.74, "name": "6H"}, {"y": 6.32, "name": "7H"}, {"y": 6.09, "name": "8H"}, {"y": 6.76, "name": "9H"}, {"y": 6.71, "name": "10H"}, {"y": 6.58, "name": "11H"}, {"y": 6.49, "name": "12H"}, {"y": 6.52, "name": "13H"}, {"y": 6.57, "name": "14H"}, {"y": 6.25, "name": "15H"}, {"y": 6.57, "name": "16H"}, {"y": 6.98, "name": "17H"}, {"y": 7.8, "name": "18H"}, {"y": 7.71, "name": "19H"}, {"y": 6.89, "name": "20H"}, {"y": 4.28, "name": "21H"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 5.15, "name": "6H"}, {"y": 8.68, "name": "7H"}, {"y": 6.23, "name": "8H"}, {"y": 6.67, "name": "9H"}, {"y": 6.36, "name": "10H"}, {"y": 6.06, "name": "11H"}, {"y": 6.06, "name": "12H"}, {"y": 6.05, "name": "13H"}, {"y": 6.14, "name": "14H"}, {"y": 6.2, "name": "15H"}, {"y": 6.36, "name": "16H"}, {"y": 6.92, "name": "17H"}, {"y": 7.38, "name": "18H"}, {"y": 7.18, "name": "19H"}, {"y": 6.42, "name": "20H"}, {"y": 6.45, "name": "21H"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 3.45, "name": "6H"}, {"y": 6.77, "name": "7H"}, {"y": 6.73, "name": "8H"}, {"y": 6.33, "name": "9H"}, {"y": 6.0, "name": "10H"}, {"y": 5.84, "name": "11H"}, {"y": 5.81, "name": "12H"}, {"y": 5.85, "name": "13H"}, {"y": 5.88, "name": "14H"}, {"y": 5.97, "name": "15H"}, {"y": 6.15, "name": "16H"}, {"y": 6.42, "name": "17H"}, {"y": 7.3, "name": "18H"}, {"y": 5.54, "name": "19H"}, {"y": 5.57, "name": "20H"}, {"y": 5.88, "name": "21H"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean duration in minutes and country (US)"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}H", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 21, "min": 6, "tickInterval": 2, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 10, "min": 1, "tickInterval": 1, "title": {"text": " "}}}'
+                                            renderChart('chart1' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab12">
+<figure class="chart">
+<div id="chart12">
+<script>
+                                            var index = 2
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}, "series": {"pointStart": 6, "type": "series"}}, "series": [{"data": [{"y": 8.15, "name": "6H"}, {"y": 3.25, "name": "7H"}, {"y": 9.36, "name": "8H"}, {"y": 4.67, "name": "9H"}, {"y": 7.63, "name": "10H"}, {"y": 7.43, "name": "11H"}, {"y": 8.82, "name": "12H"}, {"y": 7.77, "name": "13H"}, {"y": 7.33, "name": "14H"}, {"y": 7.17, "name": "15H"}, {"y": 6.91, "name": "16H"}, {"y": 8.21, "name": "17H"}, {"y": 8.42, "name": "18H"}, {"y": 10.5, "name": "19H"}, {"y": 9.82, "name": "20H"}, {"y": 8.26, "name": "21H"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 5.87, "name": "6H"}, {"y": 3.82, "name": "7H"}, {"y": 6.21, "name": "8H"}, {"y": 7.28, "name": "9H"}, {"y": 6.43, "name": "10H"}, {"y": 6.28, "name": "11H"}, {"y": 7.37, "name": "12H"}, {"y": 6.51, "name": "13H"}, {"y": 6.18, "name": "14H"}, {"y": 6.02, "name": "15H"}, {"y": 5.87, "name": "16H"}, {"y": 6.1, "name": "17H"}, {"y": 6.35, "name": "18H"}, {"y": 6.45, "name": "19H"}, {"y": 5.22, "name": "20H"}, {"y": 5.35, "name": "21H"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 7.1, "name": "6H"}, {"y": 5.26, "name": "7H"}, {"y": 5.53, "name": "8H"}, {"y": 7.37, "name": "9H"}, {"y": 6.42, "name": "10H"}, {"y": 6.05, "name": "11H"}, {"y": 6.11, "name": "12H"}, {"y": 6.13, "name": "13H"}, {"y": 6.17, "name": "14H"}, {"y": 5.91, "name": "15H"}, {"y": 5.98, "name": "16H"}, {"y": 6.53, "name": "17H"}, {"y": 7.14, "name": "18H"}, {"y": 5.94, "name": "19H"}, {"y": 5.05, "name": "20H"}, {"y": 5.03, "name": "21H"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 7.12, "name": "6H"}, {"y": 6.99, "name": "7H"}, {"y": 7.81, "name": "8H"}, {"y": 7.08, "name": "9H"}, {"y": 6.44, "name": "10H"}, {"y": 6.13, "name": "11H"}, {"y": 6.2, "name": "12H"}, {"y": 6.18, "name": "13H"}, {"y": 6.01, "name": "14H"}, {"y": 5.82, "name": "15H"}, {"y": 5.8, "name": "16H"}, {"y": 6.32, "name": "17H"}, {"y": 7.21, "name": "18H"}, {"y": 6.98, "name": "19H"}, {"y": 4.91, "name": "20H"}, {"y": 4.61, "name": "21H"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean duration in minutes and country (UK)"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}H", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 21, "min": 6, "tickInterval": 2, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 15, "min": 1, "tickInterval": 1, "title": {"text": " "}}}'
+                                            renderChart('chart1' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab13">
+<figure class="chart">
+<div id="chart13">
+<script>
+                                            var index = 3
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}, "series": {"pointStart": 6, "type": "series"}}, "series": [{"data": [{"y": 3.57, "name": "6H"}, {"y": 5.5, "name": "7H"}, {"y": 8.46, "name": "8H"}, {"y": 6.68, "name": "9H"}, {"y": 6.29, "name": "10H"}, {"y": 5.92, "name": "11H"}, {"y": 6.08, "name": "12H"}, {"y": 5.93, "name": "13H"}, {"y": 6.22, "name": "14H"}, {"y": 5.94, "name": "15H"}, {"y": 6.09, "name": "16H"}, {"y": 6.74, "name": "17H"}, {"y": 6.92, "name": "18H"}, {"y": 7.36, "name": "19H"}, {"y": 7.74, "name": "20H"}, {"y": 9.32, "name": "21H"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 5.17, "name": "6H"}, {"y": 4.96, "name": "7H"}, {"y": 7.0, "name": "8H"}, {"y": 7.01, "name": "9H"}, {"y": 6.2, "name": "10H"}, {"y": 5.96, "name": "11H"}, {"y": 5.99, "name": "12H"}, {"y": 5.98, "name": "13H"}, {"y": 6.04, "name": "14H"}, {"y": 6.17, "name": "15H"}, {"y": 6.04, "name": "16H"}, {"y": 6.12, "name": "17H"}, {"y": 6.18, "name": "18H"}, {"y": 7.02, "name": "19H"}, {"y": 5.99, "name": "20H"}, {"y": 5.82, "name": "21H"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 6.45, "name": "6H"}, {"y": 6.47, "name": "7H"}, {"y": 4.68, "name": "8H"}, {"y": 5.27, "name": "9H"}, {"y": 5.43, "name": "10H"}, {"y": 5.43, "name": "11H"}, {"y": 5.27, "name": "12H"}, {"y": 5.34, "name": "13H"}, {"y": 5.17, "name": "14H"}, {"y": 5.53, "name": "15H"}, {"y": 5.54, "name": "16H"}, {"y": 5.71, "name": "17H"}, {"y": 6.02, "name": "18H"}, {"y": 5.75, "name": "19H"}, {"y": 4.41, "name": "20H"}, {"y": 5.03, "name": "21H"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 7.23, "name": "6H"}, {"y": 7.97, "name": "7H"}, {"y": 4.61, "name": "8H"}, {"y": 5.57, "name": "9H"}, {"y": 5.37, "name": "10H"}, {"y": 5.35, "name": "11H"}, {"y": 5.23, "name": "12H"}, {"y": 5.24, "name": "13H"}, {"y": 5.23, "name": "14H"}, {"y": 5.45, "name": "15H"}, {"y": 5.45, "name": "16H"}, {"y": 5.51, "name": "17H"}, {"y": 5.92, "name": "18H"}, {"y": 6.63, "name": "19H"}, {"y": 6.32, "name": "20H"}, {"y": 6.37, "name": "21H"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean duration in minutes and country (Spain)"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}H", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 21, "min": 6, "tickInterval": 2, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 10, "min": 1, "tickInterval": 1, "title": {"text": " "}}}'
+                                            renderChart('chart1' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<h3 class="heading4">Booking distribution by time of the day</h3><p>The analysis of booking distribution across different member categories reveals a consistent trend across all markets examined. All segments peak in demand during the morning hours, particularly around 9 AM, with the smallest member group (0-40 Members) exhibiting the steepest drop-off after this peak, reflecting lower flexibility in booking times. In contrast, larger membership categories (specifically +250 Members) demonstrate a more sustained demand throughout the mid-morning to early afternoon hours, indicating differing usage patterns and potentially a broader range of meeting needs.</p><p>Quantitatively, while bookings from the 0-40 Members category plummet significant hours post-9 AM, larger groups like 101-250 Members maintain higher booking levels through to the afternoon and experience a more gradual decline. This trend suggests that businesses with larger memberships exhibit more adaptable and varied resource demands than those in smaller categories, which heavily favor early bookings but quickly taper off later in the day.</p>
+
+
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab20">Coworking size - US</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab21">Coworking size - UK</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab22">Coworking size - Spain</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab20">
+<figure class="chart">
+<div id="chart20">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}, "series": {"pointStart": 6, "type": "series"}}, "series": [{"data": [{"y": 3.66, "name": "6H"}, {"y": 2.72, "name": "7H"}, {"y": 10.55, "name": "8H"}, {"y": 15.0, "name": "9H"}, {"y": 12.25, "name": "10H"}, {"y": 7.87, "name": "11H"}, {"y": 7.41, "name": "12H"}, {"y": 8.33, "name": "13H"}, {"y": 8.97, "name": "14H"}, {"y": 6.82, "name": "15H"}, {"y": 4.38, "name": "16H"}, {"y": 3.87, "name": "17H"}, {"y": 3.82, "name": "18H"}, {"y": 1.89, "name": "19H"}, {"y": 0.83, "name": "20H"}, {"y": 1.63, "name": "21H"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 0.97, "name": "6H"}, {"y": 2.66, "name": "7H"}, {"y": 9.14, "name": "8H"}, {"y": 14.8, "name": "9H"}, {"y": 12.77, "name": "10H"}, {"y": 10.04, "name": "11H"}, {"y": 8.7, "name": "12H"}, {"y": 10.33, "name": "13H"}, {"y": 8.6, "name": "14H"}, {"y": 7.42, "name": "15H"}, {"y": 5.0, "name": "16H"}, {"y": 3.74, "name": "17H"}, {"y": 3.34, "name": "18H"}, {"y": 1.4, "name": "19H"}, {"y": 0.6, "name": "20H"}, {"y": 0.5, "name": "21H"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 0.48, "name": "6H"}, {"y": 1.51, "name": "7H"}, {"y": 6.78, "name": "8H"}, {"y": 11.86, "name": "9H"}, {"y": 12.53, "name": "10H"}, {"y": 10.75, "name": "11H"}, {"y": 9.55, "name": "12H"}, {"y": 11.19, "name": "13H"}, {"y": 10.13, "name": "14H"}, {"y": 8.59, "name": "15H"}, {"y": 6.57, "name": "16H"}, {"y": 4.5, "name": "17H"}, {"y": 3.43, "name": "18H"}, {"y": 1.41, "name": "19H"}, {"y": 0.5, "name": "20H"}, {"y": 0.24, "name": "21H"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 0.43, "name": "6H"}, {"y": 1.1, "name": "7H"}, {"y": 6.99, "name": "8H"}, {"y": 12.19, "name": "9H"}, {"y": 13.18, "name": "10H"}, {"y": 11.22, "name": "11H"}, {"y": 9.73, "name": "12H"}, {"y": 11.54, "name": "13H"}, {"y": 10.69, "name": "14H"}, {"y": 8.74, "name": "15H"}, {"y": 6.17, "name": "16H"}, {"y": 3.51, "name": "17H"}, {"y": 2.63, "name": "18H"}, {"y": 1.15, "name": "19H"}, {"y": 0.49, "name": "20H"}, {"y": 0.24, "name": "21H"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Booking distribution by time of the day and coworking size - US"}, "tooltip": {"valueSuffix": "%"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}H", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 21, "min": 6, "tickInterval": 2, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}%", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 23, "min": 0, "tickInterval": 2, "title": {"text": " "}}}'
+                                            renderChart('chart2' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab21">
+<figure class="chart">
+<div id="chart21">
+<script>
+                                            var index = 1
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}, "series": {"pointStart": 6, "type": "series"}}, "series": [{"data": [{"y": 0.16, "name": "6H"}, {"y": 3.42, "name": "7H"}, {"y": 9.8, "name": "8H"}, {"y": 39.62, "name": "9H"}, {"y": 10.34, "name": "10H"}, {"y": 6.7, "name": "11H"}, {"y": 6.83, "name": "12H"}, {"y": 5.72, "name": "13H"}, {"y": 6.37, "name": "14H"}, {"y": 4.5, "name": "15H"}, {"y": 2.82, "name": "16H"}, {"y": 1.66, "name": "17H"}, {"y": 1.17, "name": "18H"}, {"y": 0.6, "name": "19H"}, {"y": 0.16, "name": "20H"}, {"y": 0.12, "name": "21H"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 0.15, "name": "6H"}, {"y": 12.99, "name": "7H"}, {"y": 9.44, "name": "8H"}, {"y": 22.61, "name": "9H"}, {"y": 12.1, "name": "10H"}, {"y": 7.77, "name": "11H"}, {"y": 6.65, "name": "12H"}, {"y": 6.75, "name": "13H"}, {"y": 7.99, "name": "14H"}, {"y": 5.38, "name": "15H"}, {"y": 3.5, "name": "16H"}, {"y": 1.83, "name": "17H"}, {"y": 1.53, "name": "18H"}, {"y": 0.98, "name": "19H"}, {"y": 0.23, "name": "20H"}, {"y": 0.1, "name": "21H"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 0.66, "name": "6H"}, {"y": 0.84, "name": "7H"}, {"y": 13.72, "name": "8H"}, {"y": 19.74, "name": "9H"}, {"y": 13.89, "name": "10H"}, {"y": 9.13, "name": "11H"}, {"y": 7.2, "name": "12H"}, {"y": 7.49, "name": "13H"}, {"y": 10.79, "name": "14H"}, {"y": 6.64, "name": "15H"}, {"y": 4.55, "name": "16H"}, {"y": 2.2, "name": "17H"}, {"y": 2.2, "name": "18H"}, {"y": 0.59, "name": "19H"}, {"y": 0.26, "name": "20H"}, {"y": 0.11, "name": "21H"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 0.17, "name": "6H"}, {"y": 1.1, "name": "7H"}, {"y": 6.5, "name": "8H"}, {"y": 15.99, "name": "9H"}, {"y": 13.48, "name": "10H"}, {"y": 11.06, "name": "11H"}, {"y": 8.39, "name": "12H"}, {"y": 9.2, "name": "13H"}, {"y": 11.86, "name": "14H"}, {"y": 9.63, "name": "15H"}, {"y": 6.75, "name": "16H"}, {"y": 3.18, "name": "17H"}, {"y": 1.89, "name": "18H"}, {"y": 0.53, "name": "19H"}, {"y": 0.17, "name": "20H"}, {"y": 0.11, "name": "21H"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Booking distribution by time of the day and coworking size - UK"}, "tooltip": {"valueSuffix": "%"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}H", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 21, "min": 6, "tickInterval": 2, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}%", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 45, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart2' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab22">
+<figure class="chart">
+<div id="chart22">
+<script>
+                                            var index = 2
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}, "series": {"pointStart": 6, "type": "series"}}, "series": [{"data": [{"y": 0.15, "name": "6H"}, {"y": 0.34, "name": "7H"}, {"y": 2.71, "name": "8H"}, {"y": 14.99, "name": "9H"}, {"y": 15.91, "name": "10H"}, {"y": 11.77, "name": "11H"}, {"y": 10.54, "name": "12H"}, {"y": 6.38, "name": "13H"}, {"y": 4.45, "name": "14H"}, {"y": 7.87, "name": "15H"}, {"y": 9.92, "name": "16H"}, {"y": 7.12, "name": "17H"}, {"y": 4.18, "name": "18H"}, {"y": 2.81, "name": "19H"}, {"y": 0.77, "name": "20H"}, {"y": 0.09, "name": "21H"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 0.01, "name": "6H"}, {"y": 0.18, "name": "7H"}, {"y": 1.72, "name": "8H"}, {"y": 15.24, "name": "9H"}, {"y": 15.89, "name": "10H"}, {"y": 12.34, "name": "11H"}, {"y": 11.56, "name": "12H"}, {"y": 6.91, "name": "13H"}, {"y": 4.59, "name": "14H"}, {"y": 8.59, "name": "15H"}, {"y": 10.15, "name": "16H"}, {"y": 6.89, "name": "17H"}, {"y": 4.03, "name": "18H"}, {"y": 1.72, "name": "19H"}, {"y": 0.16, "name": "20H"}, {"y": 0.04, "name": "21H"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 0.01, "name": "6H"}, {"y": 0.16, "name": "7H"}, {"y": 2.37, "name": "8H"}, {"y": 16.99, "name": "9H"}, {"y": 15.68, "name": "10H"}, {"y": 12.27, "name": "11H"}, {"y": 12.32, "name": "12H"}, {"y": 6.99, "name": "13H"}, {"y": 5.36, "name": "14H"}, {"y": 8.59, "name": "15H"}, {"y": 9.07, "name": "16H"}, {"y": 5.81, "name": "17H"}, {"y": 2.88, "name": "18H"}, {"y": 1.31, "name": "19H"}, {"y": 0.17, "name": "20H"}, {"y": 0.03, "name": "21H"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 0.02, "name": "6H"}, {"y": 0.12, "name": "7H"}, {"y": 2.24, "name": "8H"}, {"y": 16.29, "name": "9H"}, {"y": 14.15, "name": "10H"}, {"y": 12.05, "name": "11H"}, {"y": 12.05, "name": "12H"}, {"y": 7.71, "name": "13H"}, {"y": 6.4, "name": "14H"}, {"y": 9.65, "name": "15H"}, {"y": 9.92, "name": "16H"}, {"y": 5.75, "name": "17H"}, {"y": 2.53, "name": "18H"}, {"y": 0.99, "name": "19H"}, {"y": 0.11, "name": "20H"}, {"y": 0.02, "name": "21H"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Booking distribution by time of the day and coworking size - Spain"}, "tooltip": {"valueSuffix": "%"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}H", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 21, "min": 6, "tickInterval": 2, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}%", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 23, "min": 0, "tickInterval": 2, "title": {"text": " "}}}'
+                                            renderChart('chart2' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="topic-section" id="section2">
+<h2 class="section-heading">Section 2</h2>
+<h3 class="heading3">How does the capacity of a resource affect the number of bookings it receives?</h3><p>The analysis of resource demand reveals notable trends in booking preferences across various markets, particularly concerning the capacity of available resources. It is evident that smaller capacities attract a higher volume of bookings, indicating a market inclination towards more intimate settings. This pattern is consistently observed in regions such as the U.S., U.K., and Spain, where demand sharply declines as resource capacity increases, particularly for groups exceeding ten participants.</p><p>This preference for smaller resource capacities not only underscores the importance of understanding customer behavior but also informs crucial resource allocation strategies. By leveraging insights on booking patterns, providers can tailor their offerings to meet the evident demand for smaller venues, optimizing their potential to capture market interest and drive bookings effectively.</p>
+
+
+<div class="card card-big keyfindings">
+<div class="row">
+<div class="col-md-6">
+<div class="keyfindings-texts">
+<h4 class="heading3">Key findings</h4>
+<div class="keyfinding-slides-wrap">
+<div class="keyfinding-slides">
+<div class="keyfinding-slide">
+
+
+<p class="weight-medium">Preference for Smaller Resources Dominates Bookings</p><p class="text-xs">Across markets, resources with a capacity of 1-5 people receive over 23% of bookings, indicating a strong demand for smaller group reservations.</p></div>
+</div>
+<div class="keyfinding-slides-controls">
+<div class="keyfinding-slides-arrows"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="img-wrap">
+<img alt="keyfindings" sizes="100%" src="images/small-resources.png" srcset="/images/small-resources.png 1x/images/small-resources@2x.png 2x"/>
+</div>
+</div>
+</div>
+</div>
+<h3 class="heading4">Booking distribution by capacity</h3><p>Booking patterns across various capacity ranges indicate a strong preference for smaller resources in both the U.S. and U.K. markets. Specifically, in the U.S., the capacity of 1-3 people shows the highest booking demand at around 23%, with a notable decline as capacities increase. While mid-range capacities (4-7) see moderate interest, bookings plummet for any resource offerings above 10 people, confirming a significant market trend favoring small group reservations.</p><p>In the U.K. and Spain, similar trends emerge, where smaller capacities dominate booking distributions, particularly in the 4-5 member range. The Spanish market reflects a peak of approximately 27% for this capacity, while larger groups experience severe declines in bookings beyond 10 members. Across all analyzed markets, the emergence of consistent demand for smaller resources highlights a critical area for resource allocation strategies moving forward.</p>
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab30">General Capacity - US</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab31">Coworking size - US</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab30">
+<figure class="chart">
+<div id="chart30">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 524, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 32, "type": "column"}}, "series": [{"data": [{"y": 23.17, "color": "#850525", "name": "1-3"}, {"y": 17.77, "color": "#850525", "name": "4-5"}, {"y": 16.69, "color": "#850525", "name": "6-7"}, {"y": 11.32, "color": "#850525", "name": "8-9"}, {"y": 12.17, "color": "#850525", "name": "10-11"}, {"y": 5.16, "color": "#850525", "name": "12-13"}, {"y": 1.75, "color": "#850525", "name": "14-15"}, {"y": 1.84, "color": "#850525", "name": "16-17"}, {"y": 1.08, "color": "#850525", "name": "18-19"}, {"y": 2.09, "color": "#850525", "name": "20-21"}, {"y": 6.97, "color": "#850525", "name": ">21"}], "name": "US", "type": "column"}], "title": {"text": "Bookings distribution by capacity - US (%)"}, "tooltip": {"valueSuffix": "%"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["1-3", "4-5", "6-7", "8-9", "10-11", "12-13", "14-15", "16-17", "18-19", "20-21", ">21"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}%", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 25, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart3' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab31">
+<figure class="chart">
+<div id="chart31">
+<script>
+                                            var index = 1
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 28.5, "name": "1-3"}, {"y": 11.05, "name": "4-5"}, {"y": 9.56, "name": "6-7"}, {"y": 12.24, "name": "8-9"}, {"y": 8.12, "name": "10-11"}, {"y": 6.67, "name": "12-13"}, {"y": 4.3, "name": "14-15"}, {"y": 1.61, "name": "16-17"}, {"y": 0.79, "name": "18-19"}, {"y": 4.18, "name": "20-21"}, {"y": 12.97, "name": ">21"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 17.93, "name": "1-3"}, {"y": 21.44, "name": "4-5"}, {"y": 14.56, "name": "6-7"}, {"y": 12.5, "name": "8-9"}, {"y": 11.7, "name": "10-11"}, {"y": 4.97, "name": "12-13"}, {"y": 2.46, "name": "14-15"}, {"y": 2.51, "name": "16-17"}, {"y": 0.99, "name": "18-19"}, {"y": 1.97, "name": "20-21"}, {"y": 8.98, "name": ">21"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 23.69, "name": "1-3"}, {"y": 16.23, "name": "4-5"}, {"y": 13.86, "name": "6-7"}, {"y": 11.79, "name": "8-9"}, {"y": 13.34, "name": "10-11"}, {"y": 6.78, "name": "12-13"}, {"y": 1.24, "name": "14-15"}, {"y": 2.04, "name": "16-17"}, {"y": 1.09, "name": "18-19"}, {"y": 1.55, "name": "20-21"}, {"y": 8.39, "name": ">21"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 23.24, "name": "1-3"}, {"y": 19.73, "name": "4-5"}, {"y": 22.52, "name": "6-7"}, {"y": 10.05, "name": "8-9"}, {"y": 13.36, "name": "10-11"}, {"y": 3.59, "name": "12-13"}, {"y": 0.63, "name": "14-15"}, {"y": 1.47, "name": "16-17"}, {"y": 1.25, "name": "18-19"}, {"y": 1.6, "name": "20-21"}, {"y": 2.55, "name": ">21"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Bookings distribution by capacity and coworking size - US (%)"}, "tooltip": {"valueSuffix": "%"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["1-3", "4-5", "6-7", "8-9", "10-11", "12-13", "14-15", "16-17", "18-19", "20-21", ">21"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}%", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 35, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart3' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab70">General Capacity - UK</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab71">Coworking size - UK</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab70">
+<figure class="chart">
+<div id="chart70">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 524, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 32, "type": "column"}}, "series": [{"data": [{"y": 18.32, "color": "#8A2BC4", "name": "1-3"}, {"y": 20.14, "color": "#8A2BC4", "name": "4-5"}, {"y": 14.18, "color": "#8A2BC4", "name": "6-7"}, {"y": 16.37, "color": "#8A2BC4", "name": "8-9"}, {"y": 9.92, "color": "#8A2BC4", "name": "10-11"}, {"y": 4.56, "color": "#8A2BC4", "name": "12-13"}, {"y": 2.67, "color": "#8A2BC4", "name": "14-15"}, {"y": 1.8, "color": "#8A2BC4", "name": "16-17"}, {"y": 0.55, "color": "#8A2BC4", "name": "18-19"}, {"y": 2.82, "color": "#8A2BC4", "name": "20-21"}, {"y": 8.67, "color": "#8A2BC4", "name": ">21"}], "name": "UK", "type": "column"}], "title": {"text": "Bookings distribution by capacity - UK (%)"}, "tooltip": {"valueSuffix": "%"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["1-3", "4-5", "6-7", "8-9", "10-11", "12-13", "14-15", "16-17", "18-19", "20-21", ">21"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}%", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 30, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart7' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab71">
+<figure class="chart">
+<div id="chart71">
+<script>
+                                            var index = 1
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 24.07, "name": "1-3"}, {"y": 12.17, "name": "4-5"}, {"y": 11.02, "name": "6-7"}, {"y": 11.78, "name": "8-9"}, {"y": 6.53, "name": "10-11"}, {"y": 6.3, "name": "12-13"}, {"y": 3.21, "name": "14-15"}, {"y": 3.46, "name": "16-17"}, {"y": 1.93, "name": "18-19"}, {"y": 3.78, "name": "20-21"}, {"y": 15.73, "name": ">21"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 13.38, "name": "1-3"}, {"y": 15.55, "name": "4-5"}, {"y": 15.57, "name": "6-7"}, {"y": 10.84, "name": "8-9"}, {"y": 8.3, "name": "10-11"}, {"y": 5.31, "name": "12-13"}, {"y": 0.74, "name": "14-15"}, {"y": 2.33, "name": "16-17"}, {"y": 0.16, "name": "18-19"}, {"y": 4.09, "name": "20-21"}, {"y": 23.72, "name": ">21"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 17.71, "name": "1-3"}, {"y": 23.42, "name": "4-5"}, {"y": 12.43, "name": "6-7"}, {"y": 13.28, "name": "8-9"}, {"y": 10.57, "name": "10-11"}, {"y": 5.17, "name": "12-13"}, {"y": 2.62, "name": "14-15"}, {"y": 2.12, "name": "16-17"}, {"y": 0.07, "name": "18-19"}, {"y": 3.18, "name": "20-21"}, {"y": 9.44, "name": ">21"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 18.07, "name": "1-3"}, {"y": 21.57, "name": "4-5"}, {"y": 14.99, "name": "6-7"}, {"y": 18.75, "name": "8-9"}, {"y": 10.65, "name": "10-11"}, {"y": 3.98, "name": "12-13"}, {"y": 2.86, "name": "14-15"}, {"y": 1.33, "name": "16-17"}, {"y": 0.45, "name": "18-19"}, {"y": 2.37, "name": "20-21"}, {"y": 5.0, "name": ">21"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Bookings distribution by capacity and coworking size - UK (%)"}, "tooltip": {"valueSuffix": "%"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["1-3", "4-5", "6-7", "8-9", "10-11", "12-13", "14-15", "16-17", "18-19", "20-21", ">21"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}%", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 35, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart7' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab80">General Capacity - Spain</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab81">Coworking size - Spain</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab80">
+<figure class="chart">
+<div id="chart80">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 524, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 32, "type": "column"}}, "series": [{"data": [{"y": 19.78, "color": "#0E735A", "name": "1-3"}, {"y": 26.92, "color": "#0E735A", "name": "4-5"}, {"y": 18.03, "color": "#0E735A", "name": "6-7"}, {"y": 15.45, "color": "#0E735A", "name": "8-9"}, {"y": 6.51, "color": "#0E735A", "name": "10-11"}, {"y": 4.08, "color": "#0E735A", "name": "12-13"}, {"y": 1.11, "color": "#0E735A", "name": "14-15"}, {"y": 1.06, "color": "#0E735A", "name": "16-17"}, {"y": 0.17, "color": "#0E735A", "name": "18-19"}, {"y": 0.69, "color": "#0E735A", "name": "20-21"}, {"y": 6.21, "color": "#0E735A", "name": ">21"}], "name": "Spain", "type": "column"}], "title": {"text": "Bookings distribution by capacity - Spain (%)"}, "tooltip": {"valueSuffix": "%"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["1-3", "4-5", "6-7", "8-9", "10-11", "12-13", "14-15", "16-17", "18-19", "20-21", ">21"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}%", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 30, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart8' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab81">
+<figure class="chart">
+<div id="chart81">
+<script>
+                                            var index = 1
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 12.45, "name": "1-3"}, {"y": 24.62, "name": "4-5"}, {"y": 22.46, "name": "6-7"}, {"y": 12.22, "name": "8-9"}, {"y": 9.6, "name": "10-11"}, {"y": 3.75, "name": "12-13"}, {"y": 0.9, "name": "14-15"}, {"y": 1.44, "name": "16-17"}, {"y": 1.01, "name": "18-19"}, {"y": 1.63, "name": "20-21"}, {"y": 9.93, "name": ">21"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 12.23, "name": "1-3"}, {"y": 23.41, "name": "4-5"}, {"y": 30.39, "name": "6-7"}, {"y": 9.99, "name": "8-9"}, {"y": 6.74, "name": "10-11"}, {"y": 7.01, "name": "12-13"}, {"y": 1.1, "name": "14-15"}, {"y": 1.7, "name": "16-17"}, {"y": 0.02, "name": "18-19"}, {"y": 1.28, "name": "20-21"}, {"y": 6.12, "name": ">21"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 23.63, "name": "1-3"}, {"y": 24.76, "name": "4-5"}, {"y": 19.73, "name": "6-7"}, {"y": 13.69, "name": "8-9"}, {"y": 7.07, "name": "10-11"}, {"y": 4.02, "name": "12-13"}, {"y": 1.14, "name": "14-15"}, {"y": 0.82, "name": "16-17"}, {"y": 0.05, "name": "18-19"}, {"y": 0.49, "name": "20-21"}, {"y": 4.6, "name": ">21"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 22.76, "name": "1-3"}, {"y": 30.32, "name": "4-5"}, {"y": 10.71, "name": "6-7"}, {"y": 19.67, "name": "8-9"}, {"y": 5.12, "name": "10-11"}, {"y": 3.06, "name": "12-13"}, {"y": 1.16, "name": "14-15"}, {"y": 0.82, "name": "16-17"}, {"y": 0.05, "name": "18-19"}, {"y": 0.29, "name": "20-21"}, {"y": 6.05, "name": ">21"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Bookings distribution by capacity and coworking size - Spain (%)"}, "tooltip": {"valueSuffix": "%"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["1-3", "4-5", "6-7", "8-9", "10-11", "12-13", "14-15", "16-17", "18-19", "20-21", ">21"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}%", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 35, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart8' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="topic-section" id="section3">
+<h2 class="section-heading">Section 3</h2>
+<h3 class="heading3">What is the mean price of a booking depending on the type of user that is using the resource?</h3><p>This section delves into the analysis of mean booking prices based on user types across different markets, revealing significant patterns in resource demand. The trends observed from January 2016 to early 2025 indicate that economic conditions and regional behaviors heavily influence pricing strategies, showcasing distinctive characteristics among Spain, the United Kingdom, and the United States.</p><p>Further examination of customer segments illustrates a clear disparity between Members and Non-Members, with pricing strategies actively encouraging loyalty through substantial cost advantages for Members. The insights gained from various booking categories also highlight how different workspace offerings cater to diverse user preferences, reflecting an overall upward trend in pricing relative to the demands imposed by market dynamics.</p>
+
+
+
+<div class="card card-big keyfindings">
+<div class="row">
+<div class="col-md-6">
+<div class="keyfindings-texts">
+<h4 class="heading3">Key findings</h4>
+<div class="keyfinding-slides-wrap">
+<div class="keyfinding-slides">
+<div class="keyfinding-slide">
+
+
+<p class="weight-medium">Membership Pricing Yields Significant Savings</p><p class="text-xs">In the US, Members enjoy an average booking price that is approximately 50% lower than that of Non-Members, illustrating the financial incentive to attract more users into membership.</p></div>
+<div class="keyfinding-slide">
+<p class="weight-medium">UK</p>
+<p class="text-xs">Spaces with more than 100 members are the ones that get the highest return from bookings made by contacts: the mean final price is approximately £107, around double that of bookings made by their members.</p>
+</div>
+<div class="keyfinding-slide">
+<p class="weight-medium">Spain</p>
+<p class="text-xs">Contact bookings provide 64% more revenue than member bookings.</p>
+</div>
+</div>
+<div class="keyfinding-slides-controls">
+<div class="keyfinding-slides-arrows"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="img-wrap">
+<img alt="keyfindings" sizes="100%" src="images/contact-turnover.png" srcset="/images/contact-turnover.png 1x/images/contact-turnover@2x.png 2x"/>
+</div>
+</div>
+</div>
+</div>
+<h3 class="heading4">Mean Final hourly price</h3><p>The analysis of mean final hourly prices across Spain, the United Kingdom, and the United States reveals distinct yet informative trends pertinent to resource demand. From January 2016 to early 2025, Spain displays notable volatility with prices increasing approximately 38% overall despite significant fluctuations, peaking at around 32.64. In contrast, the UK market shows a more consistent upward trajectory with the highest average prices throughout the period; it recovered from a low in 2021 to surpass 41 by early 2024. The US lies in between, maintaining higher mean hourly prices than Spain but lower than the UK, demonstrating stable demand even after pandemic-related dips.</p><p>When aggregating data across all markets, the overall mean hourly price showed steady growth, indicating a resilient recovery from 2020's disruptions despite varied market responses. The comparative analysis highlights that while Spain struggles with significant price fluctuations, the UK maintains a premium market status, and the US reflects diverse user demand strategies. This overview underscores how each market's economic conditions influence pricing trends, ultimately reflecting a complex landscape of user types and their corresponding demand across different regions.</p>
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<!--li(class={active: index==0})a.btn.btn-sm(href='#tab4' + index)=c5.name-->
+</ul>
+</nav>
+<div class="tab-pane active" id="tab40">
+<figure class="chart">
+<div id="chart40">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "spline"}, "legend": {"align": "left", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"series": {"pointInterval": 0.083, "pointStart": 2016.01, "type": "series"}, "spline": {"lineWidth": 3, "marker": {"enabled": false}, "type": "spline"}}, "series": [{"data": [{"y": 18.75, "name": "2016-01-01"}, {"y": 17.8, "name": "2016-02-01"}, {"y": 19.17, "name": "2016-03-01"}, {"y": 20.41, "name": "2016-04-01"}, {"y": 19.64, "name": "2016-05-01"}, {"y": 21.75, "name": "2016-06-01"}, {"y": 21.99, "name": "2016-07-01"}, {"y": 19.36, "name": "2016-08-01"}, {"y": 20.73, "name": "2016-09-01"}, {"y": 22.7, "name": "2016-10-01"}, {"y": 23.69, "name": "2016-11-01"}, {"y": 23.77, "name": "2016-12-01"}, {"y": 23.79, "name": "2017-01-01"}, {"y": 21.57, "name": "2017-02-01"}, {"y": 20.24, "name": "2017-03-01"}, {"y": 21.56, "name": "2017-04-01"}, {"y": 22.5, "name": "2017-05-01"}, {"y": 21.97, "name": "2017-06-01"}, {"y": 21.03, "name": "2017-07-01"}, {"y": 24.06, "name": "2017-08-01"}, {"y": 19.43, "name": "2017-09-01"}, {"y": 17.98, "name": "2017-10-01"}, {"y": 19.61, "name": "2017-11-01"}, {"y": 18.85, "name": "2017-12-01"}, {"y": 19.7, "name": "2018-01-01"}, {"y": 21.6, "name": "2018-02-01"}, {"y": 22.22, "name": "2018-03-01"}, {"y": 22.94, "name": "2018-04-01"}, {"y": 22.95, "name": "2018-05-01"}, {"y": 21.33, "name": "2018-06-01"}, {"y": 25.01, "name": "2018-07-01"}, {"y": 21.7, "name": "2018-08-01"}, {"y": 21.74, "name": "2018-09-01"}, {"y": 26.56, "name": "2018-10-01"}, {"y": 27.15, "name": "2018-11-01"}, {"y": 24.38, "name": "2018-12-01"}, {"y": 25.18, "name": "2019-01-01"}, {"y": 24.83, "name": "2019-02-01"}, {"y": 26.09, "name": "2019-03-01"}, {"y": 26.61, "name": "2019-04-01"}, {"y": 24.12, "name": "2019-05-01"}, {"y": 25.86, "name": "2019-06-01"}, {"y": 24.26, "name": "2019-07-01"}, {"y": 23.12, "name": "2019-08-01"}, {"y": 25.57, "name": "2019-09-01"}, {"y": 25.96, "name": "2019-10-01"}, {"y": 26.44, "name": "2019-11-01"}, {"y": 24.82, "name": "2019-12-01"}, {"y": 25.87, "name": "2020-01-01"}, {"y": 26.5, "name": "2020-02-01"}, {"y": 32.64, "name": "2020-03-01"}, {"y": 41.68, "name": "2020-04-01"}, {"y": 27.94, "name": "2020-05-01"}, {"y": 26.44, "name": "2020-06-01"}, {"y": 27.32, "name": "2020-07-01"}, {"y": 27.46, "name": "2020-08-01"}, {"y": 29.59, "name": "2020-09-01"}, {"y": 27.88, "name": "2020-10-01"}, {"y": 28.69, "name": "2020-11-01"}, {"y": 27.26, "name": "2020-12-01"}, {"y": 26.78, "name": "2021-01-01"}, {"y": 23.82, "name": "2021-02-01"}, {"y": 22.99, "name": "2021-03-01"}, {"y": 23.46, "name": "2021-04-01"}, {"y": 22.37, "name": "2021-05-01"}, {"y": 25.04, "name": "2021-06-01"}, {"y": 23.37, "name": "2021-07-01"}, {"y": 20.13, "name": "2021-08-01"}, {"y": 20.9, "name": "2021-09-01"}, {"y": 23.72, "name": "2021-10-01"}, {"y": 21.75, "name": "2021-11-01"}, {"y": 22.78, "name": "2021-12-01"}, {"y": 21.37, "name": "2022-01-01"}, {"y": 21.44, "name": "2022-02-01"}, {"y": 21.7, "name": "2022-03-01"}, {"y": 23.05, "name": "2022-04-01"}, {"y": 24.08, "name": "2022-05-01"}, {"y": 24.17, "name": "2022-06-01"}, {"y": 21.9, "name": "2022-07-01"}, {"y": 19.56, "name": "2022-08-01"}, {"y": 22.21, "name": "2022-09-01"}, {"y": 22.6, "name": "2022-10-01"}, {"y": 23.86, "name": "2022-11-01"}, {"y": 23.53, "name": "2022-12-01"}, {"y": 24.85, "name": "2023-01-01"}, {"y": 23.92, "name": "2023-02-01"}, {"y": 24.27, "name": "2023-03-01"}, {"y": 23.76, "name": "2023-04-01"}, {"y": 24.46, "name": "2023-05-01"}, {"y": 24.24, "name": "2023-06-01"}, {"y": 23.99, "name": "2023-07-01"}, {"y": 22.46, "name": "2023-08-01"}, {"y": 24.22, "name": "2023-09-01"}, {"y": 24.31, "name": "2023-10-01"}, {"y": 24.38, "name": "2023-11-01"}, {"y": 25.52, "name": "2023-12-01"}, {"y": 24.66, "name": "2024-01-01"}, {"y": 25.34, "name": "2024-02-01"}, {"y": 25.6, "name": "2024-03-01"}, {"y": 25.4, "name": "2024-04-01"}, {"y": 25.19, "name": "2024-05-01"}, {"y": 25.58, "name": "2024-06-01"}, {"y": 24.89, "name": "2024-07-01"}, {"y": 25.74, "name": "2024-08-01"}, {"y": 24.63, "name": "2024-09-01"}, {"y": 23.2, "name": "2024-10-01"}, {"y": 25.77, "name": "2024-11-01"}, {"y": 25.25, "name": "2024-12-01"}, {"y": 25.93, "name": "2025-01-01"}, {"y": 25.56, "name": "2025-02-01"}, {"y": 25.54, "name": "2025-03-01"}, {"y": 24.66, "name": "2025-04-01"}], "name": "Spain", "color": "#0E735A", "type": "spline"}, {"data": [{"y": 40.8, "name": "2016-01-01"}, {"y": 41.87, "name": "2016-02-01"}, {"y": 39.8, "name": "2016-03-01"}, {"y": 36.46, "name": "2016-04-01"}, {"y": 32.15, "name": "2016-05-01"}, {"y": 33.58, "name": "2016-06-01"}, {"y": 28.15, "name": "2016-07-01"}, {"y": 29.45, "name": "2016-08-01"}, {"y": 29.82, "name": "2016-09-01"}, {"y": 34.18, "name": "2016-10-01"}, {"y": 29.09, "name": "2016-11-01"}, {"y": 29.24, "name": "2016-12-01"}, {"y": 28.24, "name": "2017-01-01"}, {"y": 28.72, "name": "2017-02-01"}, {"y": 29.52, "name": "2017-03-01"}, {"y": 26.23, "name": "2017-04-01"}, {"y": 26.53, "name": "2017-05-01"}, {"y": 25.8, "name": "2017-06-01"}, {"y": 25.05, "name": "2017-07-01"}, {"y": 28.1, "name": "2017-08-01"}, {"y": 26.41, "name": "2017-09-01"}, {"y": 30.4, "name": "2017-10-01"}, {"y": 33.04, "name": "2017-11-01"}, {"y": 34.2, "name": "2017-12-01"}, {"y": 32.47, "name": "2018-01-01"}, {"y": 32.89, "name": "2018-02-01"}, {"y": 31.39, "name": "2018-03-01"}, {"y": 34.91, "name": "2018-04-01"}, {"y": 33.44, "name": "2018-05-01"}, {"y": 31.55, "name": "2018-06-01"}, {"y": 30.12, "name": "2018-07-01"}, {"y": 33.14, "name": "2018-08-01"}, {"y": 32.92, "name": "2018-09-01"}, {"y": 32.7, "name": "2018-10-01"}, {"y": 33.42, "name": "2018-11-01"}, {"y": 32.21, "name": "2018-12-01"}, {"y": 33.96, "name": "2019-01-01"}, {"y": 32.27, "name": "2019-02-01"}, {"y": 32.44, "name": "2019-03-01"}, {"y": 33.89, "name": "2019-04-01"}, {"y": 32.09, "name": "2019-05-01"}, {"y": 32.0, "name": "2019-06-01"}, {"y": 32.69, "name": "2019-07-01"}, {"y": 33.51, "name": "2019-08-01"}, {"y": 32.84, "name": "2019-09-01"}, {"y": 35.2, "name": "2019-10-01"}, {"y": 35.84, "name": "2019-11-01"}, {"y": 35.93, "name": "2019-12-01"}, {"y": 33.99, "name": "2020-01-01"}, {"y": 34.56, "name": "2020-02-01"}, {"y": 33.16, "name": "2020-03-01"}, {"y": 41.85, "name": "2020-04-01"}, {"y": 29.22, "name": "2020-05-01"}, {"y": 32.14, "name": "2020-06-01"}, {"y": 31.72, "name": "2020-07-01"}, {"y": 31.88, "name": "2020-08-01"}, {"y": 32.79, "name": "2020-09-01"}, {"y": 35.0, "name": "2020-10-01"}, {"y": 34.54, "name": "2020-11-01"}, {"y": 31.89, "name": "2020-12-01"}, {"y": 28.1, "name": "2021-01-01"}, {"y": 29.47, "name": "2021-02-01"}, {"y": 28.52, "name": "2021-03-01"}, {"y": 33.42, "name": "2021-04-01"}, {"y": 30.96, "name": "2021-05-01"}, {"y": 31.02, "name": "2021-06-01"}, {"y": 31.63, "name": "2021-07-01"}, {"y": 31.18, "name": "2021-08-01"}, {"y": 30.67, "name": "2021-09-01"}, {"y": 31.52, "name": "2021-10-01"}, {"y": 30.35, "name": "2021-11-01"}, {"y": 31.43, "name": "2021-12-01"}, {"y": 28.37, "name": "2022-01-01"}, {"y": 30.33, "name": "2022-02-01"}, {"y": 30.13, "name": "2022-03-01"}, {"y": 31.62, "name": "2022-04-01"}, {"y": 30.25, "name": "2022-05-01"}, {"y": 29.96, "name": "2022-06-01"}, {"y": 30.49, "name": "2022-07-01"}, {"y": 30.81, "name": "2022-08-01"}, {"y": 31.28, "name": "2022-09-01"}, {"y": 31.86, "name": "2022-10-01"}, {"y": 31.05, "name": "2022-11-01"}, {"y": 31.66, "name": "2022-12-01"}, {"y": 32.03, "name": "2023-01-01"}, {"y": 31.27, "name": "2023-02-01"}, {"y": 32.05, "name": "2023-03-01"}, {"y": 31.29, "name": "2023-04-01"}, {"y": 31.58, "name": "2023-05-01"}, {"y": 32.1, "name": "2023-06-01"}, {"y": 31.62, "name": "2023-07-01"}, {"y": 31.25, "name": "2023-08-01"}, {"y": 31.9, "name": "2023-09-01"}, {"y": 31.88, "name": "2023-10-01"}, {"y": 32.07, "name": "2023-11-01"}, {"y": 32.16, "name": "2023-12-01"}, {"y": 31.7, "name": "2024-01-01"}, {"y": 32.33, "name": "2024-02-01"}, {"y": 31.58, "name": "2024-03-01"}, {"y": 30.9, "name": "2024-04-01"}, {"y": 31.91, "name": "2024-05-01"}, {"y": 37.28, "name": "2024-06-01"}, {"y": 35.74, "name": "2024-07-01"}, {"y": 35.21, "name": "2024-08-01"}, {"y": 36.36, "name": "2024-09-01"}, {"y": 36.36, "name": "2024-10-01"}, {"y": 35.91, "name": "2024-11-01"}, {"y": 37.03, "name": "2024-12-01"}, {"y": 35.38, "name": "2025-01-01"}, {"y": 36.46, "name": "2025-02-01"}, {"y": 36.34, "name": "2025-03-01"}, {"y": 36.03, "name": "2025-04-01"}], "name": "United Kingdom", "color": "#8A2BC4", "type": "spline"}, {"data": [{"y": 33.24, "name": "2016-01-01"}, {"y": 33.28, "name": "2016-02-01"}, {"y": 31.23, "name": "2016-03-01"}, {"y": 30.58, "name": "2016-04-01"}, {"y": 31.25, "name": "2016-05-01"}, {"y": 30.65, "name": "2016-06-01"}, {"y": 31.5, "name": "2016-07-01"}, {"y": 30.74, "name": "2016-08-01"}, {"y": 32.98, "name": "2016-09-01"}, {"y": 28.95, "name": "2016-10-01"}, {"y": 29.77, "name": "2016-11-01"}, {"y": 30.16, "name": "2016-12-01"}, {"y": 30.33, "name": "2017-01-01"}, {"y": 32.1, "name": "2017-02-01"}, {"y": 30.87, "name": "2017-03-01"}, {"y": 32.1, "name": "2017-04-01"}, {"y": 30.87, "name": "2017-05-01"}, {"y": 32.27, "name": "2017-06-01"}, {"y": 31.38, "name": "2017-07-01"}, {"y": 32.67, "name": "2017-08-01"}, {"y": 32.2, "name": "2017-09-01"}, {"y": 29.82, "name": "2017-10-01"}, {"y": 30.0, "name": "2017-11-01"}, {"y": 31.24, "name": "2017-12-01"}, {"y": 30.68, "name": "2018-01-01"}, {"y": 29.56, "name": "2018-02-01"}, {"y": 30.53, "name": "2018-03-01"}, {"y": 30.83, "name": "2018-04-01"}, {"y": 31.22, "name": "2018-05-01"}, {"y": 31.24, "name": "2018-06-01"}, {"y": 32.43, "name": "2018-07-01"}, {"y": 31.97, "name": "2018-08-01"}, {"y": 31.74, "name": "2018-09-01"}, {"y": 31.75, "name": "2018-10-01"}, {"y": 32.95, "name": "2018-11-01"}, {"y": 31.51, "name": "2018-12-01"}, {"y": 35.3, "name": "2019-01-01"}, {"y": 31.99, "name": "2019-02-01"}, {"y": 34.2, "name": "2019-03-01"}, {"y": 32.89, "name": "2019-04-01"}, {"y": 32.43, "name": "2019-05-01"}, {"y": 31.09, "name": "2019-06-01"}, {"y": 31.77, "name": "2019-07-01"}, {"y": 29.68, "name": "2019-08-01"}, {"y": 31.56, "name": "2019-09-01"}, {"y": 32.1, "name": "2019-10-01"}, {"y": 31.45, "name": "2019-11-01"}, {"y": 32.66, "name": "2019-12-01"}, {"y": 34.04, "name": "2020-01-01"}, {"y": 32.76, "name": "2020-02-01"}, {"y": 33.24, "name": "2020-03-01"}, {"y": 35.36, "name": "2020-04-01"}, {"y": 32.44, "name": "2020-05-01"}, {"y": 29.28, "name": "2020-06-01"}, {"y": 29.1, "name": "2020-07-01"}, {"y": 29.26, "name": "2020-08-01"}, {"y": 30.32, "name": "2020-09-01"}, {"y": 31.65, "name": "2020-10-01"}, {"y": 32.11, "name": "2020-11-01"}, {"y": 31.02, "name": "2020-12-01"}, {"y": 30.22, "name": "2021-01-01"}, {"y": 30.03, "name": "2021-02-01"}, {"y": 30.71, "name": "2021-03-01"}, {"y": 29.33, "name": "2021-04-01"}, {"y": 30.27, "name": "2021-05-01"}, {"y": 30.14, "name": "2021-06-01"}, {"y": 29.42, "name": "2021-07-01"}, {"y": 31.25, "name": "2021-08-01"}, {"y": 31.02, "name": "2021-09-01"}, {"y": 32.03, "name": "2021-10-01"}, {"y": 33.2, "name": "2021-11-01"}, {"y": 33.08, "name": "2021-12-01"}, {"y": 31.54, "name": "2022-01-01"}, {"y": 32.52, "name": "2022-02-01"}, {"y": 32.5, "name": "2022-03-01"}, {"y": 31.8, "name": "2022-04-01"}, {"y": 35.01, "name": "2022-05-01"}, {"y": 33.07, "name": "2022-06-01"}, {"y": 33.52, "name": "2022-07-01"}, {"y": 31.99, "name": "2022-08-01"}, {"y": 32.87, "name": "2022-09-01"}, {"y": 32.28, "name": "2022-10-01"}, {"y": 34.82, "name": "2022-11-01"}, {"y": 34.19, "name": "2022-12-01"}, {"y": 34.37, "name": "2023-01-01"}, {"y": 33.95, "name": "2023-02-01"}, {"y": 33.96, "name": "2023-03-01"}, {"y": 34.89, "name": "2023-04-01"}, {"y": 33.47, "name": "2023-05-01"}, {"y": 33.95, "name": "2023-06-01"}, {"y": 32.8, "name": "2023-07-01"}, {"y": 33.66, "name": "2023-08-01"}, {"y": 33.71, "name": "2023-09-01"}, {"y": 33.96, "name": "2023-10-01"}, {"y": 34.8, "name": "2023-11-01"}, {"y": 34.67, "name": "2023-12-01"}, {"y": 35.02, "name": "2024-01-01"}, {"y": 34.37, "name": "2024-02-01"}, {"y": 36.82, "name": "2024-03-01"}, {"y": 36.81, "name": "2024-04-01"}, {"y": 36.67, "name": "2024-05-01"}, {"y": 37.57, "name": "2024-06-01"}, {"y": 37.41, "name": "2024-07-01"}, {"y": 36.75, "name": "2024-08-01"}, {"y": 36.4, "name": "2024-09-01"}, {"y": 36.65, "name": "2024-10-01"}, {"y": 36.84, "name": "2024-11-01"}, {"y": 36.09, "name": "2024-12-01"}, {"y": 35.67, "name": "2025-01-01"}, {"y": 36.2, "name": "2025-02-01"}, {"y": 36.22, "name": "2025-03-01"}, {"y": 36.81, "name": "2025-04-01"}], "name": "United States", "color": "#850525", "type": "spline"}, {"data": [{"y": 30.4, "name": "2016-01-01"}, {"y": 30.02, "name": "2016-02-01"}, {"y": 28.63, "name": "2016-03-01"}, {"y": 27.74, "name": "2016-04-01"}, {"y": 28.15, "name": "2016-05-01"}, {"y": 27.96, "name": "2016-06-01"}, {"y": 27.47, "name": "2016-07-01"}, {"y": 27.25, "name": "2016-08-01"}, {"y": 28.64, "name": "2016-09-01"}, {"y": 26.86, "name": "2016-10-01"}, {"y": 26.68, "name": "2016-11-01"}, {"y": 27.01, "name": "2016-12-01"}, {"y": 26.99, "name": "2017-01-01"}, {"y": 27.72, "name": "2017-02-01"}, {"y": 27.46, "name": "2017-03-01"}, {"y": 28.63, "name": "2017-04-01"}, {"y": 28.31, "name": "2017-05-01"}, {"y": 29.07, "name": "2017-06-01"}, {"y": 28.11, "name": "2017-07-01"}, {"y": 30.46, "name": "2017-08-01"}, {"y": 28.64, "name": "2017-09-01"}, {"y": 27.53, "name": "2017-10-01"}, {"y": 28.48, "name": "2017-11-01"}, {"y": 29.27, "name": "2017-12-01"}, {"y": 28.74, "name": "2018-01-01"}, {"y": 28.17, "name": "2018-02-01"}, {"y": 28.57, "name": "2018-03-01"}, {"y": 29.85, "name": "2018-04-01"}, {"y": 29.59, "name": "2018-05-01"}, {"y": 29.21, "name": "2018-06-01"}, {"y": 30.09, "name": "2018-07-01"}, {"y": 30.37, "name": "2018-08-01"}, {"y": 29.87, "name": "2018-09-01"}, {"y": 30.9, "name": "2018-10-01"}, {"y": 31.61, "name": "2018-11-01"}, {"y": 30.27, "name": "2018-12-01"}, {"y": 32.63, "name": "2019-01-01"}, {"y": 30.75, "name": "2019-02-01"}, {"y": 32.28, "name": "2019-03-01"}, {"y": 31.62, "name": "2019-04-01"}, {"y": 30.72, "name": "2019-05-01"}, {"y": 30.52, "name": "2019-06-01"}, {"y": 30.84, "name": "2019-07-01"}, {"y": 29.57, "name": "2019-08-01"}, {"y": 30.81, "name": "2019-09-01"}, {"y": 31.57, "name": "2019-10-01"}, {"y": 31.63, "name": "2019-11-01"}, {"y": 31.89, "name": "2019-12-01"}, {"y": 32.35, "name": "2020-01-01"}, {"y": 31.8, "name": "2020-02-01"}, {"y": 31.99, "name": "2020-03-01"}, {"y": 36.55, "name": "2020-04-01"}, {"y": 30.0, "name": "2020-05-01"}, {"y": 29.17, "name": "2020-06-01"}, {"y": 28.61, "name": "2020-07-01"}, {"y": 28.98, "name": "2020-08-01"}, {"y": 30.53, "name": "2020-09-01"}, {"y": 31.18, "name": "2020-10-01"}, {"y": 31.7, "name": "2020-11-01"}, {"y": 30.56, "name": "2020-12-01"}, {"y": 28.76, "name": "2021-01-01"}, {"y": 28.34, "name": "2021-02-01"}, {"y": 28.33, "name": "2021-03-01"}, {"y": 29.15, "name": "2021-04-01"}, {"y": 28.8, "name": "2021-05-01"}, {"y": 29.21, "name": "2021-06-01"}, {"y": 28.97, "name": "2021-07-01"}, {"y": 29.66, "name": "2021-08-01"}, {"y": 29.23, "name": "2021-09-01"}, {"y": 30.56, "name": "2021-10-01"}, {"y": 30.34, "name": "2021-11-01"}, {"y": 30.77, "name": "2021-12-01"}, {"y": 28.74, "name": "2022-01-01"}, {"y": 30.01, "name": "2022-02-01"}, {"y": 29.99, "name": "2022-03-01"}, {"y": 30.21, "name": "2022-04-01"}, {"y": 31.56, "name": "2022-05-01"}, {"y": 30.73, "name": "2022-06-01"}, {"y": 30.56, "name": "2022-07-01"}, {"y": 29.94, "name": "2022-08-01"}, {"y": 30.59, "name": "2022-09-01"}, {"y": 30.82, "name": "2022-10-01"}, {"y": 31.65, "name": "2022-11-01"}, {"y": 31.86, "name": "2022-12-01"}, {"y": 31.7, "name": "2023-01-01"}, {"y": 31.25, "name": "2023-02-01"}, {"y": 31.44, "name": "2023-03-01"}, {"y": 31.89, "name": "2023-04-01"}, {"y": 31.26, "name": "2023-05-01"}, {"y": 31.64, "name": "2023-06-01"}, {"y": 30.88, "name": "2023-07-01"}, {"y": 30.78, "name": "2023-08-01"}, {"y": 31.76, "name": "2023-09-01"}, {"y": 31.66, "name": "2023-10-01"}, {"y": 32.31, "name": "2023-11-01"}, {"y": 32.39, "name": "2023-12-01"}, {"y": 32.27, "name": "2024-01-01"}, {"y": 32.16, "name": "2024-02-01"}, {"y": 33.21, "name": "2024-03-01"}, {"y": 32.88, "name": "2024-04-01"}, {"y": 33.04, "name": "2024-05-01"}, {"y": 35.19, "name": "2024-06-01"}, {"y": 34.09, "name": "2024-07-01"}, {"y": 33.69, "name": "2024-08-01"}, {"y": 34.33, "name": "2024-09-01"}, {"y": 34.17, "name": "2024-10-01"}, {"y": 34.45, "name": "2024-11-01"}, {"y": 34.55, "name": "2024-12-01"}, {"y": 33.73, "name": "2025-01-01"}, {"y": 34.07, "name": "2025-02-01"}, {"y": 34.04, "name": "2025-03-01"}, {"y": 33.85, "name": "2025-04-01"}], "name": "All", "color": "#F19E39", "type": "spline"}], "title": {"text": "Mean Booked resources (Country)"}, "xAxis": {"lineColor": "#F0F0F0", "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 2025.4, "min": 2016, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 45, "min": 15, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart4' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<h3 class="heading4">Mean price by customer type</h3><p>The analysis of mean booking prices by customer type reveals a distinct disparity between Members and Non-Members across various markets. For instance, in the US, Members enjoy a price advantage with average bookings at around 50% lower than those of Non-Members, exemplifying a strategy that encourages membership through financial incentives. This trend extends to different coworking sizes, where Non-Members consistently face higher rates, particularly pronounced in larger spaces, where their costs can exceed those of Members by upwards of 70%.</p><p>In the UK, a similar pattern is observed, with Members' mean prices significantly lower than Non-Members by about 15%. The Spanish market displays even greater differentials, with Non-Members paying nearly 50% more than Members. Such pricing strategies across all regions indicate a deliberate effort to promote customer loyalty and boost membership enrollment by clearly demonstrating the financial benefits attached to becoming a Member, thus reinforcing the overall effectiveness of tiered pricing structures.</p>
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab50">Final Price - US</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab51">Base Price - US</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab52">Final Price and Coworing Size - US</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab53">Base Price and Coworing Size - US</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab50">
+<figure class="chart">
+<div id="chart50">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 80, "type": "column"}}, "series": [{"data": [{"y": 51.96, "color": "#FF4F2F", "name": "Member"}, {"y": 74.75, "color": "#FF7259", "name": "Non member"}], "name": "Final Price - US", "type": "column"}], "title": {"text": "Mean final price by customer type - US"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Member", "Non Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 80, "min": 0, "tickInterval": 10, "title": {"text": " "}}}'
+                                            renderChart('chart5' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab51">
+<figure class="chart">
+<div id="chart51">
+<script>
+                                            var index = 1
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 80, "type": "column"}}, "series": [{"data": [{"y": 51.85, "color": "#FF4F2F", "name": "Member"}, {"y": 72.49, "color": "#FF7259", "name": "Non member"}], "name": "Base Price - US", "type": "column"}], "title": {"text": "Mean base price by customer type - US"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Member", "Non Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 80, "min": 0, "tickInterval": 10, "title": {"text": " "}}}'
+                                            renderChart('chart5' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab52">
+<figure class="chart">
+<div id="chart52">
+<script>
+                                            var index = 2
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 49.01, "name": "Member"}, {"y": 70.11, "name": "Non member"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 51.44, "name": "Member"}, {"y": 73.94, "name": "Non member"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 44.98, "name": "Member"}, {"y": 82.89, "name": "Non member"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 59.27, "name": "Member"}, {"y": 81.62, "name": "Non member"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean final price by customer type and coworking size - US"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Member", "Non Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart5' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab53">
+<figure class="chart">
+<div id="chart53">
+<script>
+                                            var index = 3
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 49.69, "name": "Member"}, {"y": 67.51, "name": "Non member"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 51.13, "name": "Member"}, {"y": 72.19, "name": "Non member"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 47.3, "name": "Member"}, {"y": 81.3, "name": "Non member"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 56.69, "name": "Member"}, {"y": 78.11, "name": "Non member"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean base price by customer type and coworking size - US"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Member", "Non Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart5' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab90">Final Price - UK</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab91">Base Price - UK</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab92">Final Price and Coworing Size - UK</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab93">Base Price and Coworing Size - UK</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab90">
+<figure class="chart">
+<div id="chart90">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 80, "type": "column"}}, "series": [{"data": [{"y": 73.39, "color": "#FF4F2F", "name": "Member"}, {"y": 84.66, "color": "#FF7259", "name": "Non member"}], "name": "Final Price - UK", "type": "column"}], "title": {"text": "Mean final price by customer type - UK"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Member", "Non Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 90, "min": 0, "tickInterval": 10, "title": {"text": " "}}}'
+                                            renderChart('chart9' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab91">
+<figure class="chart">
+<div id="chart91">
+<script>
+                                            var index = 1
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 80, "type": "column"}}, "series": [{"data": [{"y": 67.76, "color": "#FF4F2F", "name": "Member"}, {"y": 75.19, "color": "#FF7259", "name": "Non member"}], "name": "Base Price - UK", "type": "column"}], "title": {"text": "Mean base price by customer type - UK"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Member", "Non Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 90, "min": 0, "tickInterval": 10, "title": {"text": " "}}}'
+                                            renderChart('chart9' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab92">
+<figure class="chart">
+<div id="chart92">
+<script>
+                                            var index = 2
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 91.21, "name": "Member"}, {"y": 88.21, "name": "Non member"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 58.31, "name": "Member"}, {"y": 59.2, "name": "Non member"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 55.41, "name": "Member"}, {"y": 79.67, "name": "Non member"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 77.45, "name": "Member"}, {"y": 100.47, "name": "Non member"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean final price by customer type and coworking size - UK"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Member", "Non Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart9' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab93">
+<figure class="chart">
+<div id="chart93">
+<script>
+                                            var index = 3
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 81.26, "name": "Member"}, {"y": 77.34, "name": "Non member"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 58.91, "name": "Member"}, {"y": 56.24, "name": "Non member"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 58.06, "name": "Member"}, {"y": 71.14, "name": "Non member"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 69.68, "name": "Member"}, {"y": 87.81, "name": "Non member"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean base price by customer type and coworking size - UK"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Member", "Non Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart9' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab100">Final Price - Spain</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab101">Base Price - Spain</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab102">Final Price and Coworing Size - Spain</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab103">Base Price and Coworing Size - Spain</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab100">
+<figure class="chart">
+<div id="chart100">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 80, "type": "column"}}, "series": [{"data": [{"y": 42.89, "color": "#FF4F2F", "name": "Member"}, {"y": 63.87, "color": "#FF7259", "name": "Non member"}], "name": "Final Price - Spain", "type": "column"}], "title": {"text": "Mean final price by customer type - Spain"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Member", "Non Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 80, "min": 0, "tickInterval": 10, "title": {"text": " "}}}'
+                                            renderChart('chart10' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab101">
+<figure class="chart">
+<div id="chart101">
+<script>
+                                            var index = 1
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 80, "type": "column"}}, "series": [{"data": [{"y": 39.49, "color": "#FF4F2F", "name": "Member"}, {"y": 48.01, "color": "#FF7259", "name": "Non member"}], "name": "Base Price - Spain", "type": "column"}], "title": {"text": "Mean base price by customer type - Spain"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Member", "Non Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 80, "min": 0, "tickInterval": 10, "title": {"text": " "}}}'
+                                            renderChart('chart10' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab102">
+<figure class="chart">
+<div id="chart102">
+<script>
+                                            var index = 2
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 34.84, "name": "Member"}, {"y": 54.92, "name": "Non member"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 38.7, "name": "Member"}, {"y": 60.5, "name": "Non member"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 41.68, "name": "Member"}, {"y": 70.45, "name": "Non member"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 48.14, "name": "Member"}, {"y": 74.81, "name": "Non member"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean final price by customer type and coworking size - Spain"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Member", "Non Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart10' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab103">
+<figure class="chart">
+<div id="chart103">
+<script>
+                                            var index = 3
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 33.86, "name": "Member"}, {"y": 48.12, "name": "Non member"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 38.95, "name": "Member"}, {"y": 52.94, "name": "Non member"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 38.13, "name": "Member"}, {"y": 48.04, "name": "Non member"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 41.73, "name": "Member"}, {"y": 43.15, "name": "Non member"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean base price by customer type and coworking size - Spain"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Member", "Non Member"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart10' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<h3 class="heading4">Mean hourly price by plan category</h3><p>The analysis of mean hourly prices across varied booking plan categories reveals distinct pricing dynamics based on user types and market demand. In the US, the Office category leads with average prices hovering around $36, signalling a premium offering for users seeking exclusive workspace, while the Virtual category remains the most affordable at approximately $20, catering to cost-focused individuals. The Part-time and Dedicated Desk plans show moderate prices, indicating stable demand among users requiring flexibility.
+
+Comparing the trends across diverse markets like the UK and Spain, similar dynamics emerge with Office and Other categories maintaining the highest mean prices, reflecting a demand for dedicated resources. In contrast, Hot Desk and Virtual services typically offer more accessible pricing structures, often appealing to transient users. Overall, pricing tends to trend upward with increasing membership size, especially for Dedicated Desks and Offices, suggesting that as demand scales, so does the perceived value of more private workspaces.</p>
+
+
+
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab60">Final Hourly Price - US</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab61">Base Hourly Price - US</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab62">Final Hourly Price &amp;Coworking size - US</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab63">Base Hourly Price &amp;Coworking size - US</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab60">
+<figure class="chart">
+<div id="chart60">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 40, "type": "column"}}, "series": [{"data": [{"y": 33.41, "color": "#CF2101", "name": "Dedicated Desk"}, {"y": 24.33, "color": "#FF4F2F", "name": "Hot Desk"}, {"y": 36.88, "color": "#FF7259", "name": "Office"}, {"y": 27.81, "color": "#FF9582", "name": "Other"}, {"y": 31.15, "color": "#FFB9AC", "name": "Part-time"}, {"y": 20.79, "color": "#FFDCD5", "name": "Virtual"}], "name": "Final Hourly Price - US", "type": "column"}], "title": {"text": "Final Hourly Price - US"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Other", "Part-Time", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 40, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart6' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab61">
+<figure class="chart">
+<div id="chart61">
+<script>
+                                            var index = 1
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 40, "type": "column"}}, "series": [{"data": [{"y": 29.64, "color": "#CF2101", "name": "Dedicated Desk"}, {"y": 24.88, "color": "#FF4F2F", "name": "Hot Desk"}, {"y": 36.17, "color": "#FF7259", "name": "Office"}, {"y": 28.1, "color": "#FF9582", "name": "Other"}, {"y": 32.71, "color": "#FFB9AC", "name": "Part-time"}, {"y": 21.5, "color": "#FFDCD5", "name": "Virtual"}], "name": "Base Hourly Price - US", "type": "column"}], "title": {"text": "Base Hourly Price - US"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Other", "Part-Time", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 40, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart6' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab62">
+<figure class="chart">
+<div id="chart62">
+<script>
+                                            var index = 2
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 28.24, "name": "Dedicated Desk"}, {"y": 24.64, "name": "Hot Desk"}, {"y": 29.26, "name": "Office"}, {"y": 26.16, "name": "Other"}, {"y": 21.11, "name": "Part-time"}, {"y": 23.01, "name": "Virtual"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 27.56, "name": "Dedicated Desk"}, {"y": 19.83, "name": "Hot Desk"}, {"y": 27.77, "name": "Office"}, {"y": 25.99, "name": "Other"}, {"y": 21.45, "name": "Part-time"}, {"y": 21.71, "name": "Virtual"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 32.51, "name": "Dedicated Desk"}, {"y": 24.82, "name": "Hot Desk"}, {"y": 30.41, "name": "Office"}, {"y": 26.74, "name": "Other"}, {"y": 33.11, "name": "Part-time"}, {"y": 20.5, "name": "Virtual"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 37.86, "name": "Dedicated Desk"}, {"y": 32.8, "name": "Hot Desk"}, {"y": 41.94, "name": "Office"}, {"y": 32.94, "name": "Other"}, {"y": 34.25, "name": "Part-time"}, {"y": 19.63, "name": "Virtual"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean final hourly price by plan category and coworking size - US"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Other", "Part-Time", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 5, "min": 0, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart6' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab63">
+<figure class="chart">
+<div id="chart63">
+<script>
+                                            var index = 3
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 26.29, "name": "Dedicated Desk"}, {"y": 25.5, "name": "Hot Desk"}, {"y": 28.63, "name": "Office"}, {"y": 26.15, "name": "Other"}, {"y": 21.54, "name": "Part-time"}, {"y": 23.63, "name": "Virtual"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 27.84, "name": "Dedicated Desk"}, {"y": 20.87, "name": "Hot Desk"}, {"y": 30.85, "name": "Office"}, {"y": 26.62, "name": "Other"}, {"y": 23.83, "name": "Part-time"}, {"y": 22.55, "name": "Virtual"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 29.73, "name": "Dedicated Desk"}, {"y": 24.71, "name": "Hot Desk"}, {"y": 32.72, "name": "Office"}, {"y": 27.63, "name": "Other"}, {"y": 33.5, "name": "Part-time"}, {"y": 20.88, "name": "Virtual"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 30.66, "name": "Dedicated Desk"}, {"y": 32.58, "name": "Hot Desk"}, {"y": 40.06, "name": "Office"}, {"y": 32.17, "name": "Other"}, {"y": 35.59, "name": "Part-time"}, {"y": 20.54, "name": "Virtual"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean base hourly price by plan category and coworking size - US"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Other", "Part-Time", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 5, "min": 0, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart6' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab110">Final Hourly Price - UK</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab111">Base Hourly Price - UK</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab112">Final Hourly Price &amp;Coworking size - UK</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab113">Base Hourly Price &amp;Coworking size - UK</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab110">
+<figure class="chart">
+<div id="chart110">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 40, "type": "column"}}, "series": [{"data": [{"y": 29.13, "color": "#CF2101", "name": "Dedicated Desk"}, {"y": 26.88, "color": "#FF4F2F", "name": "Hot Desk"}, {"y": 35.76, "color": "#FF7259", "name": "Office"}, {"y": 40.88, "color": "#FF9582", "name": "Other"}, {"y": 15.07, "color": "#FFB9AC", "name": "Part-time"}, {"y": 24.18, "color": "#FFDCD5", "name": "Virtual"}], "name": "Final Hourly Price - UK", "type": "column"}], "title": {"text": "Final Hourly Price - UK"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Other", "Part-Time", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 45, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart11' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab111">
+<figure class="chart">
+<div id="chart111">
+<script>
+                                            var index = 1
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 40, "type": "column"}}, "series": [{"data": [{"y": 31.5, "color": "#CF2101", "name": "Dedicated Desk"}, {"y": 26.73, "color": "#FF4F2F", "name": "Hot Desk"}, {"y": 37.45, "color": "#FF7259", "name": "Office"}, {"y": 40.22, "color": "#FF9582", "name": "Other"}, {"y": 14.2, "color": "#FFB9AC", "name": "Part-time"}, {"y": 24.29, "color": "#FFDCD5", "name": "Virtual"}], "name": "Base Hourly Price - UK", "type": "column"}], "title": {"text": "Base Hourly Price - UK"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Other", "Part-Time", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 45, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart11' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab112">
+<figure class="chart">
+<div id="chart112">
+<script>
+                                            var index = 2
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 30.97, "name": "Dedicated Desk"}, {"y": 14.17, "name": "Hot Desk"}, {"y": 36.29, "name": "Office"}, {"y": 34.32, "name": "Other"}, {"y": 22.47, "name": "Part-time"}, {"y": 20.0, "name": "Virtual"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 20.41, "name": "Dedicated Desk"}, {"y": 11.04, "name": "Hot Desk"}, {"y": 30.48, "name": "Office"}, {"y": 19.08, "name": "Other"}, {"y": 13.22, "name": "Part-time"}, {"y": 14.78, "name": "Virtual"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 18.51, "name": "Dedicated Desk"}, {"y": 13.24, "name": "Hot Desk"}, {"y": 29.71, "name": "Office"}, {"y": 29.4, "name": "Other"}, {"y": 8.23, "name": "Part-time"}, {"y": 23.16, "name": "Virtual"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 35.74, "name": "Dedicated Desk"}, {"y": 39.85, "name": "Hot Desk"}, {"y": 36.7, "name": "Office"}, {"y": 51.89, "name": "Other"}, {"y": 25.48, "name": "Part-time"}, {"y": 35.44, "name": "Virtual"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean final hourly price by plan category and coworking size - UK"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Other", "Part-Time", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 5, "min": 0, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart11' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab113">
+<figure class="chart">
+<div id="chart113">
+<script>
+                                            var index = 3
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 32.08, "name": "Dedicated Desk"}, {"y": 13.76, "name": "Hot Desk"}, {"y": 35.96, "name": "Office"}, {"y": 33.38, "name": "Other"}, {"y": 21.76, "name": "Part-time"}, {"y": 19.65, "name": "Virtual"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 22.47, "name": "Dedicated Desk"}, {"y": 12.49, "name": "Hot Desk"}, {"y": 32.22, "name": "Office"}, {"y": 19.36, "name": "Other"}, {"y": 14.42, "name": "Part-time"}, {"y": 15.43, "name": "Virtual"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 20.02, "name": "Dedicated Desk"}, {"y": 18.99, "name": "Hot Desk"}, {"y": 30.25, "name": "Office"}, {"y": 27.59, "name": "Other"}, {"y": 8.62, "name": "Part-time"}, {"y": 23.06, "name": "Virtual"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 37.8, "name": "Dedicated Desk"}, {"y": 40.18, "name": "Hot Desk"}, {"y": 38.23, "name": "Office"}, {"y": 50.15, "name": "Other"}, {"y": 28.06, "name": "Part-time"}, {"y": 35.39, "name": "Virtual"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean base hourly price by plan category and coworking size - UK"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Other", "Part-Time", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 5, "min": 0, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart11' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+<div class="tab">
+<nav class="tab-nav">
+<ul>
+<li class="active">
+<a class="btn btn-sm" href="#tab120">Final Hourly Price - Spain</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab121">Base Hourly Price - Spain</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab122">Final Hourly Price &amp;Coworking size - Spain</a>
+</li>
+<li>
+<a class="btn btn-sm" href="#tab123">Base Hourly Price &amp;Coworking size - Spain</a>
+</li>
+</ul>
+</nav>
+<div class="tab-pane active" id="tab120">
+<figure class="chart">
+<div id="chart120">
+<script>
+                                            var index = 0
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 40, "type": "column"}}, "series": [{"data": [{"y": 20.15, "color": "#CF2101", "name": "Dedicated Desk"}, {"y": 15.17, "color": "#FF4F2F", "name": "Hot Desk"}, {"y": 22.1, "color": "#FF7259", "name": "Office"}, {"y": 22.85, "color": "#FF9582", "name": "Other"}, {"y": 15.29, "color": "#FFB9AC", "name": "Virtual"}], "name": "Final Hourly Price - Spain", "type": "column"}], "title": {"text": "Final Hourly Price - Spain"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Other", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 40, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart12' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab121">
+<figure class="chart">
+<div id="chart121">
+<script>
+                                            var index = 1
+                                            var code = '{"chart": {"height": 500, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "column"}, "legend": {"align": "left", "enabled": false, "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"column": {"borderRadius": 4, "pointWidth": 40, "type": "column"}}, "series": [{"data": [{"y": 21.44, "color": "#CF2101", "name": "Dedicated Desk"}, {"y": 18.53, "color": "#FF4F2F", "name": "Hot Desk"}, {"y": 23.88, "color": "#FF7259", "name": "Office"}, {"y": 21.99, "color": "#FF9582", "name": "Other"}, {"y": 16.15, "color": "#FFB9AC", "name": "Virtual"}], "name": "Base Hourly Price - Spain", "type": "column"}], "title": {"text": "Base Hourly Price - Spain"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Other", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 40, "min": 0, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart12' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab122">
+<figure class="chart">
+<div id="chart122">
+<script>
+                                            var index = 2
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 17.33, "name": "Dedicated Desk"}, {"y": 15.41, "name": "Hot Desk"}, {"y": 20.82, "name": "Office"}, {"y": 18.47, "name": "Other"}, {"y": 12.68, "name": "Part-time"}, {"y": 9.07, "name": "Virtual"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 14.75, "name": "Dedicated Desk"}, {"y": 14.13, "name": "Hot Desk"}, {"y": 22.23, "name": "Office"}, {"y": 21.7, "name": "Other"}, {"y": 10.33, "name": "Part-time"}, {"y": 9.39, "name": "Virtual"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 17.69, "name": "Dedicated Desk"}, {"y": 15.89, "name": "Hot Desk"}, {"y": 20.68, "name": "Office"}, {"y": 22.99, "name": "Other"}, {"y": 27.12, "name": "Part-time"}, {"y": 17.02, "name": "Virtual"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 25.2, "name": "Dedicated Desk"}, {"y": 15.67, "name": "Hot Desk"}, {"y": 23.19, "name": "Office"}, {"y": 26.99, "name": "Other"}, {"y": 38.92, "name": "Part-time"}, {"y": 22.01, "name": "Virtual"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean final hourly price by plan category and coworking size - Spain"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Other", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 4, "min": 0, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart12' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+<div class="tab-pane" id="tab123">
+<figure class="chart">
+<div id="chart123">
+<script>
+                                            var index = 3
+                                            var code = '{"chart": {"height": 600, "scrollablePlotArea": {"minWidth": 600, "scrollPositionX": 1}, "type": "line"}, "legend": {"align": "right", "itemDistance": 40, "itemStyle": {"color": "#6A6A6A", "fontSize": "14px", "fontFamily": "Plaak"}, "padding": 40}, "plotOptions": {"line": {"lineWidth": 3, "marker": {"enabled": false}, "type": "line"}}, "series": [{"data": [{"y": 19.46, "name": "Dedicated Desk"}, {"y": 17.27, "name": "Hot Desk"}, {"y": 21.25, "name": "Office"}, {"y": 19.09, "name": "Other"}, {"y": 12.68, "name": "Part-time"}, {"y": 9.81, "name": "Virtual"}], "name": "0-40 Members", "color": "#FFD600", "type": "line"}, {"data": [{"y": 17.53, "name": "Dedicated Desk"}, {"y": 15.59, "name": "Hot Desk"}, {"y": 23.08, "name": "Office"}, {"y": 22.26, "name": "Other"}, {"y": 12.56, "name": "Part-time"}, {"y": 10.22, "name": "Virtual"}], "name": "41-100 Members", "color": "#7A86F0", "type": "line"}, {"data": [{"y": 20.16, "name": "Dedicated Desk"}, {"y": 19.54, "name": "Hot Desk"}, {"y": 21.07, "name": "Office"}, {"y": 21.64, "name": "Other"}, {"y": 31.64, "name": "Part-time"}, {"y": 17.92, "name": "Virtual"}], "name": "101-250 Members", "color": "#FF4F2F", "type": "line"}, {"data": [{"y": 24.0, "name": "Dedicated Desk"}, {"y": 20.25, "name": "Hot Desk"}, {"y": 25.44, "name": "Office"}, {"y": 23.47, "name": "Other"}, {"y": 33.9, "name": "Part-time"}, {"y": 21.32, "name": "Virtual"}], "name": "+250 Members", "color": "#151E6D", "type": "line"}], "title": {"text": "Mean base hourly price by plan category and coworking size - Spain"}, "xAxis": {"lineColor": "#F0F0F0", "categories": ["Dedicated Desk", "Hot Desk", "Office", "Other", "Virtual"], "gridLineColor": "#F0F0F0", "gridLineDashStyle": "LongDash", "gridLineWidth": 1, "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "max": 4, "min": 0, "tickInterval": 1, "tickLength": 0}, "yAxis": {"gridLineColor": "#F0F0F0", "labels": {"format": "{value}", "style": {"color": "#000000", "fontSize": "16px", "fontFamily": "Plaak"}}, "tickInterval": 5, "title": {"text": " "}}}'
+                                            renderChart('chart12' + index, code)
+                                        </script>
+</div>
+</figure>
+</div>
+</div>
+</section>
+</article>
+</div>
+</div>
+</section>
+<section class="topic-conclusion">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6 col-lg-7">
+<div class="texts-wrap">
+<p class="font-plaak color-orange">Conclusion</p>
+<h2 class="heading4">Smaller is better!</h2>
+<p>Being able to observe a market like the flexible workspace industry through data is an incredible experience. In this report we have been able to provide answers to questions ranging from how the duration of bookings evolves throughout the day, to knowing that resources with a maximum capacity of less than five users account for 45% of all bookings. We have been surprised by the patterns of resource usage and have confirmed through these data that creating resources with capacities of between 10 and 19 users is not advisable, since they represent a very low percentage of total bookings. Finally, we have paid special attention to the relationship between the hourly price of bookings and the type of user (contacts and members). We’ve also found that a booking made by a contact is on average 36% more profitable than a booking made by a member. </p>
+<!--a.btn.btn-orange(href=btnLink2)| 
+=btnText2
+i.icon.icon-download-->
+</div>
+</div>
+<div class="col-md-6 col-lg-5">
+<div class="card card-big">
+<p class="text-sm font-plaak color-orange">Global Analysis</p>
+<h3 class="heading4">The past is fixed, the present is moving, the future is Flex!</h3>
+<p class="text-sm color-gray">A look at the history and trends of coworking and flexible workspaces.</p>
+<a class="btn btn-orange btn-square" href="/global_analysis.html">
+<i class="icon icon-arrow-right"></i>
+</a>
+<div class="img-wrap">
+<img alt="topic" sizes="100%" src="images/topic-conclusion2.png" srcset="/images/topic-conclusion2.png 1x/images/topic-conclusion2@2x.png 2x" style="width: 100%"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer START-->
+<div class="alert text-center cookiealert" role="alert">
+<div class="container-fluid">
+<h5>Cookie Warning</h5>
+<p class="text-xs">
+            We value your privacy. This website uses and stores data such as cookies to enable essential website functionality, enhance your browsing experience, measure advertising performance as well as analytics and marketing. By clicking 'Accept All', you consent to our use of your data. 
+<a class="color-black" href="https://www.flexspaceobservatory.com/privacy-policy/ ">Learn more</a>
+</p>
+<br/>
+<div class="ml-auto">
+<button class="btn btn-sm denycookies" type="button">Deny</button>
+<button class="btn btn-orange btn-sm acceptcookies" type="button">Accept All</button>
+</div>
+</div>
+</div>
+<footer class="footer">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-8">
+<!--.footer-subscribeh2.heading3
+  | Want to be kept in the loop when new studies are released?
+  br
+  | Subscribe to our newsletter.
+.footer-subscribe_form
+  form
+    label Email
+    .form-group_inline
+      input.form-input.input-dark.footer-subscribe_input(type='email' placeholder='Ex. james.arthur@gmail.com')
+      button.btn.btn-orange.footer-subscribe_btn(type='submit' disabled='')
+        | Subscribe
+        i.icon.icon-arrow-right-->
+</div>
+<div class="col-lg-4">
+<div class="footer-infos">
+<div class="footer-inner">
+<a class="footer-link" href="/">
+<svg fill="none" height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="m18.125 15.12 9.811-9.811-1.245-1.244-9.811 9.811V0h-1.76v13.36a1.76 1.76 0 0 1-1.76 1.76H0v1.76h13.36c.972 0 1.76.788 1.76 1.76V32h1.76V18.64c0-.972.788-1.76 1.76-1.76H32v-1.76H18.125Z" fill="#FF4F2F"></path>
+<path d="m20.506 19.26-1.244 1.245 7.43 7.43 1.244-1.245-7.43-7.43ZM11.494 19.261l-7.431 7.432 1.244 1.244 7.431-7.431-1.244-1.245ZM5.309 4.063 4.064 5.308l7.43 7.43 1.245-1.245-7.43-7.43Z" fill="#FF4F2F"></path>
+</svg>
+</a>
+<p class="text-xs color-gray">©2022 Flexspace Observatory. All rights reserved.</p>
+<a class="link-underline" href="https://nexudus.com/" target="_blank">
+<span>nexudus.com</span>
+<i class="icon icon-arrow-right"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src="js/googleTag.js"></script>
+<script src="js/scripts.js"></script>
+<!--script src="js/cookie.js"></script-->
+<script defer="" src="js/script.js"></script>
+<!-- Footer END-->
